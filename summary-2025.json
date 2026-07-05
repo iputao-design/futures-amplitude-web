@@ -1,0 +1,82 @@
+{
+  "pageName": "2025.html",
+  "excelFileName": "每日振幅统计_2025.xlsx",
+  "title": "2025年统计",
+  "reportDate": "2025-12-31",
+  "startDate": "2025-01-01",
+  "updatedAt": "2026/07/05 22:31",
+  "tradingDays": 243,
+  "overallAverage": 80,
+  "targetSummaries": [
+    {
+      "code": "CSI1000",
+      "name": "中证1000",
+      "latestDate": "2025-12-31",
+      "latestAmplitude": 58.5,
+      "days": 243,
+      "total": 26500.9,
+      "average": 109.1,
+      "hotDays": 23
+    },
+    {
+      "code": "CSI500",
+      "name": "中证500",
+      "latestDate": "2025-12-31",
+      "latestAmplitude": 53,
+      "days": 243,
+      "total": 23116.7,
+      "average": 95.1,
+      "hotDays": 22
+    },
+    {
+      "code": "SSE",
+      "name": "上证指数",
+      "latestDate": "2025-12-31",
+      "latestAmplitude": 22,
+      "days": 243,
+      "total": 8706.3,
+      "average": 35.8,
+      "hotDays": 36
+    },
+    {
+      "code": "IM",
+      "name": "IM主力",
+      "latestDate": "2025-12-31",
+      "latestAmplitude": 69.8,
+      "days": 243,
+      "total": 29408.4,
+      "average": 121,
+      "hotDays": 24
+    },
+    {
+      "code": "IC",
+      "name": "IC主力",
+      "latestDate": "2025-12-31",
+      "latestAmplitude": 65.2,
+      "days": 243,
+      "total": 26578.4,
+      "average": 109.4,
+      "hotDays": 38
+    },
+    {
+      "code": "IF",
+      "name": "IF主力",
+      "latestDate": "2025-12-31",
+      "latestAmplitude": 53.4,
+      "days": 243,
+      "total": 13343.6,
+      "average": 54.9,
+      "hotDays": 25
+    },
+    {
+      "code": "IH",
+      "name": "IH主力",
+      "latestDate": "2025-12-31",
+      "latestAmplitude": 31.8,
+      "days": 243,
+      "total": 8422,
+      "average": 34.7,
+      "hotDays": 17
+    }
+  ]
+}

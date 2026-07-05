@@ -1,0 +1,7266 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日振幅统计</title>
+  <style>
+    :root { color-scheme: light; --line: #dcdfe6; --soft: #fff2cc; --hot: #ffff00; --red: #e11d48; --text: #1f2937; --purple: #7030a0; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; color: var(--text); background: #f6f7fb; }
+    header { padding: 24px 18px 16px; text-align: center; background: white; border-bottom: 1px solid var(--line); }
+    h1 { margin: 0 0 8px; color: var(--purple); font-size: 26px; font-weight: 700; }
+    .meta { color: #6b7280; font-size: 13px; }
+    .page-nav { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .page-nav a { border: 1px solid var(--line); border-radius: 6px; color: var(--text); padding: 7px 10px; text-decoration: none; background: #fff; }
+    .page-nav a.active { background: var(--purple); color: #fff; border-color: var(--purple); }
+    main { max-width: 1080px; margin: 0 auto; padding: 18px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 14px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 12px; text-align: center; }
+    .card strong { display: block; margin: 5px 0; color: var(--red); font-size: 22px; }
+    .card span { color: #6b7280; font-size: 12px; }
+    .tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; }
+    .tab { border: 1px solid var(--line); background: white; border-radius: 6px; padding: 8px 12px; cursor: pointer; white-space: nowrap; }
+    .tab.active { background: var(--purple); color: white; border-color: var(--purple); }
+    .panel { display: none; background: white; border: 1px solid var(--line); overflow-x: auto; }
+    .panel.active { display: block; }
+    h2 { margin: 0; padding: 12px; text-align: center; color: var(--purple); background: var(--soft); font-size: 24px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 720px; margin-bottom: 18px; }
+    th, td { border: 1px solid var(--line); padding: 7px 6px; text-align: center; vertical-align: middle; }
+    th { background: #f3f4f6; font-weight: 600; }
+    .month-title td { background: var(--soft); color: var(--purple); font-weight: 700; font-size: 16px; }
+    tfoot td { height: 28px; }
+    tr.delivery td { background: #dbeafe; color: #1e3a8a; font-weight: 700; }
+    .hot { background: var(--hot); color: var(--red); font-weight: 700; }
+    tr.delivery td.hot { background: var(--hot); color: var(--red); }
+    .download { margin-top: 12px; text-align: center; }
+    .download a { color: var(--purple); font-weight: 600; }
+    @media (max-width: 640px) { h1 { font-size: 22px; } h2 { font-size: 20px; } main { padding: 12px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>每日振幅统计</h1>
+    <div class="meta">统计区间：2026-01-01 至 2026-07-05 · 生成时间：2026/07/05 22:31</div>
+    <nav class="page-nav"><a class="" href="./index.html">首页</a><a class="" href="./current.html">当前月</a><a class="" href="./2024.html">2024年度</a><a class="" href="./2025.html">2025年度</a><a class="active" href="./2026.html">2026年度</a></nav>
+  </header>
+  <main>
+    <div class="cards"><div class="card">
+      <div>中证1000</div>
+      <strong>181.4</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>中证500</div>
+      <strong>224.3</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>上证指数</div>
+      <strong>46.6</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>IM主力</div>
+      <strong>137.2</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>IC主力</div>
+      <strong>208</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>IF主力</div>
+      <strong>82.4</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>IH主力</div>
+      <strong>38.4</strong>
+      <span>2026-07-03</span>
+    </div></div>
+    <nav class="tabs"><button class="tab active" data-code="CSI1000">中证1000</button><button class="tab" data-code="CSI500">中证500</button><button class="tab" data-code="SSE">上证指数</button><button class="tab" data-code="IM">IM主力</button><button class="tab" data-code="IC">IC主力</button><button class="tab" data-code="IF">IF主力</button><button class="tab" data-code="IH">IH主力</button></nav>
+    <section class="panel active" data-code="CSI1000">
+      <h2>2026年统计 - 中证1000</h2>
+      <table>
+        <thead>
+          <tr class="month-title"><td colspan="7">1月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>1月5日</td>
+        <td>7754</td>
+        <td>7623.7</td>
+        <td class="">130.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>1月6日</td>
+        <td>7864.9</td>
+        <td>7755.1</td>
+        <td class="">109.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>1月7日</td>
+        <td>7939.8</td>
+        <td>7864.1</td>
+        <td class="">75.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>1月8日</td>
+        <td>7993.6</td>
+        <td>7886.6</td>
+        <td class="">107</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>1月9日</td>
+        <td>8131.5</td>
+        <td>7969.2</td>
+        <td class="">162.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>1月12日</td>
+        <td>8371.7</td>
+        <td>8171.1</td>
+        <td class="hot">200.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>1月13日</td>
+        <td>8381</td>
+        <td>8177.6</td>
+        <td class="hot">203.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>1月14日</td>
+        <td>8415.1</td>
+        <td>8154.2</td>
+        <td class="hot">260.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>1月15日</td>
+        <td>8267.8</td>
+        <td>8151.1</td>
+        <td class="">116.7</td>
+        <td>中证1000</td>
+      </tr><tr class="delivery">
+        <td>10</td>
+        <td>周五</td>
+        <td>1月16日</td>
+        <td>8304.4</td>
+        <td>8180.1</td>
+        <td class="">124.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>1月19日</td>
+        <td>8298.5</td>
+        <td>8187.9</td>
+        <td class="">110.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>1月20日</td>
+        <td>8300.1</td>
+        <td>8104.9</td>
+        <td class="hot">195.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>1月21日</td>
+        <td>8289.1</td>
+        <td>8136.9</td>
+        <td class="">152.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>1月22日</td>
+        <td>8314.2</td>
+        <td>8252.7</td>
+        <td class="">61.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周五</td>
+        <td>1月23日</td>
+        <td>8478.6</td>
+        <td>8323.3</td>
+        <td class="">155.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>1月26日</td>
+        <td>8530.4</td>
+        <td>8302.1</td>
+        <td class="hot">228.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>1月27日</td>
+        <td>8406.1</td>
+        <td>8186.2</td>
+        <td class="hot">219.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>1月28日</td>
+        <td>8432.6</td>
+        <td>8334.7</td>
+        <td class="">97.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>1月29日</td>
+        <td>8463.1</td>
+        <td>8308.8</td>
+        <td class="">154.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>1月30日</td>
+        <td>8313.2</td>
+        <td>8084</td>
+        <td class="hot">229.3</td>
+        <td>中证1000</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>20</td><td></td><td></td><td></td><td>3095</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">154.8</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">2月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>2月2日</td>
+        <td>8221.6</td>
+        <td>7974.6</td>
+        <td class="hot">247</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>2月3日</td>
+        <td>8210</td>
+        <td>8023.2</td>
+        <td class="hot">186.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>2月4日</td>
+        <td>8216.2</td>
+        <td>8101.2</td>
+        <td class="">115</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>2月5日</td>
+        <td>8154.6</td>
+        <td>8027.6</td>
+        <td class="">126.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>2月6日</td>
+        <td>8152.3</td>
+        <td>7950</td>
+        <td class="hot">202.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>2月9日</td>
+        <td>8235.2</td>
+        <td>8149.6</td>
+        <td class="">85.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>2月10日</td>
+        <td>8274.1</td>
+        <td>8199.5</td>
+        <td class="">74.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>2月11日</td>
+        <td>8304.1</td>
+        <td>8237</td>
+        <td class="">67.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>2月12日</td>
+        <td>8337.4</td>
+        <td>8227.6</td>
+        <td class="">109.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>2月13日</td>
+        <td>8323.7</td>
+        <td>8200.1</td>
+        <td class="">123.6</td>
+        <td>中证1000</td>
+      </tr><tr class="delivery">
+        <td>11</td>
+        <td>周二</td>
+        <td>2月24日</td>
+        <td>8356.9</td>
+        <td>8236.7</td>
+        <td class="">120.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周三</td>
+        <td>2月25日</td>
+        <td>8449.8</td>
+        <td>8310.3</td>
+        <td class="">139.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周四</td>
+        <td>2月26日</td>
+        <td>8496.7</td>
+        <td>8398.1</td>
+        <td class="">98.7</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周五</td>
+        <td>2月27日</td>
+        <td>8561.3</td>
+        <td>8433.7</td>
+        <td class="">127.6</td>
+        <td>中证1000</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>14</td><td></td><td></td><td></td><td>1824.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">130.3</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">3月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>3月2日</td>
+        <td>8535.8</td>
+        <td>8393.9</td>
+        <td class="">141.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>3月3日</td>
+        <td>8510.9</td>
+        <td>8128.3</td>
+        <td class="hot">382.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>3月4日</td>
+        <td>8228.9</td>
+        <td>8039.6</td>
+        <td class="hot">189.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>3月5日</td>
+        <td>8243.8</td>
+        <td>8121.4</td>
+        <td class="">122.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>3月6日</td>
+        <td>8273.7</td>
+        <td>8115.5</td>
+        <td class="">158.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>3月9日</td>
+        <td>8230.7</td>
+        <td>7983.6</td>
+        <td class="hot">247.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>3月10日</td>
+        <td>8351.7</td>
+        <td>8271.5</td>
+        <td class="">80.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>3月11日</td>
+        <td>8394.1</td>
+        <td>8334.3</td>
+        <td class="">59.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>3月12日</td>
+        <td>8388.6</td>
+        <td>8267.4</td>
+        <td class="">121.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>3月13日</td>
+        <td>8350.9</td>
+        <td>8196.4</td>
+        <td class="">154.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>3月16日</td>
+        <td>8226</td>
+        <td>8089.5</td>
+        <td class="">136.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>3月17日</td>
+        <td>8224</td>
+        <td>8019.1</td>
+        <td class="hot">204.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>3月18日</td>
+        <td>8105.8</td>
+        <td>7970.2</td>
+        <td class="">135.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>3月19日</td>
+        <td>8008.4</td>
+        <td>7874.3</td>
+        <td class="">134.1</td>
+        <td>中证1000</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周五</td>
+        <td>3月20日</td>
+        <td>7996.2</td>
+        <td>7781.6</td>
+        <td class="hot">214.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>3月23日</td>
+        <td>7712</td>
+        <td>7357.7</td>
+        <td class="hot">354.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>3月24日</td>
+        <td>7601.9</td>
+        <td>7361.8</td>
+        <td class="hot">240.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>3月25日</td>
+        <td>7781.2</td>
+        <td>7654.8</td>
+        <td class="">126.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>3月26日</td>
+        <td>7775.9</td>
+        <td>7614.9</td>
+        <td class="">161</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>3月27日</td>
+        <td>7784.5</td>
+        <td>7526.6</td>
+        <td class="hot">258</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周一</td>
+        <td>3月30日</td>
+        <td>7774.9</td>
+        <td>7619</td>
+        <td class="">155.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>22</td>
+        <td>周二</td>
+        <td>3月31日</td>
+        <td>7789.2</td>
+        <td>7618.2</td>
+        <td class="">171.1</td>
+        <td>中证1000</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>22</td><td></td><td></td><td></td><td>3949.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">179.5</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">4月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>4月1日</td>
+        <td>7786.8</td>
+        <td>7692</td>
+        <td class="">94.7</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>4月2日</td>
+        <td>7764</td>
+        <td>7581.4</td>
+        <td class="hot">182.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>4月3日</td>
+        <td>7664.8</td>
+        <td>7521.9</td>
+        <td class="">142.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周二</td>
+        <td>4月7日</td>
+        <td>7640.5</td>
+        <td>7554.4</td>
+        <td class="">86.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周三</td>
+        <td>4月8日</td>
+        <td>7955.8</td>
+        <td>7765.2</td>
+        <td class="hot">190.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周四</td>
+        <td>4月9日</td>
+        <td>7959.1</td>
+        <td>7872.5</td>
+        <td class="">86.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周五</td>
+        <td>4月10日</td>
+        <td>8059.8</td>
+        <td>7981.6</td>
+        <td class="">78.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周一</td>
+        <td>4月13日</td>
+        <td>8040</td>
+        <td>7947.2</td>
+        <td class="">92.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周二</td>
+        <td>4月14日</td>
+        <td>8144.8</td>
+        <td>8059.4</td>
+        <td class="">85.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周三</td>
+        <td>4月15日</td>
+        <td>8193.3</td>
+        <td>8083.3</td>
+        <td class="">110</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周四</td>
+        <td>4月16日</td>
+        <td>8239</td>
+        <td>8100.5</td>
+        <td class="">138.5</td>
+        <td>中证1000</td>
+      </tr><tr class="delivery">
+        <td>12</td>
+        <td>周五</td>
+        <td>4月17日</td>
+        <td>8333.2</td>
+        <td>8223.7</td>
+        <td class="">109.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周一</td>
+        <td>4月20日</td>
+        <td>8374.8</td>
+        <td>8308.1</td>
+        <td class="">66.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周二</td>
+        <td>4月21日</td>
+        <td>8358.1</td>
+        <td>8270.2</td>
+        <td class="">88</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周三</td>
+        <td>4月22日</td>
+        <td>8482.2</td>
+        <td>8317.3</td>
+        <td class="">164.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周四</td>
+        <td>4月23日</td>
+        <td>8500.4</td>
+        <td>8302.8</td>
+        <td class="hot">197.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周五</td>
+        <td>4月24日</td>
+        <td>8360.8</td>
+        <td>8254.4</td>
+        <td class="">106.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周一</td>
+        <td>4月27日</td>
+        <td>8366.3</td>
+        <td>8249.9</td>
+        <td class="">116.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周二</td>
+        <td>4月28日</td>
+        <td>8316.3</td>
+        <td>8187.2</td>
+        <td class="">129</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周三</td>
+        <td>4月29日</td>
+        <td>8361.5</td>
+        <td>8163.3</td>
+        <td class="hot">198.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周四</td>
+        <td>4月30日</td>
+        <td>8402.4</td>
+        <td>8324.3</td>
+        <td class="">78.1</td>
+        <td>中证1000</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>2543</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">121.1</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">5月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>5月6日</td>
+        <td>8610.9</td>
+        <td>8462</td>
+        <td class="">148.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>5月7日</td>
+        <td>8716.9</td>
+        <td>8573.3</td>
+        <td class="">143.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>5月8日</td>
+        <td>8760.2</td>
+        <td>8651.1</td>
+        <td class="">109.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周一</td>
+        <td>5月11日</td>
+        <td>8888.9</td>
+        <td>8760.7</td>
+        <td class="">128.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周二</td>
+        <td>5月12日</td>
+        <td>8881.9</td>
+        <td>8749.7</td>
+        <td class="">132.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周三</td>
+        <td>5月13日</td>
+        <td>8958.5</td>
+        <td>8764</td>
+        <td class="hot">194.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周四</td>
+        <td>5月14日</td>
+        <td>8991.9</td>
+        <td>8778.7</td>
+        <td class="hot">213.1</td>
+        <td>中证1000</td>
+      </tr><tr class="delivery">
+        <td>8</td>
+        <td>周五</td>
+        <td>5月15日</td>
+        <td>8846.5</td>
+        <td>8616.1</td>
+        <td class="hot">230.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周一</td>
+        <td>5月18日</td>
+        <td>8766.3</td>
+        <td>8610.7</td>
+        <td class="">155.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周二</td>
+        <td>5月19日</td>
+        <td>8812</td>
+        <td>8602</td>
+        <td class="hot">210</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周三</td>
+        <td>5月20日</td>
+        <td>8823.7</td>
+        <td>8697.4</td>
+        <td class="">126.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周四</td>
+        <td>5月21日</td>
+        <td>8896.6</td>
+        <td>8500.9</td>
+        <td class="hot">395.7</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周五</td>
+        <td>5月22日</td>
+        <td>8719.4</td>
+        <td>8521.7</td>
+        <td class="hot">197.7</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周一</td>
+        <td>5月25日</td>
+        <td>8802.9</td>
+        <td>8670.7</td>
+        <td class="">132.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周二</td>
+        <td>5月26日</td>
+        <td>8756.5</td>
+        <td>8560.8</td>
+        <td class="hot">195.7</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周三</td>
+        <td>5月27日</td>
+        <td>8737.1</td>
+        <td>8495.7</td>
+        <td class="hot">241.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周四</td>
+        <td>5月28日</td>
+        <td>8659.6</td>
+        <td>8459.9</td>
+        <td class="hot">199.7</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周五</td>
+        <td>5月29日</td>
+        <td>8680.3</td>
+        <td>8357.8</td>
+        <td class="hot">322.5</td>
+        <td>中证1000</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>18</td><td></td><td></td><td></td><td>3476.7</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">193.1</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">6月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>6月1日</td>
+        <td>8505</td>
+        <td>8339.4</td>
+        <td class="">165.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>6月2日</td>
+        <td>8440.2</td>
+        <td>8219.2</td>
+        <td class="hot">221.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>6月3日</td>
+        <td>8549.2</td>
+        <td>8357.5</td>
+        <td class="hot">191.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>6月4日</td>
+        <td>8456</td>
+        <td>8338.9</td>
+        <td class="">117.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>6月5日</td>
+        <td>8500.1</td>
+        <td>8305.4</td>
+        <td class="hot">194.7</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>6月8日</td>
+        <td>8260.2</td>
+        <td>7987.4</td>
+        <td class="hot">272.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>6月9日</td>
+        <td>8322.1</td>
+        <td>8096.6</td>
+        <td class="hot">225.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>6月10日</td>
+        <td>8285.3</td>
+        <td>8103</td>
+        <td class="hot">182.3</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>6月11日</td>
+        <td>8223.5</td>
+        <td>8084.9</td>
+        <td class="">138.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>6月12日</td>
+        <td>8348.8</td>
+        <td>8181.4</td>
+        <td class="">167.4</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>6月15日</td>
+        <td>8521.2</td>
+        <td>8269.4</td>
+        <td class="hot">251.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>6月16日</td>
+        <td>8684.7</td>
+        <td>8508.9</td>
+        <td class="">175.7</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>6月17日</td>
+        <td>8705.4</td>
+        <td>8581.7</td>
+        <td class="">123.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>6月18日</td>
+        <td>8796.5</td>
+        <td>8664.3</td>
+        <td class="">132.2</td>
+        <td>中证1000</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周一</td>
+        <td>6月22日</td>
+        <td>8865.8</td>
+        <td>8609.6</td>
+        <td class="hot">256.2</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周二</td>
+        <td>6月23日</td>
+        <td>8862.7</td>
+        <td>8626.1</td>
+        <td class="hot">236.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周三</td>
+        <td>6月24日</td>
+        <td>8803.5</td>
+        <td>8581.8</td>
+        <td class="hot">221.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周四</td>
+        <td>6月25日</td>
+        <td>8872.1</td>
+        <td>8743.2</td>
+        <td class="">128.9</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周五</td>
+        <td>6月26日</td>
+        <td>8797.3</td>
+        <td>8563.7</td>
+        <td class="hot">233.6</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周一</td>
+        <td>6月29日</td>
+        <td>8677.6</td>
+        <td>8413.9</td>
+        <td class="hot">263.8</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周二</td>
+        <td>6月30日</td>
+        <td>8815.1</td>
+        <td>8547.3</td>
+        <td class="hot">267.8</td>
+        <td>中证1000</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>4169.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">198.5</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">7月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>8944.2</td>
+        <td>8806.6</td>
+        <td class="">137.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>8866</td>
+        <td>8598.9</td>
+        <td class="hot">267.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>8740.7</td>
+        <td>8559.3</td>
+        <td class="hot">181.4</td>
+        <td>中证1000</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>586</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">195.3</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="CSI500">
+      <h2>2026年统计 - 中证500</h2>
+      <table>
+        <thead>
+          <tr class="month-title"><td colspan="7">1月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>1月5日</td>
+        <td>7651.2</td>
+        <td>7523.2</td>
+        <td class="">128</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>1月6日</td>
+        <td>7814.7</td>
+        <td>7663.7</td>
+        <td class="">151</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>1月7日</td>
+        <td>7909.7</td>
+        <td>7828.4</td>
+        <td class="">81.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>1月8日</td>
+        <td>7938.6</td>
+        <td>7849.1</td>
+        <td class="">89.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>1月9日</td>
+        <td>8064.8</td>
+        <td>7907.8</td>
+        <td class="">156.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>1月12日</td>
+        <td>8261.4</td>
+        <td>8103.2</td>
+        <td class="">158.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>1月13日</td>
+        <td>8270.4</td>
+        <td>8106.6</td>
+        <td class="hot">163.8</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>1月14日</td>
+        <td>8368.2</td>
+        <td>8123.4</td>
+        <td class="hot">244.8</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>1月15日</td>
+        <td>8249</td>
+        <td>8148.8</td>
+        <td class="">100.2</td>
+        <td>中证500</td>
+      </tr><tr class="delivery">
+        <td>10</td>
+        <td>周五</td>
+        <td>1月16日</td>
+        <td>8292.7</td>
+        <td>8204.5</td>
+        <td class="">88.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>1月19日</td>
+        <td>8318.4</td>
+        <td>8195.1</td>
+        <td class="">123.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>1月20日</td>
+        <td>8342.9</td>
+        <td>8142.1</td>
+        <td class="hot">200.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>1月21日</td>
+        <td>8351.5</td>
+        <td>8196.6</td>
+        <td class="">154.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>1月22日</td>
+        <td>8396.1</td>
+        <td>8337.2</td>
+        <td class="">58.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周五</td>
+        <td>1月23日</td>
+        <td>8590.2</td>
+        <td>8417.8</td>
+        <td class="hot">172.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>1月26日</td>
+        <td>8671.3</td>
+        <td>8453.5</td>
+        <td class="hot">217.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>1月27日</td>
+        <td>8581.1</td>
+        <td>8368.2</td>
+        <td class="hot">212.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>1月28日</td>
+        <td>8633.1</td>
+        <td>8526.5</td>
+        <td class="">106.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>1月29日</td>
+        <td>8658.9</td>
+        <td>8503.1</td>
+        <td class="">155.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>1月30日</td>
+        <td>8496.3</td>
+        <td>8194.6</td>
+        <td class="hot">301.8</td>
+        <td>中证500</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>20</td><td></td><td></td><td></td><td>3067.1</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">153.4</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">2月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>2月2日</td>
+        <td>8324.4</td>
+        <td>8032.4</td>
+        <td class="hot">292.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>2月3日</td>
+        <td>8286.7</td>
+        <td>8075.4</td>
+        <td class="hot">211.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>2月4日</td>
+        <td>8309.9</td>
+        <td>8179.4</td>
+        <td class="">130.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>2月5日</td>
+        <td>8224.8</td>
+        <td>8081.4</td>
+        <td class="">143.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>2月6日</td>
+        <td>8247.3</td>
+        <td>8014.7</td>
+        <td class="hot">232.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>2月9日</td>
+        <td>8313.5</td>
+        <td>8229</td>
+        <td class="">84.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>2月10日</td>
+        <td>8332</td>
+        <td>8258.2</td>
+        <td class="">73.8</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>2月11日</td>
+        <td>8373.5</td>
+        <td>8295.1</td>
+        <td class="">78.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>2月12日</td>
+        <td>8437.4</td>
+        <td>8341.8</td>
+        <td class="">95.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>2月13日</td>
+        <td>8419.8</td>
+        <td>8290.8</td>
+        <td class="">128.9</td>
+        <td>中证500</td>
+      </tr><tr class="delivery">
+        <td>11</td>
+        <td>周二</td>
+        <td>2月24日</td>
+        <td>8444.1</td>
+        <td>8328.6</td>
+        <td class="">115.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周三</td>
+        <td>2月25日</td>
+        <td>8551.5</td>
+        <td>8401.6</td>
+        <td class="">149.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周四</td>
+        <td>2月26日</td>
+        <td>8582.8</td>
+        <td>8490.9</td>
+        <td class="">91.8</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周五</td>
+        <td>2月27日</td>
+        <td>8658.5</td>
+        <td>8499.8</td>
+        <td class="">158.7</td>
+        <td>中证500</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>14</td><td></td><td></td><td></td><td>1987.1</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">141.9</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">3月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>3月2日</td>
+        <td>8684</td>
+        <td>8551.5</td>
+        <td class="">132.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>3月3日</td>
+        <td>8654.6</td>
+        <td>8267.1</td>
+        <td class="hot">387.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>3月4日</td>
+        <td>8377.2</td>
+        <td>8168</td>
+        <td class="hot">209.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>3月5日</td>
+        <td>8391</td>
+        <td>8251.1</td>
+        <td class="">139.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>3月6日</td>
+        <td>8394.3</td>
+        <td>8258.6</td>
+        <td class="">135.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>3月9日</td>
+        <td>8305.9</td>
+        <td>8066.1</td>
+        <td class="hot">239.8</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>3月10日</td>
+        <td>8412.9</td>
+        <td>8330.9</td>
+        <td class="">82</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>3月11日</td>
+        <td>8439.6</td>
+        <td>8379</td>
+        <td class="">60.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>3月12日</td>
+        <td>8433</td>
+        <td>8290.6</td>
+        <td class="">142.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>3月13日</td>
+        <td>8371.7</td>
+        <td>8218</td>
+        <td class="">153.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>3月16日</td>
+        <td>8233.7</td>
+        <td>8060.8</td>
+        <td class="hot">172.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>3月17日</td>
+        <td>8207.5</td>
+        <td>8016</td>
+        <td class="hot">191.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>3月18日</td>
+        <td>8106</td>
+        <td>7958.5</td>
+        <td class="">147.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>3月19日</td>
+        <td>8000.4</td>
+        <td>7844.2</td>
+        <td class="">156.3</td>
+        <td>中证500</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周五</td>
+        <td>3月20日</td>
+        <td>7941.6</td>
+        <td>7757.8</td>
+        <td class="hot">183.8</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>3月23日</td>
+        <td>7708.4</td>
+        <td>7399</td>
+        <td class="hot">309.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>3月24日</td>
+        <td>7597.4</td>
+        <td>7379.9</td>
+        <td class="hot">217.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>3月25日</td>
+        <td>7806.9</td>
+        <td>7660.4</td>
+        <td class="">146.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>3月26日</td>
+        <td>7777.3</td>
+        <td>7620.8</td>
+        <td class="">156.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>3月27日</td>
+        <td>7785.4</td>
+        <td>7539.2</td>
+        <td class="hot">246.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周一</td>
+        <td>3月30日</td>
+        <td>7766.1</td>
+        <td>7610.5</td>
+        <td class="">155.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>22</td>
+        <td>周二</td>
+        <td>3月31日</td>
+        <td>7788.9</td>
+        <td>7617.3</td>
+        <td class="hot">171.6</td>
+        <td>中证500</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>22</td><td></td><td></td><td></td><td>3938.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">179</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">4月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>4月1日</td>
+        <td>7779</td>
+        <td>7689.6</td>
+        <td class="">89.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>4月2日</td>
+        <td>7740.1</td>
+        <td>7562.2</td>
+        <td class="hot">177.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>4月3日</td>
+        <td>7640.8</td>
+        <td>7518.3</td>
+        <td class="">122.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周二</td>
+        <td>4月7日</td>
+        <td>7630.1</td>
+        <td>7529.4</td>
+        <td class="">100.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周三</td>
+        <td>4月8日</td>
+        <td>7945.2</td>
+        <td>7741.6</td>
+        <td class="hot">203.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周四</td>
+        <td>4月9日</td>
+        <td>7947.7</td>
+        <td>7846</td>
+        <td class="">101.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周五</td>
+        <td>4月10日</td>
+        <td>8070.6</td>
+        <td>7953.5</td>
+        <td class="">117.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周一</td>
+        <td>4月13日</td>
+        <td>7991</td>
+        <td>7917.9</td>
+        <td class="">73.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周二</td>
+        <td>4月14日</td>
+        <td>8088.6</td>
+        <td>8002.6</td>
+        <td class="">85.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周三</td>
+        <td>4月15日</td>
+        <td>8150.6</td>
+        <td>8020.9</td>
+        <td class="">129.8</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周四</td>
+        <td>4月16日</td>
+        <td>8189.2</td>
+        <td>8056.8</td>
+        <td class="">132.4</td>
+        <td>中证500</td>
+      </tr><tr class="delivery">
+        <td>12</td>
+        <td>周五</td>
+        <td>4月17日</td>
+        <td>8230.1</td>
+        <td>8149.9</td>
+        <td class="">80.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周一</td>
+        <td>4月20日</td>
+        <td>8310.9</td>
+        <td>8214.3</td>
+        <td class="">96.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周二</td>
+        <td>4月21日</td>
+        <td>8281.3</td>
+        <td>8189.8</td>
+        <td class="">91.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周三</td>
+        <td>4月22日</td>
+        <td>8377.3</td>
+        <td>8226.9</td>
+        <td class="">150.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周四</td>
+        <td>4月23日</td>
+        <td>8401.5</td>
+        <td>8221</td>
+        <td class="hot">180.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周五</td>
+        <td>4月24日</td>
+        <td>8299.9</td>
+        <td>8165.8</td>
+        <td class="">134.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周一</td>
+        <td>4月27日</td>
+        <td>8326.2</td>
+        <td>8219.9</td>
+        <td class="">106.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周二</td>
+        <td>4月28日</td>
+        <td>8275.3</td>
+        <td>8173.4</td>
+        <td class="">101.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周三</td>
+        <td>4月29日</td>
+        <td>8356.7</td>
+        <td>8157.4</td>
+        <td class="hot">199.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周四</td>
+        <td>4月30日</td>
+        <td>8375.2</td>
+        <td>8300.5</td>
+        <td class="">74.7</td>
+        <td>中证500</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>2549.9</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">121.4</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">5月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>5月6日</td>
+        <td>8621.3</td>
+        <td>8441.3</td>
+        <td class="hot">180</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>5月7日</td>
+        <td>8700.3</td>
+        <td>8598.7</td>
+        <td class="">101.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>5月8日</td>
+        <td>8706.3</td>
+        <td>8616.2</td>
+        <td class="">90.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周一</td>
+        <td>5月11日</td>
+        <td>8863.8</td>
+        <td>8716.5</td>
+        <td class="">147.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周二</td>
+        <td>5月12日</td>
+        <td>8856.2</td>
+        <td>8736.4</td>
+        <td class="">119.8</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周三</td>
+        <td>5月13日</td>
+        <td>8925.9</td>
+        <td>8730.9</td>
+        <td class="hot">195</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周四</td>
+        <td>5月14日</td>
+        <td>8956.7</td>
+        <td>8670.2</td>
+        <td class="hot">286.5</td>
+        <td>中证500</td>
+      </tr><tr class="delivery">
+        <td>8</td>
+        <td>周五</td>
+        <td>5月15日</td>
+        <td>8717.1</td>
+        <td>8473</td>
+        <td class="hot">244.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周一</td>
+        <td>5月18日</td>
+        <td>8606.4</td>
+        <td>8472.4</td>
+        <td class="">134</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周二</td>
+        <td>5月19日</td>
+        <td>8633.1</td>
+        <td>8416.5</td>
+        <td class="hot">216.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周三</td>
+        <td>5月20日</td>
+        <td>8681.7</td>
+        <td>8552.4</td>
+        <td class="">129.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周四</td>
+        <td>5月21日</td>
+        <td>8790.4</td>
+        <td>8406.3</td>
+        <td class="hot">384.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周五</td>
+        <td>5月22日</td>
+        <td>8591.2</td>
+        <td>8414.9</td>
+        <td class="hot">176.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周一</td>
+        <td>5月25日</td>
+        <td>8705.2</td>
+        <td>8543.9</td>
+        <td class="hot">161.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周二</td>
+        <td>5月26日</td>
+        <td>8673.2</td>
+        <td>8529.7</td>
+        <td class="">143.5</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周三</td>
+        <td>5月27日</td>
+        <td>8722.6</td>
+        <td>8491.3</td>
+        <td class="hot">231.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周四</td>
+        <td>5月28日</td>
+        <td>8596.4</td>
+        <td>8424.4</td>
+        <td class="hot">172</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周五</td>
+        <td>5月29日</td>
+        <td>8598</td>
+        <td>8296.2</td>
+        <td class="hot">301.7</td>
+        <td>中证500</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>18</td><td></td><td></td><td></td><td>3414.3</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">189.7</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">6月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>6月1日</td>
+        <td>8442.5</td>
+        <td>8259.6</td>
+        <td class="hot">182.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>6月2日</td>
+        <td>8378.4</td>
+        <td>8142.5</td>
+        <td class="hot">235.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>6月3日</td>
+        <td>8462.7</td>
+        <td>8294.3</td>
+        <td class="hot">168.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>6月4日</td>
+        <td>8391.1</td>
+        <td>8279.9</td>
+        <td class="">111.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>6月5日</td>
+        <td>8399.4</td>
+        <td>8218.1</td>
+        <td class="hot">181.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>6月8日</td>
+        <td>8142.3</td>
+        <td>7889.4</td>
+        <td class="hot">252.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>6月9日</td>
+        <td>8181.1</td>
+        <td>7965.5</td>
+        <td class="hot">215.6</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>6月10日</td>
+        <td>8148.3</td>
+        <td>7973.5</td>
+        <td class="hot">174.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>6月11日</td>
+        <td>8091.7</td>
+        <td>7965</td>
+        <td class="">126.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>6月12日</td>
+        <td>8258.9</td>
+        <td>8098.8</td>
+        <td class="hot">160.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>6月15日</td>
+        <td>8406.8</td>
+        <td>8174.6</td>
+        <td class="hot">232.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>6月16日</td>
+        <td>8538.2</td>
+        <td>8413.5</td>
+        <td class="">124.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>6月17日</td>
+        <td>8630.5</td>
+        <td>8451.6</td>
+        <td class="hot">178.9</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>6月18日</td>
+        <td>8716.3</td>
+        <td>8588</td>
+        <td class="">128.4</td>
+        <td>中证500</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周一</td>
+        <td>6月22日</td>
+        <td>8870.5</td>
+        <td>8605.2</td>
+        <td class="hot">265.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周二</td>
+        <td>6月23日</td>
+        <td>8895.3</td>
+        <td>8629</td>
+        <td class="hot">266.3</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周三</td>
+        <td>6月24日</td>
+        <td>8850.8</td>
+        <td>8613.1</td>
+        <td class="hot">237.7</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周四</td>
+        <td>6月25日</td>
+        <td>8941</td>
+        <td>8803.6</td>
+        <td class="">137.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周五</td>
+        <td>6月26日</td>
+        <td>8926.8</td>
+        <td>8647.8</td>
+        <td class="hot">279</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周一</td>
+        <td>6月29日</td>
+        <td>8837</td>
+        <td>8587.9</td>
+        <td class="hot">249.1</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周二</td>
+        <td>6月30日</td>
+        <td>9040.1</td>
+        <td>8771.7</td>
+        <td class="hot">268.5</td>
+        <td>中证500</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>4177.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">198.9</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">7月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>9147.6</td>
+        <td>8956.2</td>
+        <td class="hot">191.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>8932.6</td>
+        <td>8667.4</td>
+        <td class="hot">265.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>8860.4</td>
+        <td>8636.2</td>
+        <td class="hot">224.3</td>
+        <td>中证500</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>680.9</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">227</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="SSE">
+      <h2>2026年统计 - 上证指数</h2>
+      <table>
+        <thead>
+          <tr class="month-title"><td colspan="7">1月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>1月5日</td>
+        <td>4025.3</td>
+        <td>3983.6</td>
+        <td class="">41.7</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>1月6日</td>
+        <td>4083.7</td>
+        <td>4025.1</td>
+        <td class="hot">58.6</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>1月7日</td>
+        <td>4098.8</td>
+        <td>4069.4</td>
+        <td class="">29.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>1月8日</td>
+        <td>4093.9</td>
+        <td>4067.1</td>
+        <td class="">26.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>1月9日</td>
+        <td>4121.7</td>
+        <td>4083.6</td>
+        <td class="">38.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>1月12日</td>
+        <td>4168.4</td>
+        <td>4119.9</td>
+        <td class="">48.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>1月13日</td>
+        <td>4179.7</td>
+        <td>4126.2</td>
+        <td class="hot">53.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>1月14日</td>
+        <td>4190.9</td>
+        <td>4103.6</td>
+        <td class="hot">87.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>1月15日</td>
+        <td>4133.1</td>
+        <td>4096.9</td>
+        <td class="">36.2</td>
+        <td>上证指数</td>
+      </tr><tr class="delivery">
+        <td>10</td>
+        <td>周五</td>
+        <td>1月16日</td>
+        <td>4140.2</td>
+        <td>4091.8</td>
+        <td class="">48.4</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>1月19日</td>
+        <td>4126.5</td>
+        <td>4090.1</td>
+        <td class="">36.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>1月20日</td>
+        <td>4128.9</td>
+        <td>4080.3</td>
+        <td class="">48.6</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>1月21日</td>
+        <td>4136</td>
+        <td>4103.5</td>
+        <td class="">32.4</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>1月22日</td>
+        <td>4140.8</td>
+        <td>4109.9</td>
+        <td class="">30.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周五</td>
+        <td>1月23日</td>
+        <td>4143.8</td>
+        <td>4120.2</td>
+        <td class="">23.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>1月26日</td>
+        <td>4161</td>
+        <td>4124.7</td>
+        <td class="">36.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>1月27日</td>
+        <td>4158.8</td>
+        <td>4101.8</td>
+        <td class="hot">57</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>1月28日</td>
+        <td>4170.1</td>
+        <td>4138</td>
+        <td class="">32.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>1月29日</td>
+        <td>4170.2</td>
+        <td>4138.3</td>
+        <td class="">31.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>1月30日</td>
+        <td>4152.9</td>
+        <td>4064.8</td>
+        <td class="hot">88.1</td>
+        <td>上证指数</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>20</td><td></td><td></td><td></td><td>885.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">44.3</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">2月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>2月2日</td>
+        <td>4103.4</td>
+        <td>4013.7</td>
+        <td class="hot">89.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>2月3日</td>
+        <td>4069.4</td>
+        <td>4002.8</td>
+        <td class="hot">66.6</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>2月4日</td>
+        <td>4104.6</td>
+        <td>4062.7</td>
+        <td class="">41.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>2月5日</td>
+        <td>4088.9</td>
+        <td>4048.9</td>
+        <td class="">40</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>2月6日</td>
+        <td>4095</td>
+        <td>4030</td>
+        <td class="hot">65.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>2月9日</td>
+        <td>4123.2</td>
+        <td>4093.1</td>
+        <td class="">30.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>2月10日</td>
+        <td>4134.3</td>
+        <td>4117.6</td>
+        <td class="">16.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>2月11日</td>
+        <td>4142.6</td>
+        <td>4122.4</td>
+        <td class="">20.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>2月12日</td>
+        <td>4140.6</td>
+        <td>4124.1</td>
+        <td class="">16.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>2月13日</td>
+        <td>4123.8</td>
+        <td>4079.8</td>
+        <td class="">44.1</td>
+        <td>上证指数</td>
+      </tr><tr class="delivery">
+        <td>11</td>
+        <td>周二</td>
+        <td>2月24日</td>
+        <td>4131.6</td>
+        <td>4105.9</td>
+        <td class="">25.6</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周三</td>
+        <td>2月25日</td>
+        <td>4167.8</td>
+        <td>4122.7</td>
+        <td class="">45.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周四</td>
+        <td>2月26日</td>
+        <td>4152.2</td>
+        <td>4127.2</td>
+        <td class="">25</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周五</td>
+        <td>2月27日</td>
+        <td>4166.2</td>
+        <td>4128.4</td>
+        <td class="">37.9</td>
+        <td>上证指数</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>14</td><td></td><td></td><td></td><td>564.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">40.3</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">3月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>3月2日</td>
+        <td>4188.8</td>
+        <td>4131.4</td>
+        <td class="hot">57.4</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>3月3日</td>
+        <td>4197.2</td>
+        <td>4116</td>
+        <td class="hot">81.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>3月4日</td>
+        <td>4106</td>
+        <td>4055.4</td>
+        <td class="hot">50.6</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>3月5日</td>
+        <td>4125.6</td>
+        <td>4090.6</td>
+        <td class="">35</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>3月6日</td>
+        <td>4129.5</td>
+        <td>4085.9</td>
+        <td class="">43.6</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>3月9日</td>
+        <td>4106.5</td>
+        <td>4052.5</td>
+        <td class="hot">54</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>3月10日</td>
+        <td>4124</td>
+        <td>4098.6</td>
+        <td class="">25.4</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>3月11日</td>
+        <td>4135.8</td>
+        <td>4112.8</td>
+        <td class="">23</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>3月12日</td>
+        <td>4141.6</td>
+        <td>4103.2</td>
+        <td class="">38.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>3月13日</td>
+        <td>4134.1</td>
+        <td>4086.8</td>
+        <td class="">47.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>3月16日</td>
+        <td>4096.1</td>
+        <td>4048.1</td>
+        <td class="">48</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>3月17日</td>
+        <td>4108.4</td>
+        <td>4049.6</td>
+        <td class="hot">58.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>3月18日</td>
+        <td>4065.4</td>
+        <td>4023</td>
+        <td class="">42.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>3月19日</td>
+        <td>4042</td>
+        <td>3994.2</td>
+        <td class="">47.9</td>
+        <td>上证指数</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周五</td>
+        <td>3月20日</td>
+        <td>4022.7</td>
+        <td>3955.7</td>
+        <td class="hot">67</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>3月23日</td>
+        <td>3906.6</td>
+        <td>3794.7</td>
+        <td class="hot">111.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>3月24日</td>
+        <td>3881.4</td>
+        <td>3808</td>
+        <td class="hot">73.4</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>3月25日</td>
+        <td>3933.1</td>
+        <td>3891.8</td>
+        <td class="">41.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>3月26日</td>
+        <td>3937.1</td>
+        <td>3880.6</td>
+        <td class="hot">56.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>3月27日</td>
+        <td>3924.1</td>
+        <td>3852.1</td>
+        <td class="hot">72</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周一</td>
+        <td>3月30日</td>
+        <td>3924.3</td>
+        <td>3872.8</td>
+        <td class="hot">51.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>22</td>
+        <td>周二</td>
+        <td>3月31日</td>
+        <td>3948.8</td>
+        <td>3891.9</td>
+        <td class="hot">57</td>
+        <td>上证指数</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>22</td><td></td><td></td><td></td><td>1183.4</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">53.8</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">4月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>4月1日</td>
+        <td>3955.9</td>
+        <td>3929.9</td>
+        <td class="">26</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>4月2日</td>
+        <td>3952.6</td>
+        <td>3900.1</td>
+        <td class="hot">52.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>4月3日</td>
+        <td>3929.5</td>
+        <td>3871.3</td>
+        <td class="hot">58.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周二</td>
+        <td>4月7日</td>
+        <td>3902.6</td>
+        <td>3875.7</td>
+        <td class="">26.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周三</td>
+        <td>4月8日</td>
+        <td>3995</td>
+        <td>3926.2</td>
+        <td class="hot">68.7</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周四</td>
+        <td>4月9日</td>
+        <td>3979.1</td>
+        <td>3955.2</td>
+        <td class="">23.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周五</td>
+        <td>4月10日</td>
+        <td>4011</td>
+        <td>3979.8</td>
+        <td class="">31.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周一</td>
+        <td>4月13日</td>
+        <td>3991.3</td>
+        <td>3966.2</td>
+        <td class="">25.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周二</td>
+        <td>4月14日</td>
+        <td>4026.6</td>
+        <td>3992.4</td>
+        <td class="">34.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周三</td>
+        <td>4月15日</td>
+        <td>4050.6</td>
+        <td>4020.9</td>
+        <td class="">29.7</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周四</td>
+        <td>4月16日</td>
+        <td>4057.8</td>
+        <td>4028.9</td>
+        <td class="">28.9</td>
+        <td>上证指数</td>
+      </tr><tr class="delivery">
+        <td>12</td>
+        <td>周五</td>
+        <td>4月17日</td>
+        <td>4058.6</td>
+        <td>4038.4</td>
+        <td class="">20.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周一</td>
+        <td>4月20日</td>
+        <td>4083.2</td>
+        <td>4051.7</td>
+        <td class="">31.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周二</td>
+        <td>4月21日</td>
+        <td>4086.6</td>
+        <td>4062.1</td>
+        <td class="">24.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周三</td>
+        <td>4月22日</td>
+        <td>4106.8</td>
+        <td>4074.7</td>
+        <td class="">32.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周四</td>
+        <td>4月23日</td>
+        <td>4114.8</td>
+        <td>4070.5</td>
+        <td class="">44.4</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周五</td>
+        <td>4月24日</td>
+        <td>4092.6</td>
+        <td>4061.1</td>
+        <td class="">31.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周一</td>
+        <td>4月27日</td>
+        <td>4092.8</td>
+        <td>4071.1</td>
+        <td class="">21.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周二</td>
+        <td>4月28日</td>
+        <td>4090.2</td>
+        <td>4062.9</td>
+        <td class="">27.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周三</td>
+        <td>4月29日</td>
+        <td>4112.2</td>
+        <td>4061.8</td>
+        <td class="hot">50.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周四</td>
+        <td>4月30日</td>
+        <td>4118.8</td>
+        <td>4101</td>
+        <td class="">17.8</td>
+        <td>上证指数</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>706.8</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">33.7</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">5月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>5月6日</td>
+        <td>4166.1</td>
+        <td>4129.9</td>
+        <td class="">36.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>5月7日</td>
+        <td>4180.2</td>
+        <td>4163.1</td>
+        <td class="">17.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>5月8日</td>
+        <td>4183.1</td>
+        <td>4154.2</td>
+        <td class="">28.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周一</td>
+        <td>5月11日</td>
+        <td>4229.6</td>
+        <td>4186.1</td>
+        <td class="">43.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周二</td>
+        <td>5月12日</td>
+        <td>4230.2</td>
+        <td>4199.3</td>
+        <td class="">30.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周三</td>
+        <td>5月13日</td>
+        <td>4245.1</td>
+        <td>4192.3</td>
+        <td class="hot">52.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周四</td>
+        <td>5月14日</td>
+        <td>4258.9</td>
+        <td>4177.9</td>
+        <td class="hot">80.9</td>
+        <td>上证指数</td>
+      </tr><tr class="delivery">
+        <td>8</td>
+        <td>周五</td>
+        <td>5月15日</td>
+        <td>4191.8</td>
+        <td>4114.1</td>
+        <td class="hot">77.7</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周一</td>
+        <td>5月18日</td>
+        <td>4145.7</td>
+        <td>4108.6</td>
+        <td class="">37.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周二</td>
+        <td>5月19日</td>
+        <td>4170.3</td>
+        <td>4108</td>
+        <td class="hot">62.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周三</td>
+        <td>5月20日</td>
+        <td>4169.8</td>
+        <td>4140</td>
+        <td class="">29.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周四</td>
+        <td>5月21日</td>
+        <td>4199.5</td>
+        <td>4074.2</td>
+        <td class="hot">125.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周五</td>
+        <td>5月22日</td>
+        <td>4120.1</td>
+        <td>4067.7</td>
+        <td class="hot">52.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周一</td>
+        <td>5月25日</td>
+        <td>4153.9</td>
+        <td>4119.8</td>
+        <td class="">34.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周二</td>
+        <td>5月26日</td>
+        <td>4150.3</td>
+        <td>4104.5</td>
+        <td class="">45.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周三</td>
+        <td>5月27日</td>
+        <td>4153.6</td>
+        <td>4077.6</td>
+        <td class="hot">75.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周四</td>
+        <td>5月28日</td>
+        <td>4110.8</td>
+        <td>4055.8</td>
+        <td class="hot">55</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周五</td>
+        <td>5月29日</td>
+        <td>4113</td>
+        <td>4055.9</td>
+        <td class="hot">57.1</td>
+        <td>上证指数</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>18</td><td></td><td></td><td></td><td>942.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">52.4</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">6月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>6月1日</td>
+        <td>4093</td>
+        <td>4045.7</td>
+        <td class="">47.4</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>6月2日</td>
+        <td>4089.6</td>
+        <td>4032.6</td>
+        <td class="hot">57</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>6月3日</td>
+        <td>4107</td>
+        <td>4059.9</td>
+        <td class="">47.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>6月4日</td>
+        <td>4080.7</td>
+        <td>4043.4</td>
+        <td class="">37.3</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>6月5日</td>
+        <td>4078.9</td>
+        <td>4015.1</td>
+        <td class="hot">63.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>6月8日</td>
+        <td>4007.5</td>
+        <td>3927.9</td>
+        <td class="hot">79.6</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>6月9日</td>
+        <td>4010.9</td>
+        <td>3955.9</td>
+        <td class="hot">55</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>6月10日</td>
+        <td>4006.3</td>
+        <td>3963.4</td>
+        <td class="">42.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>6月11日</td>
+        <td>3997.5</td>
+        <td>3958.4</td>
+        <td class="">39</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>6月12日</td>
+        <td>4060.3</td>
+        <td>4008.2</td>
+        <td class="hot">52.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>6月15日</td>
+        <td>4097.2</td>
+        <td>4051.1</td>
+        <td class="">46.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>6月16日</td>
+        <td>4103.9</td>
+        <td>4077.9</td>
+        <td class="">26.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>6月17日</td>
+        <td>4110</td>
+        <td>4073.7</td>
+        <td class="">36.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>6月18日</td>
+        <td>4117.5</td>
+        <td>4080.3</td>
+        <td class="">37.2</td>
+        <td>上证指数</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周一</td>
+        <td>6月22日</td>
+        <td>4164.4</td>
+        <td>4070.2</td>
+        <td class="hot">94.2</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周二</td>
+        <td>6月23日</td>
+        <td>4175.3</td>
+        <td>4085.6</td>
+        <td class="hot">89.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周三</td>
+        <td>6月24日</td>
+        <td>4117.3</td>
+        <td>4075.5</td>
+        <td class="">41.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周四</td>
+        <td>6月25日</td>
+        <td>4133.1</td>
+        <td>4093</td>
+        <td class="">40.1</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周五</td>
+        <td>6月26日</td>
+        <td>4099.8</td>
+        <td>4007.9</td>
+        <td class="hot">91.9</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周一</td>
+        <td>6月29日</td>
+        <td>4075.3</td>
+        <td>3992.6</td>
+        <td class="hot">82.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周二</td>
+        <td>6月30日</td>
+        <td>4097.4</td>
+        <td>4052.2</td>
+        <td class="">45.2</td>
+        <td>上证指数</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>1152.7</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">54.9</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">7月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>4143.3</td>
+        <td>4087.5</td>
+        <td class="hot">55.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>4093.7</td>
+        <td>4019.2</td>
+        <td class="hot">74.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>4073.9</td>
+        <td>4027.3</td>
+        <td class="">46.6</td>
+        <td>上证指数</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>176.9</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">59</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="IM">
+      <h2>2026年统计 - IM主力</h2>
+      <table>
+        <thead>
+          <tr class="month-title"><td colspan="7">1月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>1月5日</td>
+        <td>7641</td>
+        <td>7462.2</td>
+        <td class="">178.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>1月6日</td>
+        <td>7763.8</td>
+        <td>7644.6</td>
+        <td class="">119.2</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>1月7日</td>
+        <td>7795.8</td>
+        <td>7730</td>
+        <td class="">65.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>1月8日</td>
+        <td>7863.8</td>
+        <td>7739</td>
+        <td class="">124.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>1月9日</td>
+        <td>8049.4</td>
+        <td>7815</td>
+        <td class="hot">234.4</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>1月12日</td>
+        <td>8346</td>
+        <td>8056.2</td>
+        <td class="hot">289.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>1月13日</td>
+        <td>8335</td>
+        <td>8115</td>
+        <td class="hot">220</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>1月14日</td>
+        <td>8419</td>
+        <td>8060</td>
+        <td class="hot">359</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>1月15日</td>
+        <td>8207.4</td>
+        <td>8082</td>
+        <td class="">125.4</td>
+        <td>IM2603</td>
+      </tr><tr class="delivery">
+        <td>10</td>
+        <td>周五</td>
+        <td>1月16日</td>
+        <td>8283.8</td>
+        <td>8115</td>
+        <td class="">168.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>1月19日</td>
+        <td>8275</td>
+        <td>8121.6</td>
+        <td class="">153.4</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>1月20日</td>
+        <td>8247.4</td>
+        <td>8016.8</td>
+        <td class="hot">230.6</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>1月21日</td>
+        <td>8252.8</td>
+        <td>8071</td>
+        <td class="">181.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>1月22日</td>
+        <td>8302.6</td>
+        <td>8218</td>
+        <td class="">84.6</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周五</td>
+        <td>1月23日</td>
+        <td>8518.2</td>
+        <td>8301.4</td>
+        <td class="hot">216.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>1月26日</td>
+        <td>8568</td>
+        <td>8238</td>
+        <td class="hot">330</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>1月27日</td>
+        <td>8393.8</td>
+        <td>8122</td>
+        <td class="hot">271.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>1月28日</td>
+        <td>8412</td>
+        <td>8284</td>
+        <td class="">128</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>1月29日</td>
+        <td>8479.8</td>
+        <td>8280</td>
+        <td class="hot">199.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>1月30日</td>
+        <td>8344.8</td>
+        <td>8050</td>
+        <td class="hot">294.8</td>
+        <td>IM2603</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>20</td><td></td><td></td><td></td><td>3977.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">198.9</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">2月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>2月2日</td>
+        <td>8240</td>
+        <td>7840</td>
+        <td class="hot">400</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>2月3日</td>
+        <td>8215.2</td>
+        <td>7975.2</td>
+        <td class="hot">240</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>2月4日</td>
+        <td>8213</td>
+        <td>8050.2</td>
+        <td class="">162.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>2月5日</td>
+        <td>8144</td>
+        <td>7969.4</td>
+        <td class="">174.6</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>2月6日</td>
+        <td>8154.4</td>
+        <td>7880.8</td>
+        <td class="hot">273.6</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>2月9日</td>
+        <td>8237.6</td>
+        <td>8120.4</td>
+        <td class="">117.2</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>2月10日</td>
+        <td>8258.4</td>
+        <td>8182</td>
+        <td class="">76.4</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>2月11日</td>
+        <td>8307.6</td>
+        <td>8227.4</td>
+        <td class="">80.2</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>2月12日</td>
+        <td>8351.8</td>
+        <td>8205</td>
+        <td class="">146.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>2月13日</td>
+        <td>8316.8</td>
+        <td>8161</td>
+        <td class="">155.8</td>
+        <td>IM2603</td>
+      </tr><tr class="delivery">
+        <td>11</td>
+        <td>周二</td>
+        <td>2月24日</td>
+        <td>8365</td>
+        <td>8227.2</td>
+        <td class="">137.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周三</td>
+        <td>2月25日</td>
+        <td>8441</td>
+        <td>8300</td>
+        <td class="">141</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周四</td>
+        <td>2月26日</td>
+        <td>8458.6</td>
+        <td>8365.6</td>
+        <td class="">93</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周五</td>
+        <td>2月27日</td>
+        <td>8538.8</td>
+        <td>8391</td>
+        <td class="">147.8</td>
+        <td>IM2603</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>14</td><td></td><td></td><td></td><td>2347</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">167.6</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">3月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>3月2日</td>
+        <td>8514.6</td>
+        <td>8338</td>
+        <td class="">176.6</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>3月3日</td>
+        <td>8479.4</td>
+        <td>8105.6</td>
+        <td class="hot">373.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>3月4日</td>
+        <td>8225.2</td>
+        <td>8037.2</td>
+        <td class="">188</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>3月5日</td>
+        <td>8214</td>
+        <td>8060.6</td>
+        <td class="">153.4</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>3月6日</td>
+        <td>8249.4</td>
+        <td>8082.2</td>
+        <td class="">167.2</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>3月9日</td>
+        <td>8214</td>
+        <td>7850</td>
+        <td class="hot">364</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>3月10日</td>
+        <td>8326.2</td>
+        <td>8225</td>
+        <td class="">101.2</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>3月11日</td>
+        <td>8368</td>
+        <td>8290</td>
+        <td class="">78</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>3月12日</td>
+        <td>8344.2</td>
+        <td>8211</td>
+        <td class="">133.2</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>3月13日</td>
+        <td>8332</td>
+        <td>8172</td>
+        <td class="">160</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>3月16日</td>
+        <td>8212.6</td>
+        <td>8054</td>
+        <td class="">158.6</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>3月17日</td>
+        <td>8220</td>
+        <td>8002</td>
+        <td class="hot">218</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>3月18日</td>
+        <td>8098.4</td>
+        <td>7971.2</td>
+        <td class="">127.2</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>3月19日</td>
+        <td>8013.6</td>
+        <td>7873.4</td>
+        <td class="">140.2</td>
+        <td>IM2603</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周五</td>
+        <td>3月20日</td>
+        <td>8004.8</td>
+        <td>7866</td>
+        <td class="">138.8</td>
+        <td>IM2603</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>3月23日</td>
+        <td>7518.6</td>
+        <td>7120.2</td>
+        <td class="hot">398.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>3月24日</td>
+        <td>7402</td>
+        <td>7153.8</td>
+        <td class="hot">248.2</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>3月25日</td>
+        <td>7589</td>
+        <td>7446.6</td>
+        <td class="">142.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>3月26日</td>
+        <td>7534</td>
+        <td>7363.6</td>
+        <td class="">170.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>3月27日</td>
+        <td>7562.4</td>
+        <td>7301</td>
+        <td class="hot">261.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周一</td>
+        <td>3月30日</td>
+        <td>7528</td>
+        <td>7323</td>
+        <td class="hot">205</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>22</td>
+        <td>周二</td>
+        <td>3月31日</td>
+        <td>7550</td>
+        <td>7364</td>
+        <td class="">186</td>
+        <td>IM2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>22</td><td></td><td></td><td></td><td>4290</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">195</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">4月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>4月1日</td>
+        <td>7567.6</td>
+        <td>7456.6</td>
+        <td class="">111</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>4月2日</td>
+        <td>7510</td>
+        <td>7311.2</td>
+        <td class="hot">198.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>4月3日</td>
+        <td>7418</td>
+        <td>7280.2</td>
+        <td class="">137.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周二</td>
+        <td>4月7日</td>
+        <td>7437.8</td>
+        <td>7332.8</td>
+        <td class="">105</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周三</td>
+        <td>4月8日</td>
+        <td>7782</td>
+        <td>7560</td>
+        <td class="hot">222</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周四</td>
+        <td>4月9日</td>
+        <td>7757.6</td>
+        <td>7680.2</td>
+        <td class="">77.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周五</td>
+        <td>4月10日</td>
+        <td>7869.6</td>
+        <td>7761</td>
+        <td class="">108.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周一</td>
+        <td>4月13日</td>
+        <td>7829.8</td>
+        <td>7751</td>
+        <td class="">78.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周二</td>
+        <td>4月14日</td>
+        <td>7918</td>
+        <td>7821.8</td>
+        <td class="">96.2</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周三</td>
+        <td>4月15日</td>
+        <td>7982</td>
+        <td>7895.2</td>
+        <td class="">86.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周四</td>
+        <td>4月16日</td>
+        <td>8072.2</td>
+        <td>7923.6</td>
+        <td class="">148.6</td>
+        <td>IM2606</td>
+      </tr><tr class="delivery">
+        <td>12</td>
+        <td>周五</td>
+        <td>4月17日</td>
+        <td>8165.8</td>
+        <td>8020</td>
+        <td class="">145.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周一</td>
+        <td>4月20日</td>
+        <td>8223.8</td>
+        <td>8102.6</td>
+        <td class="">121.2</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周二</td>
+        <td>4月21日</td>
+        <td>8185.8</td>
+        <td>8092</td>
+        <td class="">93.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周三</td>
+        <td>4月22日</td>
+        <td>8326.4</td>
+        <td>8141</td>
+        <td class="">185.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周四</td>
+        <td>4月23日</td>
+        <td>8337</td>
+        <td>8144.8</td>
+        <td class="hot">192.2</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周五</td>
+        <td>4月24日</td>
+        <td>8232</td>
+        <td>8115.6</td>
+        <td class="">116.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周一</td>
+        <td>4月27日</td>
+        <td>8239</td>
+        <td>8126.8</td>
+        <td class="">112.2</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周二</td>
+        <td>4月28日</td>
+        <td>8195</td>
+        <td>8056</td>
+        <td class="">139</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周三</td>
+        <td>4月29日</td>
+        <td>8271</td>
+        <td>8070</td>
+        <td class="hot">201</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周四</td>
+        <td>4月30日</td>
+        <td>8292</td>
+        <td>8211.8</td>
+        <td class="">80.2</td>
+        <td>IM2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>2758.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">131.3</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">5月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>5月6日</td>
+        <td>8553</td>
+        <td>8381</td>
+        <td class="">172</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>5月7日</td>
+        <td>8639.6</td>
+        <td>8491</td>
+        <td class="">148.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>5月8日</td>
+        <td>8670</td>
+        <td>8568.2</td>
+        <td class="">101.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周一</td>
+        <td>5月11日</td>
+        <td>8794.8</td>
+        <td>8655.8</td>
+        <td class="">139</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周二</td>
+        <td>5月12日</td>
+        <td>8739.2</td>
+        <td>8644.2</td>
+        <td class="">95</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周三</td>
+        <td>5月13日</td>
+        <td>8877.4</td>
+        <td>8666</td>
+        <td class="hot">211.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周四</td>
+        <td>5月14日</td>
+        <td>8908.8</td>
+        <td>8685.2</td>
+        <td class="hot">223.6</td>
+        <td>IM2606</td>
+      </tr><tr class="delivery">
+        <td>8</td>
+        <td>周五</td>
+        <td>5月15日</td>
+        <td>8758.2</td>
+        <td>8505.6</td>
+        <td class="hot">252.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周一</td>
+        <td>5月18日</td>
+        <td>8697.8</td>
+        <td>8532.2</td>
+        <td class="">165.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周二</td>
+        <td>5月19日</td>
+        <td>8721.6</td>
+        <td>8511</td>
+        <td class="hot">210.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周三</td>
+        <td>5月20日</td>
+        <td>8717.2</td>
+        <td>8581</td>
+        <td class="">136.2</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周四</td>
+        <td>5月21日</td>
+        <td>8814.2</td>
+        <td>8426.2</td>
+        <td class="hot">388</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周五</td>
+        <td>5月22日</td>
+        <td>8651.2</td>
+        <td>8459</td>
+        <td class="hot">192.2</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周一</td>
+        <td>5月25日</td>
+        <td>8691.4</td>
+        <td>8570.4</td>
+        <td class="">121</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周二</td>
+        <td>5月26日</td>
+        <td>8645</td>
+        <td>8462.6</td>
+        <td class="">182.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周三</td>
+        <td>5月27日</td>
+        <td>8664.8</td>
+        <td>8388</td>
+        <td class="hot">276.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周四</td>
+        <td>5月28日</td>
+        <td>8571.6</td>
+        <td>8367</td>
+        <td class="hot">204.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周五</td>
+        <td>5月29日</td>
+        <td>8589.8</td>
+        <td>8291.6</td>
+        <td class="hot">298.2</td>
+        <td>IM2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>18</td><td></td><td></td><td></td><td>3519.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">195.5</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">6月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>6月1日</td>
+        <td>8450</td>
+        <td>8294.2</td>
+        <td class="">155.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>6月2日</td>
+        <td>8395</td>
+        <td>8190</td>
+        <td class="hot">205</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>6月3日</td>
+        <td>8493.4</td>
+        <td>8300.4</td>
+        <td class="hot">193</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>6月4日</td>
+        <td>8400</td>
+        <td>8306.4</td>
+        <td class="">93.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>6月5日</td>
+        <td>8444.6</td>
+        <td>8240</td>
+        <td class="hot">204.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>6月8日</td>
+        <td>8222</td>
+        <td>7962</td>
+        <td class="hot">260</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>6月9日</td>
+        <td>8261.6</td>
+        <td>8065</td>
+        <td class="hot">196.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>6月10日</td>
+        <td>8214.8</td>
+        <td>8053</td>
+        <td class="">161.8</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>6月11日</td>
+        <td>8194.4</td>
+        <td>8048</td>
+        <td class="">146.4</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>6月12日</td>
+        <td>8323.8</td>
+        <td>8165.2</td>
+        <td class="">158.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>6月15日</td>
+        <td>8480.6</td>
+        <td>8285</td>
+        <td class="hot">195.6</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>6月16日</td>
+        <td>8645</td>
+        <td>8447</td>
+        <td class="hot">198</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>6月17日</td>
+        <td>8696</td>
+        <td>8570</td>
+        <td class="">126</td>
+        <td>IM2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>6月18日</td>
+        <td>8788</td>
+        <td>8646.6</td>
+        <td class="">141.4</td>
+        <td>IM2606</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周一</td>
+        <td>6月22日</td>
+        <td>8558</td>
+        <td>8367</td>
+        <td class="hot">191</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周二</td>
+        <td>6月23日</td>
+        <td>8535</td>
+        <td>8339.2</td>
+        <td class="hot">195.8</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周三</td>
+        <td>6月24日</td>
+        <td>8520</td>
+        <td>8344.6</td>
+        <td class="">175.4</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周四</td>
+        <td>6月25日</td>
+        <td>8562</td>
+        <td>8430</td>
+        <td class="">132</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周五</td>
+        <td>6月26日</td>
+        <td>8490.2</td>
+        <td>8260.2</td>
+        <td class="hot">230</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周一</td>
+        <td>6月29日</td>
+        <td>8393</td>
+        <td>8145.2</td>
+        <td class="hot">247.8</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周二</td>
+        <td>6月30日</td>
+        <td>8518.8</td>
+        <td>8270</td>
+        <td class="hot">248.8</td>
+        <td>IM2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>3857.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">183.7</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">7月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>8629</td>
+        <td>8480</td>
+        <td class="">149</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>8556</td>
+        <td>8344</td>
+        <td class="hot">212</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>8475</td>
+        <td>8337.8</td>
+        <td class="">137.2</td>
+        <td>IM2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>498.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">166.1</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="IC">
+      <h2>2026年统计 - IC主力</h2>
+      <table>
+        <thead>
+          <tr class="month-title"><td colspan="7">1月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>1月5日</td>
+        <td>7599.2</td>
+        <td>7422</td>
+        <td class="hot">177.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>1月6日</td>
+        <td>7786.4</td>
+        <td>7616</td>
+        <td class="hot">170.4</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>1月7日</td>
+        <td>7845.6</td>
+        <td>7770</td>
+        <td class="">75.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>1月8日</td>
+        <td>7883.8</td>
+        <td>7774.6</td>
+        <td class="">109.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>1月9日</td>
+        <td>8037.8</td>
+        <td>7822</td>
+        <td class="hot">215.8</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>1月12日</td>
+        <td>8268</td>
+        <td>8044</td>
+        <td class="hot">224</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>1月13日</td>
+        <td>8265</td>
+        <td>8078</td>
+        <td class="hot">187</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>1月14日</td>
+        <td>8388.6</td>
+        <td>8059.4</td>
+        <td class="hot">329.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>1月15日</td>
+        <td>8239.2</td>
+        <td>8115</td>
+        <td class="">124.2</td>
+        <td>IC2603</td>
+      </tr><tr class="delivery">
+        <td>10</td>
+        <td>周五</td>
+        <td>1月16日</td>
+        <td>8280.2</td>
+        <td>8162.4</td>
+        <td class="">117.8</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>1月19日</td>
+        <td>8324.8</td>
+        <td>8172.2</td>
+        <td class="hot">152.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>1月20日</td>
+        <td>8348</td>
+        <td>8112</td>
+        <td class="hot">236</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>1月21日</td>
+        <td>8372</td>
+        <td>8205</td>
+        <td class="hot">167</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>1月22日</td>
+        <td>8434</td>
+        <td>8333.6</td>
+        <td class="">100.4</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周五</td>
+        <td>1月23日</td>
+        <td>8660</td>
+        <td>8427</td>
+        <td class="hot">233</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>1月26日</td>
+        <td>8728.2</td>
+        <td>8428.2</td>
+        <td class="hot">300</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>1月27日</td>
+        <td>8604.6</td>
+        <td>8346</td>
+        <td class="hot">258.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>1月28日</td>
+        <td>8658</td>
+        <td>8515.2</td>
+        <td class="">142.8</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>1月29日</td>
+        <td>8700</td>
+        <td>8488.2</td>
+        <td class="hot">211.8</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>1月30日</td>
+        <td>8535</td>
+        <td>8135</td>
+        <td class="hot">400</td>
+        <td>IC2603</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>20</td><td></td><td></td><td></td><td>3932.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">196.6</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">2月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>2月2日</td>
+        <td>8334.4</td>
+        <td>7832</td>
+        <td class="hot">502.4</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>2月3日</td>
+        <td>8296.8</td>
+        <td>8011.2</td>
+        <td class="hot">285.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>2月4日</td>
+        <td>8317.8</td>
+        <td>8133.6</td>
+        <td class="hot">184.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>2月5日</td>
+        <td>8229</td>
+        <td>8030</td>
+        <td class="hot">199</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>2月6日</td>
+        <td>8249.6</td>
+        <td>7950</td>
+        <td class="hot">299.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>2月9日</td>
+        <td>8324</td>
+        <td>8220</td>
+        <td class="">104</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>2月10日</td>
+        <td>8329</td>
+        <td>8244.8</td>
+        <td class="">84.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>2月11日</td>
+        <td>8384</td>
+        <td>8282.8</td>
+        <td class="">101.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>2月12日</td>
+        <td>8458.8</td>
+        <td>8331.2</td>
+        <td class="">127.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>2月13日</td>
+        <td>8419</td>
+        <td>8250</td>
+        <td class="hot">169</td>
+        <td>IC2603</td>
+      </tr><tr class="delivery">
+        <td>11</td>
+        <td>周二</td>
+        <td>2月24日</td>
+        <td>8455</td>
+        <td>8314</td>
+        <td class="">141</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周三</td>
+        <td>2月25日</td>
+        <td>8558</td>
+        <td>8394</td>
+        <td class="hot">164</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周四</td>
+        <td>2月26日</td>
+        <td>8568</td>
+        <td>8477.4</td>
+        <td class="">90.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周五</td>
+        <td>2月27日</td>
+        <td>8650</td>
+        <td>8484</td>
+        <td class="hot">166</td>
+        <td>IC2603</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>14</td><td></td><td></td><td></td><td>2618.4</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">187</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">3月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>3月2日</td>
+        <td>8686</td>
+        <td>8519.8</td>
+        <td class="hot">166.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>3月3日</td>
+        <td>8642</td>
+        <td>8238.8</td>
+        <td class="hot">403.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>3月4日</td>
+        <td>8380.4</td>
+        <td>8193</td>
+        <td class="hot">187.4</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>3月5日</td>
+        <td>8361.4</td>
+        <td>8180.6</td>
+        <td class="hot">180.8</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>3月6日</td>
+        <td>8379.8</td>
+        <td>8224.2</td>
+        <td class="hot">155.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>3月9日</td>
+        <td>8294.2</td>
+        <td>7710</td>
+        <td class="hot">584.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>3月10日</td>
+        <td>8405.8</td>
+        <td>8290</td>
+        <td class="">115.8</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>3月11日</td>
+        <td>8434.4</td>
+        <td>8346</td>
+        <td class="">88.4</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>3月12日</td>
+        <td>8396</td>
+        <td>8233.8</td>
+        <td class="hot">162.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>3月13日</td>
+        <td>8360</td>
+        <td>8195.4</td>
+        <td class="hot">164.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>3月16日</td>
+        <td>8229.6</td>
+        <td>8033.8</td>
+        <td class="hot">195.8</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>3月17日</td>
+        <td>8216.6</td>
+        <td>7994</td>
+        <td class="hot">222.6</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>3月18日</td>
+        <td>8099</td>
+        <td>7950</td>
+        <td class="">149</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>3月19日</td>
+        <td>8005.6</td>
+        <td>7839.2</td>
+        <td class="hot">166.4</td>
+        <td>IC2603</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周五</td>
+        <td>3月20日</td>
+        <td>7955</td>
+        <td>7827.8</td>
+        <td class="">127.2</td>
+        <td>IC2603</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>3月23日</td>
+        <td>7532.2</td>
+        <td>7171</td>
+        <td class="hot">361.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>3月24日</td>
+        <td>7420.4</td>
+        <td>7179</td>
+        <td class="hot">241.4</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>3月25日</td>
+        <td>7652</td>
+        <td>7480</td>
+        <td class="hot">172</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>3月26日</td>
+        <td>7578.8</td>
+        <td>7406.6</td>
+        <td class="hot">172.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>3月27日</td>
+        <td>7612.6</td>
+        <td>7348</td>
+        <td class="hot">264.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周一</td>
+        <td>3月30日</td>
+        <td>7576.6</td>
+        <td>7372.4</td>
+        <td class="hot">204.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>22</td>
+        <td>周二</td>
+        <td>3月31日</td>
+        <td>7619</td>
+        <td>7417.8</td>
+        <td class="hot">201.2</td>
+        <td>IC2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>22</td><td></td><td></td><td></td><td>4686.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">213</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">4月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>4月1日</td>
+        <td>7612.8</td>
+        <td>7509</td>
+        <td class="">103.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>4月2日</td>
+        <td>7561.4</td>
+        <td>7341.4</td>
+        <td class="hot">220</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>4月3日</td>
+        <td>7459.8</td>
+        <td>7325.2</td>
+        <td class="">134.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周二</td>
+        <td>4月7日</td>
+        <td>7470</td>
+        <td>7355.6</td>
+        <td class="">114.4</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周三</td>
+        <td>4月8日</td>
+        <td>7834.6</td>
+        <td>7600</td>
+        <td class="hot">234.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周四</td>
+        <td>4月9日</td>
+        <td>7793.6</td>
+        <td>7698.8</td>
+        <td class="">94.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周五</td>
+        <td>4月10日</td>
+        <td>7945.4</td>
+        <td>7796.4</td>
+        <td class="">149</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周一</td>
+        <td>4月13日</td>
+        <td>7864</td>
+        <td>7792</td>
+        <td class="">72</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周二</td>
+        <td>4月14日</td>
+        <td>7944.4</td>
+        <td>7842.4</td>
+        <td class="">102</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周三</td>
+        <td>4月15日</td>
+        <td>8023</td>
+        <td>7901</td>
+        <td class="">122</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周四</td>
+        <td>4月16日</td>
+        <td>8084.4</td>
+        <td>7937.4</td>
+        <td class="">147</td>
+        <td>IC2606</td>
+      </tr><tr class="delivery">
+        <td>12</td>
+        <td>周五</td>
+        <td>4月17日</td>
+        <td>8119.6</td>
+        <td>8015</td>
+        <td class="">104.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周一</td>
+        <td>4月20日</td>
+        <td>8213.8</td>
+        <td>8076.4</td>
+        <td class="">137.4</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周二</td>
+        <td>4月21日</td>
+        <td>8150</td>
+        <td>8055</td>
+        <td class="">95</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周三</td>
+        <td>4月22日</td>
+        <td>8265.6</td>
+        <td>8091</td>
+        <td class="hot">174.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周四</td>
+        <td>4月23日</td>
+        <td>8288.2</td>
+        <td>8090</td>
+        <td class="hot">198.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周五</td>
+        <td>4月24日</td>
+        <td>8193.8</td>
+        <td>8042</td>
+        <td class="hot">151.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周一</td>
+        <td>4月27日</td>
+        <td>8220.2</td>
+        <td>8103</td>
+        <td class="">117.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周二</td>
+        <td>4月28日</td>
+        <td>8178.4</td>
+        <td>8056.2</td>
+        <td class="">122.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周三</td>
+        <td>4月29日</td>
+        <td>8281.8</td>
+        <td>8066</td>
+        <td class="hot">215.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周四</td>
+        <td>4月30日</td>
+        <td>8287.8</td>
+        <td>8206</td>
+        <td class="">81.8</td>
+        <td>IC2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>2892.8</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">137.8</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">5月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>5月6日</td>
+        <td>8565.4</td>
+        <td>8375.4</td>
+        <td class="hot">190</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>5月7日</td>
+        <td>8638.4</td>
+        <td>8520.4</td>
+        <td class="">118</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>5月8日</td>
+        <td>8648</td>
+        <td>8546.4</td>
+        <td class="">101.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周一</td>
+        <td>5月11日</td>
+        <td>8791</td>
+        <td>8628.4</td>
+        <td class="hot">162.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周二</td>
+        <td>5月12日</td>
+        <td>8754</td>
+        <td>8656.2</td>
+        <td class="">97.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周三</td>
+        <td>5月13日</td>
+        <td>8866.6</td>
+        <td>8653</td>
+        <td class="hot">213.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周四</td>
+        <td>5月14日</td>
+        <td>8886.8</td>
+        <td>8603.4</td>
+        <td class="hot">283.4</td>
+        <td>IC2606</td>
+      </tr><tr class="delivery">
+        <td>8</td>
+        <td>周五</td>
+        <td>5月15日</td>
+        <td>8652.2</td>
+        <td>8378.2</td>
+        <td class="hot">274</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周一</td>
+        <td>5月18日</td>
+        <td>8545</td>
+        <td>8403.2</td>
+        <td class="">141.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周二</td>
+        <td>5月19日</td>
+        <td>8542.8</td>
+        <td>8324.6</td>
+        <td class="hot">218.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周三</td>
+        <td>5月20日</td>
+        <td>8586.8</td>
+        <td>8450</td>
+        <td class="">136.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周四</td>
+        <td>5月21日</td>
+        <td>8728</td>
+        <td>8310</td>
+        <td class="hot">418</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周五</td>
+        <td>5月22日</td>
+        <td>8532.6</td>
+        <td>8357.8</td>
+        <td class="hot">174.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周一</td>
+        <td>5月25日</td>
+        <td>8603.8</td>
+        <td>8444.2</td>
+        <td class="hot">159.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周二</td>
+        <td>5月26日</td>
+        <td>8576.6</td>
+        <td>8425</td>
+        <td class="hot">151.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周三</td>
+        <td>5月27日</td>
+        <td>8658.2</td>
+        <td>8372.2</td>
+        <td class="hot">286</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周四</td>
+        <td>5月28日</td>
+        <td>8526.2</td>
+        <td>8321.6</td>
+        <td class="hot">204.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周五</td>
+        <td>5月29日</td>
+        <td>8518</td>
+        <td>8218.2</td>
+        <td class="hot">299.8</td>
+        <td>IC2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>18</td><td></td><td></td><td></td><td>3632.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">201.8</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">6月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>6月1日</td>
+        <td>8383</td>
+        <td>8206</td>
+        <td class="hot">177</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>6月2日</td>
+        <td>8343.2</td>
+        <td>8101.6</td>
+        <td class="hot">241.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>6月3日</td>
+        <td>8425</td>
+        <td>8241</td>
+        <td class="hot">184</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>6月4日</td>
+        <td>8351.8</td>
+        <td>8256</td>
+        <td class="">95.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>6月5日</td>
+        <td>8354.6</td>
+        <td>8161</td>
+        <td class="hot">193.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>6月8日</td>
+        <td>8095.2</td>
+        <td>7838</td>
+        <td class="hot">257.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>6月9日</td>
+        <td>8133.8</td>
+        <td>7912</td>
+        <td class="hot">221.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>6月10日</td>
+        <td>8085.2</td>
+        <td>7921.8</td>
+        <td class="hot">163.4</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>6月11日</td>
+        <td>8052.2</td>
+        <td>7915</td>
+        <td class="">137.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>6月12日</td>
+        <td>8237.6</td>
+        <td>8077</td>
+        <td class="hot">160.6</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>6月15日</td>
+        <td>8385</td>
+        <td>8181.2</td>
+        <td class="hot">203.8</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>6月16日</td>
+        <td>8514.4</td>
+        <td>8362.2</td>
+        <td class="hot">152.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>6月17日</td>
+        <td>8616.6</td>
+        <td>8444.4</td>
+        <td class="hot">172.2</td>
+        <td>IC2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>6月18日</td>
+        <td>8718</td>
+        <td>8571</td>
+        <td class="">147</td>
+        <td>IC2606</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周一</td>
+        <td>6月22日</td>
+        <td>8677</td>
+        <td>8432</td>
+        <td class="hot">245</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周二</td>
+        <td>6月23日</td>
+        <td>8672.2</td>
+        <td>8377</td>
+        <td class="hot">295.2</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周三</td>
+        <td>6月24日</td>
+        <td>8635</td>
+        <td>8418.8</td>
+        <td class="hot">216.2</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周四</td>
+        <td>6月25日</td>
+        <td>8714.8</td>
+        <td>8561.6</td>
+        <td class="hot">153.2</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周五</td>
+        <td>6月26日</td>
+        <td>8672.2</td>
+        <td>8402</td>
+        <td class="hot">270.2</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周一</td>
+        <td>6月29日</td>
+        <td>8590</td>
+        <td>8350.4</td>
+        <td class="hot">239.6</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周二</td>
+        <td>6月30日</td>
+        <td>8805</td>
+        <td>8512</td>
+        <td class="hot">293</td>
+        <td>IC2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>4219.8</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">200.9</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">7月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>8873.8</td>
+        <td>8656.8</td>
+        <td class="hot">217</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>8678.6</td>
+        <td>8456.8</td>
+        <td class="hot">221.8</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>8650</td>
+        <td>8442</td>
+        <td class="hot">208</td>
+        <td>IC2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>646.8</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">215.6</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="IF">
+      <h2>2026年统计 - IF主力</h2>
+      <table>
+        <thead>
+          <tr class="month-title"><td colspan="7">1月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>1月5日</td>
+        <td>4705</td>
+        <td>4627</td>
+        <td class="">78</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>1月6日</td>
+        <td>4780.8</td>
+        <td>4705</td>
+        <td class="">75.8</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>1月7日</td>
+        <td>4785.8</td>
+        <td>4733</td>
+        <td class="">52.8</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>1月8日</td>
+        <td>4751</td>
+        <td>4694.2</td>
+        <td class="">56.8</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>1月9日</td>
+        <td>4767.6</td>
+        <td>4703.6</td>
+        <td class="">64</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>1月12日</td>
+        <td>4797</td>
+        <td>4722.6</td>
+        <td class="">74.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>1月13日</td>
+        <td>4828</td>
+        <td>4738.6</td>
+        <td class="">89.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>1月14日</td>
+        <td>4833.2</td>
+        <td>4707</td>
+        <td class="hot">126.2</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>1月15日</td>
+        <td>4764.8</td>
+        <td>4708.2</td>
+        <td class="">56.6</td>
+        <td>IF2603</td>
+      </tr><tr class="delivery">
+        <td>10</td>
+        <td>周五</td>
+        <td>1月16日</td>
+        <td>4790</td>
+        <td>4711.6</td>
+        <td class="">78.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>1月19日</td>
+        <td>4763</td>
+        <td>4708.8</td>
+        <td class="">54.2</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>1月20日</td>
+        <td>4743.8</td>
+        <td>4672.8</td>
+        <td class="">71</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>1月21日</td>
+        <td>4756.4</td>
+        <td>4698.8</td>
+        <td class="">57.6</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>1月22日</td>
+        <td>4756.2</td>
+        <td>4700.6</td>
+        <td class="">55.6</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周五</td>
+        <td>1月23日</td>
+        <td>4739.4</td>
+        <td>4705.4</td>
+        <td class="">34</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>1月26日</td>
+        <td>4775.6</td>
+        <td>4712.4</td>
+        <td class="">63.2</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>1月27日</td>
+        <td>4748.6</td>
+        <td>4681</td>
+        <td class="">67.6</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>1月28日</td>
+        <td>4747.8</td>
+        <td>4716</td>
+        <td class="">31.8</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>1月29日</td>
+        <td>4793</td>
+        <td>4716.2</td>
+        <td class="">76.8</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>1月30日</td>
+        <td>4780</td>
+        <td>4640</td>
+        <td class="hot">140</td>
+        <td>IF2603</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>20</td><td></td><td></td><td></td><td>1404.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">70.2</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">2月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>2月2日</td>
+        <td>4724</td>
+        <td>4555.6</td>
+        <td class="hot">168.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>2月3日</td>
+        <td>4662.4</td>
+        <td>4574.8</td>
+        <td class="">87.6</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>2月4日</td>
+        <td>4697.2</td>
+        <td>4631.2</td>
+        <td class="">66</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>2月5日</td>
+        <td>4684.8</td>
+        <td>4623</td>
+        <td class="">61.8</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>2月6日</td>
+        <td>4682.8</td>
+        <td>4587</td>
+        <td class="hot">95.8</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>2月9日</td>
+        <td>4725.4</td>
+        <td>4678</td>
+        <td class="">47.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>2月10日</td>
+        <td>4733.8</td>
+        <td>4713.4</td>
+        <td class="">20.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>2月11日</td>
+        <td>4725</td>
+        <td>4705</td>
+        <td class="">20</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>2月12日</td>
+        <td>4727</td>
+        <td>4705</td>
+        <td class="">22</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>2月13日</td>
+        <td>4697.8</td>
+        <td>4624</td>
+        <td class="">73.8</td>
+        <td>IF2603</td>
+      </tr><tr class="delivery">
+        <td>11</td>
+        <td>周二</td>
+        <td>2月24日</td>
+        <td>4711.2</td>
+        <td>4671.2</td>
+        <td class="">40</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周三</td>
+        <td>2月25日</td>
+        <td>4768</td>
+        <td>4693.6</td>
+        <td class="">74.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周四</td>
+        <td>2月26日</td>
+        <td>4741</td>
+        <td>4691.8</td>
+        <td class="">49.2</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周五</td>
+        <td>2月27日</td>
+        <td>4719.2</td>
+        <td>4682.2</td>
+        <td class="">37</td>
+        <td>IF2603</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>14</td><td></td><td></td><td></td><td>863.8</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">61.7</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">3月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>3月2日</td>
+        <td>4724</td>
+        <td>4646</td>
+        <td class="">78</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>3月3日</td>
+        <td>4725</td>
+        <td>4630</td>
+        <td class="hot">95</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>3月4日</td>
+        <td>4632.2</td>
+        <td>4560.2</td>
+        <td class="">72</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>3月5日</td>
+        <td>4654.2</td>
+        <td>4605.8</td>
+        <td class="">48.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>3月6日</td>
+        <td>4667.4</td>
+        <td>4601.8</td>
+        <td class="">65.6</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>3月9日</td>
+        <td>4616.8</td>
+        <td>4500</td>
+        <td class="hot">116.8</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>3月10日</td>
+        <td>4674</td>
+        <td>4630</td>
+        <td class="">44</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>3月11日</td>
+        <td>4699</td>
+        <td>4664.4</td>
+        <td class="">34.6</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>3月12日</td>
+        <td>4685.6</td>
+        <td>4631</td>
+        <td class="">54.6</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>3月13日</td>
+        <td>4697</td>
+        <td>4642.6</td>
+        <td class="">54.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>3月16日</td>
+        <td>4670.6</td>
+        <td>4609.2</td>
+        <td class="">61.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>3月17日</td>
+        <td>4718.4</td>
+        <td>4628</td>
+        <td class="hot">90.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>3月18日</td>
+        <td>4658.6</td>
+        <td>4602.6</td>
+        <td class="">56</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>3月19日</td>
+        <td>4630.6</td>
+        <td>4570</td>
+        <td class="">60.6</td>
+        <td>IF2603</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周五</td>
+        <td>3月20日</td>
+        <td>4629.6</td>
+        <td>4589.2</td>
+        <td class="">40.4</td>
+        <td>IF2603</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>3月23日</td>
+        <td>4453.8</td>
+        <td>4307.2</td>
+        <td class="hot">146.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>3月24日</td>
+        <td>4394.8</td>
+        <td>4319</td>
+        <td class="">75.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>3月25日</td>
+        <td>4466.2</td>
+        <td>4415.4</td>
+        <td class="">50.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>3月26日</td>
+        <td>4462</td>
+        <td>4386.6</td>
+        <td class="">75.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>3月27日</td>
+        <td>4455</td>
+        <td>4357.6</td>
+        <td class="hot">97.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周一</td>
+        <td>3月30日</td>
+        <td>4418</td>
+        <td>4355.2</td>
+        <td class="">62.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>22</td>
+        <td>周二</td>
+        <td>3月31日</td>
+        <td>4444.6</td>
+        <td>4370.4</td>
+        <td class="">74.2</td>
+        <td>IF2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>22</td><td></td><td></td><td></td><td>1555.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">70.7</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">4月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>4月1日</td>
+        <td>4459.8</td>
+        <td>4417</td>
+        <td class="">42.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>4月2日</td>
+        <td>4436.6</td>
+        <td>4365.2</td>
+        <td class="">71.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>4月3日</td>
+        <td>4420</td>
+        <td>4346</td>
+        <td class="">74</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周二</td>
+        <td>4月7日</td>
+        <td>4390.6</td>
+        <td>4347</td>
+        <td class="">43.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周三</td>
+        <td>4月8日</td>
+        <td>4540.6</td>
+        <td>4430.6</td>
+        <td class="hot">110</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周四</td>
+        <td>4月9日</td>
+        <td>4511.2</td>
+        <td>4485.6</td>
+        <td class="">25.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周五</td>
+        <td>4月10日</td>
+        <td>4591.8</td>
+        <td>4518.4</td>
+        <td class="">73.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周一</td>
+        <td>4月13日</td>
+        <td>4582.4</td>
+        <td>4541.6</td>
+        <td class="">40.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周二</td>
+        <td>4月14日</td>
+        <td>4640</td>
+        <td>4583.8</td>
+        <td class="">56.2</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周三</td>
+        <td>4月15日</td>
+        <td>4680.8</td>
+        <td>4618.4</td>
+        <td class="">62.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周四</td>
+        <td>4月16日</td>
+        <td>4685</td>
+        <td>4639.2</td>
+        <td class="">45.8</td>
+        <td>IF2606</td>
+      </tr><tr class="delivery">
+        <td>12</td>
+        <td>周五</td>
+        <td>4月17日</td>
+        <td>4680.6</td>
+        <td>4649.2</td>
+        <td class="">31.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周一</td>
+        <td>4月20日</td>
+        <td>4714.8</td>
+        <td>4656.8</td>
+        <td class="">58</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周二</td>
+        <td>4月21日</td>
+        <td>4718</td>
+        <td>4660</td>
+        <td class="">58</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周三</td>
+        <td>4月22日</td>
+        <td>4745.6</td>
+        <td>4688</td>
+        <td class="">57.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周四</td>
+        <td>4月23日</td>
+        <td>4763</td>
+        <td>4691.8</td>
+        <td class="">71.2</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周五</td>
+        <td>4月24日</td>
+        <td>4733</td>
+        <td>4678.6</td>
+        <td class="">54.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周一</td>
+        <td>4月27日</td>
+        <td>4743.4</td>
+        <td>4708.8</td>
+        <td class="">34.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周二</td>
+        <td>4月28日</td>
+        <td>4725.8</td>
+        <td>4687.2</td>
+        <td class="">38.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周三</td>
+        <td>4月29日</td>
+        <td>4776.6</td>
+        <td>4687.2</td>
+        <td class="">89.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周四</td>
+        <td>4月30日</td>
+        <td>4776.2</td>
+        <td>4744.2</td>
+        <td class="">32</td>
+        <td>IF2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>1171.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">55.8</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">5月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>5月6日</td>
+        <td>4869</td>
+        <td>4797</td>
+        <td class="">72</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>5月7日</td>
+        <td>4867.6</td>
+        <td>4832</td>
+        <td class="">35.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>5月8日</td>
+        <td>4855</td>
+        <td>4812</td>
+        <td class="">43</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周一</td>
+        <td>5月11日</td>
+        <td>4931.6</td>
+        <td>4844.4</td>
+        <td class="">87.2</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周二</td>
+        <td>5月12日</td>
+        <td>4937.6</td>
+        <td>4892.4</td>
+        <td class="">45.2</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周三</td>
+        <td>5月13日</td>
+        <td>4975.6</td>
+        <td>4891.6</td>
+        <td class="">84</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周四</td>
+        <td>5月14日</td>
+        <td>4995</td>
+        <td>4877.4</td>
+        <td class="hot">117.6</td>
+        <td>IF2606</td>
+      </tr><tr class="delivery">
+        <td>8</td>
+        <td>周五</td>
+        <td>5月15日</td>
+        <td>4895.8</td>
+        <td>4794</td>
+        <td class="hot">101.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周一</td>
+        <td>5月18日</td>
+        <td>4834.6</td>
+        <td>4765.6</td>
+        <td class="">69</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周二</td>
+        <td>5月19日</td>
+        <td>4817</td>
+        <td>4735</td>
+        <td class="">82</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周三</td>
+        <td>5月20日</td>
+        <td>4821.8</td>
+        <td>4771.8</td>
+        <td class="">50</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周四</td>
+        <td>5月21日</td>
+        <td>4900.8</td>
+        <td>4740.2</td>
+        <td class="hot">160.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周五</td>
+        <td>5月22日</td>
+        <td>4814.4</td>
+        <td>4757</td>
+        <td class="">57.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周一</td>
+        <td>5月25日</td>
+        <td>4864.8</td>
+        <td>4811.4</td>
+        <td class="">53.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周二</td>
+        <td>5月26日</td>
+        <td>4902.4</td>
+        <td>4838</td>
+        <td class="">64.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周三</td>
+        <td>5月27日</td>
+        <td>4928.4</td>
+        <td>4837.6</td>
+        <td class="hot">90.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周四</td>
+        <td>5月28日</td>
+        <td>4880.4</td>
+        <td>4793.2</td>
+        <td class="">87.2</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周五</td>
+        <td>5月29日</td>
+        <td>4901.2</td>
+        <td>4827</td>
+        <td class="">74.2</td>
+        <td>IF2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>18</td><td></td><td></td><td></td><td>1375.4</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">76.4</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">6月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>6月1日</td>
+        <td>4881.6</td>
+        <td>4796</td>
+        <td class="">85.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>6月2日</td>
+        <td>4906.8</td>
+        <td>4802</td>
+        <td class="hot">104.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>6月3日</td>
+        <td>4964.6</td>
+        <td>4875</td>
+        <td class="">89.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>6月4日</td>
+        <td>4908.8</td>
+        <td>4855.4</td>
+        <td class="">53.4</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>6月5日</td>
+        <td>4888.8</td>
+        <td>4762.2</td>
+        <td class="hot">126.6</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>6月8日</td>
+        <td>4746</td>
+        <td>4640.2</td>
+        <td class="hot">105.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>6月9日</td>
+        <td>4752.4</td>
+        <td>4669.6</td>
+        <td class="">82.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>6月10日</td>
+        <td>4736.8</td>
+        <td>4673.8</td>
+        <td class="">63</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>6月11日</td>
+        <td>4737</td>
+        <td>4656.2</td>
+        <td class="">80.8</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>6月12日</td>
+        <td>4793</td>
+        <td>4730</td>
+        <td class="">63</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>6月15日</td>
+        <td>4882</td>
+        <td>4804.8</td>
+        <td class="">77.2</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>6月16日</td>
+        <td>4898.2</td>
+        <td>4858</td>
+        <td class="">40.2</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>6月17日</td>
+        <td>4928</td>
+        <td>4859</td>
+        <td class="">69</td>
+        <td>IF2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>6月18日</td>
+        <td>4971</td>
+        <td>4910</td>
+        <td class="">61</td>
+        <td>IF2606</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周一</td>
+        <td>6月22日</td>
+        <td>4987.4</td>
+        <td>4838.8</td>
+        <td class="hot">148.6</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周二</td>
+        <td>6月23日</td>
+        <td>4994</td>
+        <td>4790.2</td>
+        <td class="hot">203.8</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周三</td>
+        <td>6月24日</td>
+        <td>4854.8</td>
+        <td>4801.2</td>
+        <td class="">53.6</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周四</td>
+        <td>6月25日</td>
+        <td>4921.6</td>
+        <td>4829.8</td>
+        <td class="hot">91.8</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周五</td>
+        <td>6月26日</td>
+        <td>4884</td>
+        <td>4717</td>
+        <td class="hot">167</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周一</td>
+        <td>6月29日</td>
+        <td>4800</td>
+        <td>4718.6</td>
+        <td class="">81.4</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周二</td>
+        <td>6月30日</td>
+        <td>4866</td>
+        <td>4786</td>
+        <td class="">80</td>
+        <td>IF2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>1929</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">91.9</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">7月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>4899.6</td>
+        <td>4802.2</td>
+        <td class="hot">97.4</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>4800.2</td>
+        <td>4705</td>
+        <td class="hot">95.2</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>4810.4</td>
+        <td>4728</td>
+        <td class="">82.4</td>
+        <td>IF2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>275</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">91.7</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="IH">
+      <h2>2026年统计 - IH主力</h2>
+      <table>
+        <thead>
+          <tr class="month-title"><td colspan="7">1月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>1月5日</td>
+        <td>3108.8</td>
+        <td>3040.8</td>
+        <td class="hot">68</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>1月6日</td>
+        <td>3162</td>
+        <td>3106</td>
+        <td class="">56</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>1月7日</td>
+        <td>3165.6</td>
+        <td>3131.2</td>
+        <td class="">34.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>1月8日</td>
+        <td>3142.4</td>
+        <td>3104.8</td>
+        <td class="">37.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>1月9日</td>
+        <td>3148.6</td>
+        <td>3112</td>
+        <td class="">36.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>1月12日</td>
+        <td>3151.6</td>
+        <td>3122.2</td>
+        <td class="">29.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>1月13日</td>
+        <td>3181.2</td>
+        <td>3125</td>
+        <td class="">56.2</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>1月14日</td>
+        <td>3177.8</td>
+        <td>3101</td>
+        <td class="hot">76.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>1月15日</td>
+        <td>3132.4</td>
+        <td>3098.6</td>
+        <td class="">33.8</td>
+        <td>IH2603</td>
+      </tr><tr class="delivery">
+        <td>10</td>
+        <td>周五</td>
+        <td>1月16日</td>
+        <td>3133</td>
+        <td>3074.4</td>
+        <td class="">58.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>1月19日</td>
+        <td>3102.6</td>
+        <td>3072</td>
+        <td class="">30.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>1月20日</td>
+        <td>3092</td>
+        <td>3061</td>
+        <td class="">31</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>1月21日</td>
+        <td>3102.6</td>
+        <td>3068</td>
+        <td class="">34.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>1月22日</td>
+        <td>3093.8</td>
+        <td>3052.8</td>
+        <td class="">41</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周五</td>
+        <td>1月23日</td>
+        <td>3072.6</td>
+        <td>3036.2</td>
+        <td class="">36.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>1月26日</td>
+        <td>3099.8</td>
+        <td>3045</td>
+        <td class="">54.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>1月27日</td>
+        <td>3086.8</td>
+        <td>3050.6</td>
+        <td class="">36.2</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>1月28日</td>
+        <td>3079.8</td>
+        <td>3058.6</td>
+        <td class="">21.2</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>1月29日</td>
+        <td>3136.6</td>
+        <td>3061.2</td>
+        <td class="hot">75.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>1月30日</td>
+        <td>3128.4</td>
+        <td>3044</td>
+        <td class="hot">84.4</td>
+        <td>IH2603</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>20</td><td></td><td></td><td></td><td>933</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">46.7</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">2月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>2月2日</td>
+        <td>3081</td>
+        <td>2984</td>
+        <td class="hot">97</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>2月3日</td>
+        <td>3036.6</td>
+        <td>2987.6</td>
+        <td class="">49</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>2月4日</td>
+        <td>3074.4</td>
+        <td>3027.6</td>
+        <td class="">46.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>2月5日</td>
+        <td>3071.8</td>
+        <td>3030.6</td>
+        <td class="">41.2</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>2月6日</td>
+        <td>3060</td>
+        <td>3013.6</td>
+        <td class="">46.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>2月9日</td>
+        <td>3086.8</td>
+        <td>3058.2</td>
+        <td class="">28.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>2月10日</td>
+        <td>3095</td>
+        <td>3083.4</td>
+        <td class="">11.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>2月11日</td>
+        <td>3096.4</td>
+        <td>3078.6</td>
+        <td class="">17.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>2月12日</td>
+        <td>3098</td>
+        <td>3080.8</td>
+        <td class="">17.2</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>2月13日</td>
+        <td>3072.2</td>
+        <td>3020</td>
+        <td class="">52.2</td>
+        <td>IH2603</td>
+      </tr><tr class="delivery">
+        <td>11</td>
+        <td>周二</td>
+        <td>2月24日</td>
+        <td>3055.4</td>
+        <td>3033.6</td>
+        <td class="">21.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周三</td>
+        <td>2月25日</td>
+        <td>3086.4</td>
+        <td>3041.4</td>
+        <td class="">45</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周四</td>
+        <td>2月26日</td>
+        <td>3065</td>
+        <td>3022</td>
+        <td class="">43</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周五</td>
+        <td>2月27日</td>
+        <td>3051.2</td>
+        <td>3027</td>
+        <td class="">24.2</td>
+        <td>IH2603</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>14</td><td></td><td></td><td></td><td>541.8</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">38.7</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">3月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>3月2日</td>
+        <td>3053</td>
+        <td>3006</td>
+        <td class="">47</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>3月3日</td>
+        <td>3056</td>
+        <td>3005</td>
+        <td class="">51</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>3月4日</td>
+        <td>2999.8</td>
+        <td>2950</td>
+        <td class="">49.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>3月5日</td>
+        <td>2998.8</td>
+        <td>2974</td>
+        <td class="">24.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>3月6日</td>
+        <td>3002.6</td>
+        <td>2965.2</td>
+        <td class="">37.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>3月9日</td>
+        <td>2972</td>
+        <td>2912.6</td>
+        <td class="">59.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>3月10日</td>
+        <td>2987.6</td>
+        <td>2969.6</td>
+        <td class="">18</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>3月11日</td>
+        <td>2989</td>
+        <td>2970.6</td>
+        <td class="">18.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>3月12日</td>
+        <td>2983.8</td>
+        <td>2951</td>
+        <td class="">32.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>3月13日</td>
+        <td>2978.4</td>
+        <td>2949.6</td>
+        <td class="">28.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>3月16日</td>
+        <td>2956.6</td>
+        <td>2925.2</td>
+        <td class="">31.4</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>3月17日</td>
+        <td>2996.6</td>
+        <td>2952</td>
+        <td class="">44.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>3月18日</td>
+        <td>2975.2</td>
+        <td>2938.6</td>
+        <td class="">36.6</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>3月19日</td>
+        <td>2943.4</td>
+        <td>2908.4</td>
+        <td class="">35</td>
+        <td>IH2603</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周五</td>
+        <td>3月20日</td>
+        <td>2927.8</td>
+        <td>2896</td>
+        <td class="">31.8</td>
+        <td>IH2603</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周一</td>
+        <td>3月23日</td>
+        <td>2847.6</td>
+        <td>2750.8</td>
+        <td class="hot">96.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周二</td>
+        <td>3月24日</td>
+        <td>2814.2</td>
+        <td>2773</td>
+        <td class="">41.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周三</td>
+        <td>3月25日</td>
+        <td>2847.6</td>
+        <td>2822.2</td>
+        <td class="">25.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周四</td>
+        <td>3月26日</td>
+        <td>2842.4</td>
+        <td>2797.6</td>
+        <td class="">44.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周五</td>
+        <td>3月27日</td>
+        <td>2832.6</td>
+        <td>2785</td>
+        <td class="">47.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周一</td>
+        <td>3月30日</td>
+        <td>2818</td>
+        <td>2780.4</td>
+        <td class="">37.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>22</td>
+        <td>周二</td>
+        <td>3月31日</td>
+        <td>2844</td>
+        <td>2802.6</td>
+        <td class="">41.4</td>
+        <td>IH2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>22</td><td></td><td></td><td></td><td>881.6</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">40.1</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">4月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>4月1日</td>
+        <td>2865.4</td>
+        <td>2835.2</td>
+        <td class="">30.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>4月2日</td>
+        <td>2847.2</td>
+        <td>2810.8</td>
+        <td class="">36.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>4月3日</td>
+        <td>2835.2</td>
+        <td>2798.4</td>
+        <td class="">36.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周二</td>
+        <td>4月7日</td>
+        <td>2821.4</td>
+        <td>2797.2</td>
+        <td class="">24.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周三</td>
+        <td>4月8日</td>
+        <td>2891.8</td>
+        <td>2841</td>
+        <td class="">50.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周四</td>
+        <td>4月9日</td>
+        <td>2872.8</td>
+        <td>2852.4</td>
+        <td class="">20.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周五</td>
+        <td>4月10日</td>
+        <td>2896</td>
+        <td>2868.8</td>
+        <td class="">27.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周一</td>
+        <td>4月13日</td>
+        <td>2878.8</td>
+        <td>2860</td>
+        <td class="">18.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周二</td>
+        <td>4月14日</td>
+        <td>2900.8</td>
+        <td>2873.2</td>
+        <td class="">27.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周三</td>
+        <td>4月15日</td>
+        <td>2930.8</td>
+        <td>2907</td>
+        <td class="">23.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周四</td>
+        <td>4月16日</td>
+        <td>2929.4</td>
+        <td>2911</td>
+        <td class="">18.4</td>
+        <td>IH2606</td>
+      </tr><tr class="delivery">
+        <td>12</td>
+        <td>周五</td>
+        <td>4月17日</td>
+        <td>2907.8</td>
+        <td>2888</td>
+        <td class="">19.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周一</td>
+        <td>4月20日</td>
+        <td>2922</td>
+        <td>2891</td>
+        <td class="">31</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周二</td>
+        <td>4月21日</td>
+        <td>2923.6</td>
+        <td>2902.2</td>
+        <td class="">21.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周三</td>
+        <td>4月22日</td>
+        <td>2921</td>
+        <td>2906.2</td>
+        <td class="">14.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周四</td>
+        <td>4月23日</td>
+        <td>2924.4</td>
+        <td>2891.2</td>
+        <td class="">33.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周五</td>
+        <td>4月24日</td>
+        <td>2934.2</td>
+        <td>2893.6</td>
+        <td class="">40.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周一</td>
+        <td>4月27日</td>
+        <td>2942.6</td>
+        <td>2917</td>
+        <td class="">25.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周二</td>
+        <td>4月28日</td>
+        <td>2945.8</td>
+        <td>2917.2</td>
+        <td class="">28.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周三</td>
+        <td>4月29日</td>
+        <td>2956</td>
+        <td>2923</td>
+        <td class="">33</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周四</td>
+        <td>4月30日</td>
+        <td>2970</td>
+        <td>2942.6</td>
+        <td class="">27.4</td>
+        <td>IH2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>590</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">28.1</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">5月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>5月6日</td>
+        <td>3024.8</td>
+        <td>2984.8</td>
+        <td class="">40</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>5月7日</td>
+        <td>3024.6</td>
+        <td>3003.4</td>
+        <td class="">21.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>5月8日</td>
+        <td>3005</td>
+        <td>2969.2</td>
+        <td class="">35.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周一</td>
+        <td>5月11日</td>
+        <td>3031.8</td>
+        <td>2984.2</td>
+        <td class="">47.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周二</td>
+        <td>5月12日</td>
+        <td>3038.6</td>
+        <td>3016.4</td>
+        <td class="">22.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周三</td>
+        <td>5月13日</td>
+        <td>3039.4</td>
+        <td>3004.6</td>
+        <td class="">34.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周四</td>
+        <td>5月14日</td>
+        <td>3041.8</td>
+        <td>2982.6</td>
+        <td class="">59.2</td>
+        <td>IH2606</td>
+      </tr><tr class="delivery">
+        <td>8</td>
+        <td>周五</td>
+        <td>5月15日</td>
+        <td>2985.8</td>
+        <td>2927</td>
+        <td class="">58.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周一</td>
+        <td>5月18日</td>
+        <td>2944.8</td>
+        <td>2903.4</td>
+        <td class="">41.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周二</td>
+        <td>5月19日</td>
+        <td>2935.4</td>
+        <td>2901</td>
+        <td class="">34.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周三</td>
+        <td>5月20日</td>
+        <td>2944</td>
+        <td>2916.8</td>
+        <td class="">27.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周四</td>
+        <td>5月21日</td>
+        <td>2981.8</td>
+        <td>2899.8</td>
+        <td class="hot">82</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周五</td>
+        <td>5月22日</td>
+        <td>2920</td>
+        <td>2893.2</td>
+        <td class="">26.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周一</td>
+        <td>5月25日</td>
+        <td>2948.6</td>
+        <td>2908.2</td>
+        <td class="">40.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>15</td>
+        <td>周二</td>
+        <td>5月26日</td>
+        <td>2958.4</td>
+        <td>2928.2</td>
+        <td class="">30.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周三</td>
+        <td>5月27日</td>
+        <td>2960</td>
+        <td>2896.6</td>
+        <td class="hot">63.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周四</td>
+        <td>5月28日</td>
+        <td>2911.6</td>
+        <td>2871</td>
+        <td class="">40.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周五</td>
+        <td>5月29日</td>
+        <td>2919.8</td>
+        <td>2886.4</td>
+        <td class="">33.4</td>
+        <td>IH2606</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>18</td><td></td><td></td><td></td><td>739.4</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">41.1</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">6月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周一</td>
+        <td>6月1日</td>
+        <td>2909</td>
+        <td>2870</td>
+        <td class="">39</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周二</td>
+        <td>6月2日</td>
+        <td>2920.6</td>
+        <td>2877</td>
+        <td class="">43.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周三</td>
+        <td>6月3日</td>
+        <td>2924.2</td>
+        <td>2892.2</td>
+        <td class="">32</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>4</td>
+        <td>周四</td>
+        <td>6月4日</td>
+        <td>2903</td>
+        <td>2865.6</td>
+        <td class="">37.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>5</td>
+        <td>周五</td>
+        <td>6月5日</td>
+        <td>2892.8</td>
+        <td>2841.6</td>
+        <td class="">51.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>6</td>
+        <td>周一</td>
+        <td>6月8日</td>
+        <td>2833.2</td>
+        <td>2791.2</td>
+        <td class="">42</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>7</td>
+        <td>周二</td>
+        <td>6月9日</td>
+        <td>2822.6</td>
+        <td>2795.6</td>
+        <td class="">27</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>8</td>
+        <td>周三</td>
+        <td>6月10日</td>
+        <td>2840.4</td>
+        <td>2809</td>
+        <td class="">31.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>9</td>
+        <td>周四</td>
+        <td>6月11日</td>
+        <td>2841.8</td>
+        <td>2815.6</td>
+        <td class="">26.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>10</td>
+        <td>周五</td>
+        <td>6月12日</td>
+        <td>2902.6</td>
+        <td>2844</td>
+        <td class="">58.6</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>11</td>
+        <td>周一</td>
+        <td>6月15日</td>
+        <td>2950.8</td>
+        <td>2911</td>
+        <td class="">39.8</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>12</td>
+        <td>周二</td>
+        <td>6月16日</td>
+        <td>2935.2</td>
+        <td>2905</td>
+        <td class="">30.2</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>13</td>
+        <td>周三</td>
+        <td>6月17日</td>
+        <td>2935.8</td>
+        <td>2903.4</td>
+        <td class="">32.4</td>
+        <td>IH2606</td>
+      </tr><tr>
+        <td>14</td>
+        <td>周四</td>
+        <td>6月18日</td>
+        <td>2954.6</td>
+        <td>2922.4</td>
+        <td class="">32.2</td>
+        <td>IH2606</td>
+      </tr><tr class="delivery">
+        <td>15</td>
+        <td>周一</td>
+        <td>6月22日</td>
+        <td>2982.2</td>
+        <td>2883.4</td>
+        <td class="hot">98.8</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>16</td>
+        <td>周二</td>
+        <td>6月23日</td>
+        <td>2985.2</td>
+        <td>2873.2</td>
+        <td class="hot">112</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>17</td>
+        <td>周三</td>
+        <td>6月24日</td>
+        <td>2905.8</td>
+        <td>2885</td>
+        <td class="">20.8</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>18</td>
+        <td>周四</td>
+        <td>6月25日</td>
+        <td>2946.4</td>
+        <td>2891.2</td>
+        <td class="">55.2</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>19</td>
+        <td>周五</td>
+        <td>6月26日</td>
+        <td>2920.8</td>
+        <td>2834.8</td>
+        <td class="hot">86</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>20</td>
+        <td>周一</td>
+        <td>6月29日</td>
+        <td>2935</td>
+        <td>2866.8</td>
+        <td class="hot">68.2</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>21</td>
+        <td>周二</td>
+        <td>6月30日</td>
+        <td>2940.8</td>
+        <td>2913.4</td>
+        <td class="">27.4</td>
+        <td>IH2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>21</td><td></td><td></td><td></td><td>991.4</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">47.2</td><td></td></tr>
+        </tfoot>
+      </table><table>
+        <thead>
+          <tr class="month-title"><td colspan="7">7月</td></tr>
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>2976</td>
+        <td>2918.2</td>
+        <td class="">57.8</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>2924.8</td>
+        <td>2861.8</td>
+        <td class="hot">63</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>2912</td>
+        <td>2873.6</td>
+        <td class="">38.4</td>
+        <td>IH2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>159.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">53.1</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section>
+    <div class="download"><a href="./%E6%AF%8F%E6%97%A5%E6%8C%AF%E5%B9%85%E7%BB%9F%E8%AE%A1_2026.xlsx">下载 Excel</a></div>
+  </main>
+  <script>
+    document.querySelectorAll(".tab").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach((item) => item.classList.remove("active"));
+        document.querySelectorAll(".panel").forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+        document.querySelector('.panel[data-code="' + button.dataset.code + '"]').classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

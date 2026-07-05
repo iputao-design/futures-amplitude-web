@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日振幅统计</title>
+  <style>
+    :root { color-scheme: light; --line: #dcdfe6; --soft: #fff2cc; --hot: #ffff00; --red: #e11d48; --text: #1f2937; --purple: #7030a0; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; color: var(--text); background: #f6f7fb; }
+    header { padding: 24px 18px 16px; text-align: center; background: white; border-bottom: 1px solid var(--line); }
+    h1 { margin: 0 0 8px; color: var(--purple); font-size: 26px; font-weight: 700; }
+    .meta { color: #6b7280; font-size: 13px; }
+    .page-nav { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .page-nav a { border: 1px solid var(--line); border-radius: 6px; color: var(--text); padding: 7px 10px; text-decoration: none; background: #fff; }
+    .page-nav a.active { background: var(--purple); color: #fff; border-color: var(--purple); }
+    main { max-width: 1080px; margin: 0 auto; padding: 18px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 14px; }
+    .card { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 12px; text-align: center; }
+    .card strong { display: block; margin: 5px 0; color: var(--red); font-size: 22px; }
+    .card span { color: #6b7280; font-size: 12px; }
+    .tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; }
+    .tab { border: 1px solid var(--line); background: white; border-radius: 6px; padding: 8px 12px; cursor: pointer; white-space: nowrap; }
+    .tab.active { background: var(--purple); color: white; border-color: var(--purple); }
+    .panel { display: none; background: white; border: 1px solid var(--line); overflow-x: auto; }
+    .panel.active { display: block; }
+    h2 { margin: 0; padding: 12px; text-align: center; color: var(--purple); background: var(--soft); font-size: 24px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 720px; margin-bottom: 18px; }
+    th, td { border: 1px solid var(--line); padding: 7px 6px; text-align: center; vertical-align: middle; }
+    th { background: #f3f4f6; font-weight: 600; }
+    .month-title td { background: var(--soft); color: var(--purple); font-weight: 700; font-size: 16px; }
+    tfoot td { height: 28px; }
+    tr.delivery td { background: #dbeafe; color: #1e3a8a; font-weight: 700; }
+    .hot { background: var(--hot); color: var(--red); font-weight: 700; }
+    tr.delivery td.hot { background: var(--hot); color: var(--red); }
+    .download { margin-top: 12px; text-align: center; }
+    .download a { color: var(--purple); font-weight: 600; }
+    @media (max-width: 640px) { h1 { font-size: 22px; } h2 { font-size: 20px; } main { padding: 12px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>每日振幅统计</h1>
+    <div class="meta">统计区间：2026-07-01 至 2026-07-04 · 生成时间：2026/07/05 22:30</div>
+    <nav class="page-nav"><a class="" href="./index.html">首页</a><a class="active" href="./current.html">当前月</a><a class="" href="./2024.html">2024年度</a><a class="" href="./2025.html">2025年度</a><a class="" href="./2026.html">2026年度</a></nav>
+  </header>
+  <main>
+    <div class="cards"><div class="card">
+      <div>中证1000</div>
+      <strong>181.4</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>中证500</div>
+      <strong>224.3</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>上证指数</div>
+      <strong>46.6</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>IM主力</div>
+      <strong>137.2</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>IC主力</div>
+      <strong>208</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>IF主力</div>
+      <strong>82.4</strong>
+      <span>2026-07-03</span>
+    </div><div class="card">
+      <div>IH主力</div>
+      <strong>38.4</strong>
+      <span>2026-07-03</span>
+    </div></div>
+    <nav class="tabs"><button class="tab active" data-code="CSI1000">中证1000</button><button class="tab" data-code="CSI500">中证500</button><button class="tab" data-code="SSE">上证指数</button><button class="tab" data-code="IM">IM主力</button><button class="tab" data-code="IC">IC主力</button><button class="tab" data-code="IF">IF主力</button><button class="tab" data-code="IH">IH主力</button></nav>
+    <section class="panel active" data-code="CSI1000">
+      <h2>2026年7月统计 - 中证1000</h2>
+      <table>
+        <thead>
+          
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>8944.2</td>
+        <td>8806.6</td>
+        <td class="">137.5</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>8866</td>
+        <td>8598.9</td>
+        <td class="hot">267.1</td>
+        <td>中证1000</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>8740.7</td>
+        <td>8559.3</td>
+        <td class="hot">181.4</td>
+        <td>中证1000</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>586</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">195.3</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="CSI500">
+      <h2>2026年7月统计 - 中证500</h2>
+      <table>
+        <thead>
+          
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>9147.6</td>
+        <td>8956.2</td>
+        <td class="hot">191.4</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>8932.6</td>
+        <td>8667.4</td>
+        <td class="hot">265.2</td>
+        <td>中证500</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>8860.4</td>
+        <td>8636.2</td>
+        <td class="hot">224.3</td>
+        <td>中证500</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>680.9</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">227</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="SSE">
+      <h2>2026年7月统计 - 上证指数</h2>
+      <table>
+        <thead>
+          
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>4143.3</td>
+        <td>4087.5</td>
+        <td class="hot">55.8</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>4093.7</td>
+        <td>4019.2</td>
+        <td class="hot">74.5</td>
+        <td>上证指数</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>4073.9</td>
+        <td>4027.3</td>
+        <td class="">46.6</td>
+        <td>上证指数</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>176.9</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">59</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="IM">
+      <h2>2026年7月统计 - IM主力</h2>
+      <table>
+        <thead>
+          
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>8629</td>
+        <td>8480</td>
+        <td class="">149</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>8556</td>
+        <td>8344</td>
+        <td class="hot">212</td>
+        <td>IM2609</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>8475</td>
+        <td>8337.8</td>
+        <td class="">137.2</td>
+        <td>IM2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>498.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">166.1</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="IC">
+      <h2>2026年7月统计 - IC主力</h2>
+      <table>
+        <thead>
+          
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>8873.8</td>
+        <td>8656.8</td>
+        <td class="hot">217</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>8678.6</td>
+        <td>8456.8</td>
+        <td class="hot">221.8</td>
+        <td>IC2609</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>8650</td>
+        <td>8442</td>
+        <td class="hot">208</td>
+        <td>IC2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>646.8</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">215.6</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="IF">
+      <h2>2026年7月统计 - IF主力</h2>
+      <table>
+        <thead>
+          
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>4899.6</td>
+        <td>4802.2</td>
+        <td class="hot">97.4</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>4800.2</td>
+        <td>4705</td>
+        <td class="hot">95.2</td>
+        <td>IF2609</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>4810.4</td>
+        <td>4728</td>
+        <td class="">82.4</td>
+        <td>IF2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>275</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">91.7</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section><section class="panel" data-code="IH">
+      <h2>2026年7月统计 - IH主力</h2>
+      <table>
+        <thead>
+          
+          <tr><th>序号</th><th>星期</th><th>日期</th><th>高点</th><th>低点</th><th>振幅</th><th>标的</th></tr>
+        </thead>
+        <tbody><tr>
+        <td>1</td>
+        <td>周三</td>
+        <td>7月1日</td>
+        <td>2976</td>
+        <td>2918.2</td>
+        <td class="">57.8</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>2</td>
+        <td>周四</td>
+        <td>7月2日</td>
+        <td>2924.8</td>
+        <td>2861.8</td>
+        <td class="hot">63</td>
+        <td>IH2609</td>
+      </tr><tr>
+        <td>3</td>
+        <td>周五</td>
+        <td>7月3日</td>
+        <td>2912</td>
+        <td>2873.6</td>
+        <td class="">38.4</td>
+        <td>IH2609</td>
+      </tr></tbody>
+        <tfoot>
+          <tr><td>合计</td><td>3</td><td></td><td></td><td></td><td>159.2</td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td class="hot">53.1</td><td></td></tr>
+        </tfoot>
+      </table>
+    </section>
+    <div class="download"><a href="./%E6%AF%8F%E6%97%A5%E6%8C%AF%E5%B9%85%E7%BB%9F%E8%AE%A1.xlsx">下载 Excel</a></div>
+  </main>
+  <script>
+    document.querySelectorAll(".tab").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach((item) => item.classList.remove("active"));
+        document.querySelectorAll(".panel").forEach((item) => item.classList.remove("active"));
+        button.classList.add("active");
+        document.querySelector('.panel[data-code="' + button.dataset.code + '"]').classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
