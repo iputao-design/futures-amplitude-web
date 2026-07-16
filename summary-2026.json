@@ -4,9 +4,9 @@
   "title": "2026年统计",
   "reportDate": "2026-07-16",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/07/16 19:55",
+  "updatedAt": "2026/07/16 19:56",
   "tradingDays": 128,
-  "overallAverage": 126.7,
+  "overallAverage": 126.6,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -44,9 +44,9 @@
       "latestDate": "2026-07-16",
       "latestAmplitude": 239.2,
       "days": 128,
-      "total": 23378.8,
+      "total": 23369.8,
       "average": 182.6,
-      "hotDays": 53
+      "hotDays": 52
     },
     {
       "code": "IC",
@@ -54,8 +54,8 @@
       "latestDate": "2026-07-16",
       "latestAmplitude": 231.4,
       "days": 128,
-      "total": 24888.4,
-      "average": 194.4,
+      "total": 24814.8,
+      "average": 193.9,
       "hotDays": 89
     },
     {
@@ -64,8 +64,8 @@
       "latestDate": "2026-07-16",
       "latestAmplitude": 94.6,
       "days": 128,
-      "total": 9432.6,
-      "average": 73.7,
+      "total": 9389,
+      "average": 73.4,
       "hotDays": 28
     },
     {
@@ -74,8 +74,8 @@
       "latestDate": "2026-07-16",
       "latestAmplitude": 58.4,
       "days": 128,
-      "total": 5326.2,
-      "average": 41.6,
+      "total": 5305.2,
+      "average": 41.4,
       "hotDays": 16
     }
   ]
