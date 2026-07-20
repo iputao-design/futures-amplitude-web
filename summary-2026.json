@@ -2,81 +2,81 @@
   "pageName": "2026.html",
   "excelFileName": "每日振幅统计_2026.xlsx",
   "title": "2026年统计",
-  "reportDate": "2026-07-17",
+  "reportDate": "2026-07-20",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/07/17 20:30",
-  "tradingDays": 129,
-  "overallAverage": 128.1,
+  "updatedAt": "2026/07/20 16:39",
+  "tradingDays": 130,
+  "overallAverage": 129.5,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-07-17",
-      "latestAmplitude": 442.3,
-      "days": 129,
-      "total": 22480.7,
-      "average": 174.3,
-      "hotDays": 57
+      "latestDate": "2026-07-20",
+      "latestAmplitude": 474,
+      "days": 130,
+      "total": 22954.7,
+      "average": 176.6,
+      "hotDays": 58
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-07-17",
-      "latestAmplitude": 434.6,
-      "days": 129,
-      "total": 22694.1,
-      "average": 175.9,
-      "hotDays": 64
+      "latestDate": "2026-07-20",
+      "latestAmplitude": 373,
+      "days": 130,
+      "total": 23067.1,
+      "average": 177.4,
+      "hotDays": 65
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-07-17",
-      "latestAmplitude": 124,
-      "days": 129,
-      "total": 6367.9,
-      "average": 49.4,
-      "hotDays": 52
+      "latestDate": "2026-07-20",
+      "latestAmplitude": 90.5,
+      "days": 130,
+      "total": 6458.4,
+      "average": 49.7,
+      "hotDays": 53
     },
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-07-17",
-      "latestAmplitude": 515.8,
-      "days": 129,
-      "total": 23885.6,
-      "average": 185.2,
-      "hotDays": 53
+      "latestDate": "2026-07-20",
+      "latestAmplitude": 584.8,
+      "days": 130,
+      "total": 24470.4,
+      "average": 188.2,
+      "hotDays": 54
     },
     {
       "code": "IC",
       "name": "IC主力",
-      "latestDate": "2026-07-17",
-      "latestAmplitude": 485.4,
-      "days": 129,
-      "total": 25300.2,
-      "average": 196.1,
-      "hotDays": 90
+      "latestDate": "2026-07-20",
+      "latestAmplitude": 469.8,
+      "days": 130,
+      "total": 25770,
+      "average": 198.2,
+      "hotDays": 91
     },
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-07-17",
-      "latestAmplitude": 192.4,
-      "days": 129,
-      "total": 9581.4,
-      "average": 74.3,
-      "hotDays": 29
+      "latestDate": "2026-07-20",
+      "latestAmplitude": 125,
+      "days": 130,
+      "total": 9706.4,
+      "average": 74.7,
+      "hotDays": 30
     },
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-07-17",
-      "latestAmplitude": 82.2,
-      "days": 129,
-      "total": 5387.4,
-      "average": 41.8,
-      "hotDays": 17
+      "latestDate": "2026-07-20",
+      "latestAmplitude": 64.6,
+      "days": 130,
+      "total": 5452,
+      "average": 41.9,
+      "hotDays": 18
     }
   ]
 }
