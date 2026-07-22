@@ -4,9 +4,9 @@
   "title": "2026年7月统计",
   "reportDate": "2026-07-22",
   "startDate": "2026-07-01",
-  "updatedAt": "2026/07/22 16:30",
+  "updatedAt": "2026/07/22 20:34",
   "tradingDays": 16,
-  "overallAverage": 197.4,
+  "overallAverage": 197.2,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -61,22 +61,22 @@
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-07-21",
-      "latestAmplitude": 149.4,
-      "days": 15,
-      "total": 1600.6,
-      "average": 106.7,
+      "latestDate": "2026-07-22",
+      "latestAmplitude": 73.8,
+      "days": 16,
+      "total": 1674.4,
+      "average": 104.7,
       "hotDays": 10
     },
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-07-21",
-      "latestAmplitude": 57.8,
-      "days": 15,
-      "total": 853.6,
-      "average": 56.9,
-      "hotDays": 6
+      "latestDate": "2026-07-22",
+      "latestAmplitude": 72,
+      "days": 16,
+      "total": 925.6,
+      "average": 57.9,
+      "hotDays": 7
     }
   ]
 }
