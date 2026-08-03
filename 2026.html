@@ -27,7 +27,7 @@
     h3 { margin: 0; padding: 10px; text-align: center; color: var(--purple); background: var(--soft); font-size: 18px; }
     table { width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 1020px; margin-bottom: 18px; }
     .weekly-section { margin-top: 8px; }
-    .weekly-table { min-width: 680px; margin-bottom: 0; }
+    .weekly-table { min-width: 1020px; margin-bottom: 0; }
     th, td { border: 1px solid var(--line); padding: 7px 6px; text-align: center; vertical-align: middle; }
     th { background: #f3f4f6; font-weight: 600; }
     .month-title td { background: var(--soft); color: var(--purple); font-weight: 700; font-size: 16px; }
@@ -45,7 +45,7 @@
 <body>
   <header>
     <h1>每日及每周振幅统计</h1>
-    <div class="meta">统计区间：2026-01-01 至 2026-07-31 · 生成时间：2026/08/03 11:34</div>
+    <div class="meta">统计区间：2026-01-01 至 2026-07-31 · 生成时间：2026/08/03 11:49</div>
     <nav class="page-nav"><a class="" href="./index.html">首页</a><a class="" href="./current.html">当前月</a><a class="" href="./2024.html">2024年度</a><a class="" href="./2025.html">2025年度</a><a class="active" href="./2026.html">2026年度</a></nav>
   </header>
   <main>
@@ -1823,214 +1823,359 @@
       <div class="weekly-section">
       <h3>每周振幅统计 - 中证1000</h3>
       <table class="weekly-table">
-        <thead><tr><th>序号</th><th>周期</th><th>周最高</th><th>周最低</th><th>周振幅</th><th>交易日</th></tr></thead>
+        <thead><tr><th>序号</th><th>周期</th><th>开盘</th><th>高点</th><th>低点</th><th>收盘</th><th>涨跌点数</th><th>涨幅</th><th>振幅</th><th>标的</th><th>交易日</th></tr></thead>
         <tbody><tr>
         <td>1</td>
         <td>1月5日-1月9日</td>
+        <td>7639.5</td>
         <td>8131.5</td>
         <td>7623.8</td>
-        <td>507.7</td>
+        <td>8129.2</td>
+        <td class=""></td>
+        <td></td>
+        <td class="hot">507.7</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>2</td>
         <td>1月12日-1月16日</td>
+        <td>8196.1</td>
         <td>8415.1</td>
         <td>8151.1</td>
-        <td>264</td>
+        <td>8232.7</td>
+        <td class="">103.5</td>
+        <td>1.3%</td>
+        <td class="hot">264</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>3</td>
         <td>1月19日-1月23日</td>
+        <td>8204.6</td>
         <td>8478.6</td>
         <td>8104.9</td>
-        <td>373.6</td>
+        <td>8470.7</td>
+        <td class="move-hot">238</td>
+        <td>2.9%</td>
+        <td class="hot">373.6</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>4</td>
         <td>1月26日-1月30日</td>
+        <td>8513.2</td>
         <td>8530.4</td>
         <td>8084</td>
-        <td>446.4</td>
+        <td>8254.9</td>
+        <td class="move-hot">-215.9</td>
+        <td>-2.5%</td>
+        <td class="hot">446.4</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>5</td>
         <td>2月2日-2月6日</td>
+        <td>8166.7</td>
         <td>8221.6</td>
         <td>7950</td>
-        <td>271.6</td>
+        <td>8051.6</td>
+        <td class="move-hot">-203.3</td>
+        <td>-2.5%</td>
+        <td class="hot">271.6</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>6</td>
         <td>2月9日-2月13日</td>
+        <td>8177.3</td>
         <td>8337.4</td>
         <td>8149.7</td>
-        <td>187.7</td>
+        <td>8204.8</td>
+        <td class="move-hot">153.3</td>
+        <td>1.9%</td>
+        <td class="hot">187.7</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>7</td>
         <td>2月24日-2月27日</td>
+        <td>8319.7</td>
         <td>8561.3</td>
         <td>8236.7</td>
-        <td>324.6</td>
+        <td>8560.8</td>
+        <td class="move-hot">356</td>
+        <td>4.3%</td>
+        <td class="hot">324.6</td>
+        <td>中证1000</td>
         <td>4</td>
       </tr><tr>
         <td>8</td>
         <td>3月2日-3月6日</td>
+        <td>8464.3</td>
         <td>8535.8</td>
         <td>8039.6</td>
-        <td>496.2</td>
+        <td>8248.9</td>
+        <td class="move-hot">-312</td>
+        <td>-3.6%</td>
+        <td class="hot">496.2</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>9</td>
         <td>3月9日-3月13日</td>
+        <td>8131.7</td>
         <td>8394.1</td>
         <td>7983.6</td>
-        <td>410.6</td>
+        <td>8214.3</td>
+        <td class="">-34.6</td>
+        <td>-0.4%</td>
+        <td class="hot">410.6</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>10</td>
         <td>3月16日-3月20日</td>
+        <td>8212.3</td>
         <td>8226</td>
         <td>7781.6</td>
-        <td>444.5</td>
+        <td>7783.4</td>
+        <td class="move-hot">-430.9</td>
+        <td>-5.2%</td>
+        <td class="hot">444.5</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>11</td>
         <td>3月23日-3月27日</td>
+        <td>7633</td>
         <td>7784.6</td>
         <td>7357.7</td>
-        <td>426.9</td>
+        <td>7746.3</td>
+        <td class="">-37.1</td>
+        <td>-0.5%</td>
+        <td class="hot">426.9</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>12</td>
         <td>3月30日-4月3日</td>
+        <td>7664.6</td>
         <td>7789.2</td>
         <td>7521.9</td>
-        <td>267.3</td>
+        <td>7536.6</td>
+        <td class="move-hot">-209.7</td>
+        <td>-2.7%</td>
+        <td class="hot">267.3</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>13</td>
         <td>4月7日-4月10日</td>
+        <td>7556.3</td>
         <td>8059.8</td>
         <td>7554.4</td>
-        <td>505.4</td>
+        <td>7998.2</td>
+        <td class="move-hot">461.6</td>
+        <td>6.1%</td>
+        <td class="hot">505.4</td>
+        <td>中证1000</td>
         <td>4</td>
       </tr><tr>
         <td>14</td>
         <td>4月13日-4月17日</td>
+        <td>7947.2</td>
         <td>8333.2</td>
         <td>7947.2</td>
-        <td>386</td>
+        <td>8307.4</td>
+        <td class="move-hot">309.2</td>
+        <td>3.9%</td>
+        <td class="hot">386</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>15</td>
         <td>4月20日-4月24日</td>
+        <td>8308.1</td>
         <td>8500.4</td>
         <td>8254.4</td>
-        <td>246</td>
+        <td>8304.1</td>
+        <td class="">-3.3</td>
+        <td>0%</td>
+        <td class="hot">246</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>16</td>
         <td>4月27日-4月30日</td>
+        <td>8292.8</td>
         <td>8402.4</td>
         <td>8163.4</td>
-        <td>239</td>
+        <td>8382</td>
+        <td class="">77.8</td>
+        <td>0.9%</td>
+        <td class="hot">239</td>
+        <td>中证1000</td>
         <td>4</td>
       </tr><tr>
         <td>17</td>
         <td>5月6日-5月8日</td>
+        <td>8462</td>
         <td>8760.2</td>
         <td>8462</td>
-        <td>298.2</td>
+        <td>8741.2</td>
+        <td class="move-hot">359.2</td>
+        <td>4.3%</td>
+        <td class="hot">298.2</td>
+        <td>中证1000</td>
         <td>3</td>
       </tr><tr>
         <td>18</td>
         <td>5月11日-5月15日</td>
+        <td>8807.9</td>
         <td>8991.9</td>
         <td>8616.1</td>
-        <td>375.8</td>
+        <td>8682.7</td>
+        <td class="">-58.5</td>
+        <td>-0.7%</td>
+        <td class="hot">375.8</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>19</td>
         <td>5月18日-5月22日</td>
+        <td>8645.8</td>
         <td>8896.6</td>
         <td>8500.9</td>
-        <td>395.7</td>
+        <td>8692.7</td>
+        <td class="">10</td>
+        <td>0.1%</td>
+        <td class="hot">395.7</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>20</td>
         <td>5月25日-5月29日</td>
+        <td>8756.5</td>
         <td>8803</td>
         <td>8357.8</td>
-        <td>445.2</td>
+        <td>8408.7</td>
+        <td class="move-hot">-283.9</td>
+        <td>-3.3%</td>
+        <td class="hot">445.2</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>21</td>
         <td>6月1日-6月5日</td>
+        <td>8393.5</td>
         <td>8549.3</td>
         <td>8219.2</td>
-        <td>330.1</td>
+        <td>8341</td>
+        <td class="">-67.8</td>
+        <td>-0.8%</td>
+        <td class="hot">330.1</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>22</td>
         <td>6月8日-6月12日</td>
+        <td>8069.5</td>
         <td>8348.8</td>
         <td>7987.4</td>
-        <td>361.4</td>
+        <td>8202.8</td>
+        <td class="">-138.2</td>
+        <td>-1.7%</td>
+        <td class="hot">361.4</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>23</td>
         <td>6月15日-6月18日</td>
+        <td>8269.4</td>
         <td>8796.5</td>
         <td>8269.4</td>
-        <td>527.1</td>
+        <td>8771</td>
+        <td class="move-hot">568.2</td>
+        <td>6.9%</td>
+        <td class="hot">527.1</td>
+        <td>中证1000</td>
         <td>4</td>
       </tr><tr>
         <td>24</td>
         <td>6月22日-6月26日</td>
+        <td>8813.7</td>
         <td>8872.1</td>
         <td>8563.7</td>
-        <td>308.4</td>
+        <td>8601.4</td>
+        <td class="move-hot">-169.6</td>
+        <td>-1.9%</td>
+        <td class="hot">308.4</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>25</td>
         <td>6月29日-7月3日</td>
+        <td>8616.4</td>
         <td>8944.2</td>
         <td>8413.9</td>
-        <td>530.3</td>
+        <td>8620.8</td>
+        <td class="">19.4</td>
+        <td>0.2%</td>
+        <td class="hot">530.3</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>26</td>
         <td>7月6日-7月10日</td>
+        <td>8669.1</td>
         <td>8694.8</td>
         <td>7978.8</td>
-        <td>716</td>
+        <td>8198.3</td>
+        <td class="move-hot">-422.5</td>
+        <td>-4.9%</td>
+        <td class="hot">716</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>27</td>
         <td>7月13日-7月17日</td>
+        <td>8124.4</td>
         <td>8171.5</td>
         <td>7163.3</td>
-        <td>1008.2</td>
+        <td>7168</td>
+        <td class="move-hot">-1030.3</td>
+        <td>-12.6%</td>
+        <td class="hot">1008.2</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>28</td>
         <td>7月20日-7月24日</td>
+        <td>7256.3</td>
         <td>7302.5</td>
         <td>6714.2</td>
-        <td>588.3</td>
+        <td>6995.7</td>
+        <td class="move-hot">-172.3</td>
+        <td>-2.4%</td>
+        <td class="hot">588.3</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr><tr>
         <td>29</td>
         <td>7月27日-7月31日</td>
+        <td>6981.2</td>
         <td>7228.8</td>
         <td>6841.8</td>
-        <td>387</td>
+        <td>7075.5</td>
+        <td class="">79.8</td>
+        <td>1.1%</td>
+        <td class="hot">387</td>
+        <td>中证1000</td>
         <td>5</td>
       </tr></tbody>
         <tfoot>
-          <tr><td>合计</td><td>29周</td><td></td><td></td><td>12069.2</td><td></td></tr>
-          <tr><td>均值</td><td></td><td></td><td></td><td class="hot">416.2</td><td></td></tr>
+          <tr><td>合计</td><td>29周</td><td></td><td></td><td></td><td></td><td></td><td></td><td>12069.2</td><td></td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="hot">416.2</td><td></td><td></td></tr>
         </tfoot>
       </table>
     </div>
@@ -3778,214 +3923,359 @@
       <div class="weekly-section">
       <h3>每周振幅统计 - 中证500</h3>
       <table class="weekly-table">
-        <thead><tr><th>序号</th><th>周期</th><th>周最高</th><th>周最低</th><th>周振幅</th><th>交易日</th></tr></thead>
+        <thead><tr><th>序号</th><th>周期</th><th>开盘</th><th>高点</th><th>低点</th><th>收盘</th><th>涨跌点数</th><th>涨幅</th><th>振幅</th><th>标的</th><th>交易日</th></tr></thead>
         <tbody><tr>
         <td>1</td>
         <td>1月5日-1月9日</td>
+        <td>7523.9</td>
         <td>8064.8</td>
         <td>7523.3</td>
-        <td>541.5</td>
+        <td>8056.7</td>
+        <td class=""></td>
+        <td></td>
+        <td class="hot">541.5</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>2</td>
         <td>1月12日-1月16日</td>
+        <td>8141.6</td>
         <td>8368.2</td>
         <td>8103.2</td>
-        <td>265</td>
+        <td>8232.7</td>
+        <td class="move-hot">176</td>
+        <td>2.2%</td>
+        <td class="hot">265</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>3</td>
         <td>1月19日-1月23日</td>
+        <td>8199.5</td>
         <td>8590.2</td>
         <td>8142.1</td>
-        <td>448</td>
+        <td>8590.2</td>
+        <td class="move-hot">357.5</td>
+        <td>4.3%</td>
+        <td class="hot">448</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>4</td>
         <td>1月26日-1月30日</td>
+        <td>8624.9</td>
         <td>8671.4</td>
         <td>8194.6</td>
-        <td>476.8</td>
+        <td>8370.5</td>
+        <td class="move-hot">-219.6</td>
+        <td>-2.6%</td>
+        <td class="hot">476.8</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>5</td>
         <td>2月2日-2月6日</td>
+        <td>8279.7</td>
         <td>8324.4</td>
         <td>8014.7</td>
-        <td>309.8</td>
+        <td>8146.4</td>
+        <td class="move-hot">-224.1</td>
+        <td>-2.7%</td>
+        <td class="hot">309.8</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>6</td>
         <td>2月9日-2月13日</td>
+        <td>8280.1</td>
         <td>8437.4</td>
         <td>8229</td>
-        <td>208.4</td>
+        <td>8299.6</td>
+        <td class="move-hot">153.2</td>
+        <td>1.9%</td>
+        <td class="hot">208.4</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>7</td>
         <td>2月24日-2月27日</td>
+        <td>8403.3</td>
         <td>8658.5</td>
         <td>8328.6</td>
-        <td>329.9</td>
+        <td>8658.5</td>
+        <td class="move-hot">358.9</td>
+        <td>4.3%</td>
+        <td class="hot">329.9</td>
+        <td>中证500</td>
         <td>4</td>
       </tr><tr>
         <td>8</td>
         <td>3月2日-3月6日</td>
+        <td>8585.9</td>
         <td>8684</td>
         <td>8168</td>
-        <td>516</td>
+        <td>8360.3</td>
+        <td class="move-hot">-298.1</td>
+        <td>-3.4%</td>
+        <td class="hot">516</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>9</td>
         <td>3月9日-3月13日</td>
+        <td>8234.2</td>
         <td>8439.6</td>
         <td>8066.1</td>
-        <td>373.5</td>
+        <td>8239.8</td>
+        <td class="">-120.5</td>
+        <td>-1.4%</td>
+        <td class="hot">373.5</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>10</td>
         <td>3月16日-3月20日</td>
+        <td>8227.7</td>
         <td>8233.7</td>
         <td>7757.8</td>
-        <td>475.8</td>
+        <td>7760</td>
+        <td class="move-hot">-479.8</td>
+        <td>-5.8%</td>
+        <td class="hot">475.8</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>11</td>
         <td>3月23日-3月27日</td>
+        <td>7623.2</td>
         <td>7806.9</td>
         <td>7379.9</td>
-        <td>427.1</td>
+        <td>7737.6</td>
+        <td class="">-22.4</td>
+        <td>-0.3%</td>
+        <td class="hot">427.1</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>12</td>
         <td>3月30日-4月3日</td>
+        <td>7655.2</td>
         <td>7788.9</td>
         <td>7518.4</td>
-        <td>270.5</td>
+        <td>7534.9</td>
+        <td class="move-hot">-202.7</td>
+        <td>-2.6%</td>
+        <td class="hot">270.5</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>13</td>
         <td>4月7日-4月10日</td>
+        <td>7562.1</td>
         <td>8070.7</td>
         <td>7529.4</td>
-        <td>541.3</td>
+        <td>7969.4</td>
+        <td class="move-hot">434.4</td>
+        <td>5.8%</td>
+        <td class="hot">541.3</td>
+        <td>中证500</td>
         <td>4</td>
       </tr><tr>
         <td>14</td>
         <td>4月13日-4月17日</td>
+        <td>7917.9</td>
         <td>8230.1</td>
         <td>7917.9</td>
-        <td>312.2</td>
+        <td>8214.2</td>
+        <td class="move-hot">244.8</td>
+        <td>3.1%</td>
+        <td class="hot">312.2</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>15</td>
         <td>4月20日-4月24日</td>
+        <td>8223.6</td>
         <td>8401.5</td>
         <td>8165.8</td>
-        <td>235.7</td>
+        <td>8247.9</td>
+        <td class="">33.7</td>
+        <td>0.4%</td>
+        <td class="hot">235.7</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>16</td>
         <td>4月27日-4月30日</td>
+        <td>8236.4</td>
         <td>8375.2</td>
         <td>8157.4</td>
-        <td>217.8</td>
+        <td>8349.5</td>
+        <td class="">101.6</td>
+        <td>1.2%</td>
+        <td class="hot">217.8</td>
+        <td>中证500</td>
         <td>4</td>
       </tr><tr>
         <td>17</td>
         <td>5月6日-5月8日</td>
+        <td>8441.3</td>
         <td>8706.3</td>
         <td>8441.3</td>
-        <td>265</td>
+        <td>8694.2</td>
+        <td class="move-hot">344.7</td>
+        <td>4.1%</td>
+        <td class="hot">265</td>
+        <td>中证500</td>
         <td>3</td>
       </tr><tr>
         <td>18</td>
         <td>5月11日-5月15日</td>
+        <td>8771.2</td>
         <td>8956.7</td>
         <td>8473</td>
-        <td>483.6</td>
+        <td>8536.3</td>
+        <td class="move-hot">-157.8</td>
+        <td>-1.8%</td>
+        <td class="hot">483.6</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>19</td>
         <td>5月18日-5月22日</td>
+        <td>8493</td>
         <td>8790.4</td>
         <td>8406.3</td>
-        <td>384.1</td>
+        <td>8576.9</td>
+        <td class="">40.6</td>
+        <td>0.5%</td>
+        <td class="hot">384.1</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>20</td>
         <td>5月25日-5月29日</td>
+        <td>8631.2</td>
         <td>8722.6</td>
         <td>8296.2</td>
-        <td>426.3</td>
+        <td>8359.6</td>
+        <td class="move-hot">-217.4</td>
+        <td>-2.5%</td>
+        <td class="hot">426.3</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>21</td>
         <td>6月1日-6月5日</td>
+        <td>8358.5</td>
         <td>8462.7</td>
         <td>8142.5</td>
-        <td>320.2</td>
+        <td>8251.1</td>
+        <td class="">-108.4</td>
+        <td>-1.3%</td>
+        <td class="hot">320.2</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>22</td>
         <td>6月8日-6月12日</td>
+        <td>7978.7</td>
         <td>8258.9</td>
         <td>7889.4</td>
-        <td>369.5</td>
+        <td>8106.2</td>
+        <td class="">-144.9</td>
+        <td>-1.8%</td>
+        <td class="hot">369.5</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>23</td>
         <td>6月15日-6月18日</td>
+        <td>8175.1</td>
         <td>8716.3</td>
         <td>8174.6</td>
-        <td>541.8</td>
+        <td>8673.1</td>
+        <td class="move-hot">566.9</td>
+        <td>7%</td>
+        <td class="hot">541.8</td>
+        <td>中证500</td>
         <td>4</td>
       </tr><tr>
         <td>24</td>
         <td>6月22日-6月26日</td>
+        <td>8709.7</td>
         <td>8941</td>
         <td>8605.2</td>
-        <td>335.7</td>
+        <td>8703.6</td>
+        <td class="">30.5</td>
+        <td>0.4%</td>
+        <td class="hot">335.7</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>25</td>
         <td>6月29日-7月3日</td>
+        <td>8731.6</td>
         <td>9147.6</td>
         <td>8587.9</td>
-        <td>559.7</td>
+        <td>8745.3</td>
+        <td class="">41.7</td>
+        <td>0.5%</td>
+        <td class="hot">559.7</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>26</td>
         <td>7月6日-7月10日</td>
+        <td>8791</td>
         <td>8823.1</td>
         <td>8282</td>
-        <td>541.1</td>
+        <td>8504</td>
+        <td class="move-hot">-241.3</td>
+        <td>-2.8%</td>
+        <td class="hot">541.1</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>27</td>
         <td>7月13日-7月17日</td>
+        <td>8409.1</td>
         <td>8457.7</td>
         <td>7474.2</td>
-        <td>983.5</td>
+        <td>7513.8</td>
+        <td class="move-hot">-990.2</td>
+        <td>-11.6%</td>
+        <td class="hot">983.5</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>28</td>
         <td>7月20日-7月24日</td>
+        <td>7597.8</td>
         <td>7889.5</td>
         <td>7253.5</td>
-        <td>635.9</td>
+        <td>7532.7</td>
+        <td class="">18.9</td>
+        <td>0.3%</td>
+        <td class="hot">635.9</td>
+        <td>中证500</td>
         <td>5</td>
       </tr><tr>
         <td>29</td>
         <td>7月27日-7月31日</td>
+        <td>7512.4</td>
         <td>7721.4</td>
         <td>7222</td>
-        <td>499.4</td>
+        <td>7494</td>
+        <td class="">-38.7</td>
+        <td>-0.5%</td>
+        <td class="hot">499.4</td>
+        <td>中证500</td>
         <td>5</td>
       </tr></tbody>
         <tfoot>
-          <tr><td>合计</td><td>29周</td><td></td><td></td><td>12295.1</td><td></td></tr>
-          <tr><td>均值</td><td></td><td></td><td></td><td class="hot">424</td><td></td></tr>
+          <tr><td>合计</td><td>29周</td><td></td><td></td><td></td><td></td><td></td><td></td><td>12295.1</td><td></td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="hot">424</td><td></td><td></td></tr>
         </tfoot>
       </table>
     </div>
@@ -5733,214 +6023,359 @@
       <div class="weekly-section">
       <h3>每周振幅统计 - 上证指数</h3>
       <table class="weekly-table">
-        <thead><tr><th>序号</th><th>周期</th><th>周最高</th><th>周最低</th><th>周振幅</th><th>交易日</th></tr></thead>
+        <thead><tr><th>序号</th><th>周期</th><th>开盘</th><th>高点</th><th>低点</th><th>收盘</th><th>涨跌点数</th><th>涨幅</th><th>振幅</th><th>标的</th><th>交易日</th></tr></thead>
         <tbody><tr>
         <td>1</td>
         <td>1月5日-1月9日</td>
+        <td>3987</td>
         <td>4121.7</td>
         <td>3983.6</td>
-        <td>138.1</td>
+        <td>4120.4</td>
+        <td class=""></td>
+        <td></td>
+        <td class="hot">138.1</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>2</td>
         <td>1月12日-1月16日</td>
+        <td>4134.9</td>
         <td>4190.9</td>
         <td>4091.8</td>
-        <td>99.1</td>
+        <td>4101.9</td>
+        <td class="">-18.5</td>
+        <td>-0.4%</td>
+        <td class="hot">99.1</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>3</td>
         <td>1月19日-1月23日</td>
+        <td>4090.7</td>
         <td>4143.8</td>
         <td>4080.3</td>
-        <td>63.5</td>
+        <td>4136.2</td>
+        <td class="">34.3</td>
+        <td>0.8%</td>
+        <td class="hot">63.5</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>4</td>
         <td>1月26日-1月30日</td>
+        <td>4144.8</td>
         <td>4170.2</td>
         <td>4064.8</td>
-        <td>105.4</td>
+        <td>4118</td>
+        <td class="">-18.2</td>
+        <td>-0.4%</td>
+        <td class="hot">105.4</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>5</td>
         <td>2月2日-2月6日</td>
+        <td>4079.7</td>
         <td>4104.6</td>
         <td>4002.8</td>
-        <td>101.8</td>
+        <td>4065.6</td>
+        <td class="">-52.4</td>
+        <td>-1.3%</td>
+        <td class="hot">101.8</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>6</td>
         <td>2月9日-2月13日</td>
+        <td>4103.5</td>
         <td>4142.6</td>
         <td>4079.8</td>
-        <td>62.8</td>
+        <td>4082.1</td>
+        <td class="">16.5</td>
+        <td>0.4%</td>
+        <td class="hot">62.8</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>7</td>
         <td>2月24日-2月27日</td>
+        <td>4129.1</td>
         <td>4167.8</td>
         <td>4105.9</td>
-        <td>61.9</td>
+        <td>4162.9</td>
+        <td class="">80.8</td>
+        <td>2%</td>
+        <td class="hot">61.9</td>
+        <td>上证指数</td>
         <td>4</td>
       </tr><tr>
         <td>8</td>
         <td>3月2日-3月6日</td>
+        <td>4151.8</td>
         <td>4197.2</td>
         <td>4055.4</td>
-        <td>141.8</td>
+        <td>4124.2</td>
+        <td class="">-38.7</td>
+        <td>-0.9%</td>
+        <td class="hot">141.8</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>9</td>
         <td>3月9日-3月13日</td>
+        <td>4098.7</td>
         <td>4141.7</td>
         <td>4052.6</td>
-        <td>89.1</td>
+        <td>4095.5</td>
+        <td class="">-28.7</td>
+        <td>-0.7%</td>
+        <td class="hot">89.1</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>10</td>
         <td>3月16日-3月20日</td>
+        <td>4092.3</td>
         <td>4108.4</td>
         <td>3955.7</td>
-        <td>152.7</td>
+        <td>3957.1</td>
+        <td class="">-138.4</td>
+        <td>-3.4%</td>
+        <td class="hot">152.7</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>11</td>
         <td>3月23日-3月27日</td>
+        <td>3905</td>
         <td>3937.1</td>
         <td>3794.7</td>
-        <td>142.4</td>
+        <td>3913.7</td>
+        <td class="">-43.3</td>
+        <td>-1.1%</td>
+        <td class="hot">142.4</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>12</td>
         <td>3月30日-4月3日</td>
+        <td>3884.3</td>
         <td>3955.9</td>
         <td>3871.3</td>
-        <td>84.6</td>
+        <td>3880.1</td>
+        <td class="">-33.6</td>
+        <td>-0.9%</td>
+        <td class="hot">84.6</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>13</td>
         <td>4月7日-4月10日</td>
+        <td>3884.2</td>
         <td>4011</td>
         <td>3875.7</td>
-        <td>135.3</td>
+        <td>3986.2</td>
+        <td class="">106.1</td>
+        <td>2.7%</td>
+        <td class="hot">135.3</td>
+        <td>上证指数</td>
         <td>4</td>
       </tr><tr>
         <td>14</td>
         <td>4月13日-4月17日</td>
+        <td>3971.2</td>
         <td>4058.6</td>
         <td>3966.2</td>
-        <td>92.4</td>
+        <td>4051.4</td>
+        <td class="">65.2</td>
+        <td>1.6%</td>
+        <td class="hot">92.4</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>15</td>
         <td>4月20日-4月24日</td>
+        <td>4053.4</td>
         <td>4114.8</td>
         <td>4051.7</td>
-        <td>63.2</td>
+        <td>4079.9</td>
+        <td class="">28.5</td>
+        <td>0.7%</td>
+        <td class="hot">63.2</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>16</td>
         <td>4月27日-4月30日</td>
+        <td>4074.8</td>
         <td>4118.8</td>
         <td>4061.8</td>
-        <td>56.9</td>
+        <td>4112.2</td>
+        <td class="">32.3</td>
+        <td>0.8%</td>
+        <td class="hot">56.9</td>
+        <td>上证指数</td>
         <td>4</td>
       </tr><tr>
         <td>17</td>
         <td>5月6日-5月8日</td>
+        <td>4135.5</td>
         <td>4183.1</td>
         <td>4129.9</td>
-        <td>53.2</td>
+        <td>4180</td>
+        <td class="">67.8</td>
+        <td>1.6%</td>
+        <td class="hot">53.2</td>
+        <td>上证指数</td>
         <td>3</td>
       </tr><tr>
         <td>18</td>
         <td>5月11日-5月15日</td>
+        <td>4201.4</td>
         <td>4258.9</td>
         <td>4114.1</td>
-        <td>144.8</td>
+        <td>4135.4</td>
+        <td class="">-44.6</td>
+        <td>-1.1%</td>
+        <td class="hot">144.8</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>19</td>
         <td>5月18日-5月22日</td>
+        <td>4120.1</td>
         <td>4199.5</td>
         <td>4067.8</td>
-        <td>131.8</td>
+        <td>4112.9</td>
+        <td class="">-22.5</td>
+        <td>-0.5%</td>
+        <td class="hot">131.8</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>20</td>
         <td>5月25日-5月29日</td>
+        <td>4126.3</td>
         <td>4153.9</td>
         <td>4055.8</td>
-        <td>98.1</td>
+        <td>4068.6</td>
+        <td class="">-44.3</td>
+        <td>-1.1%</td>
+        <td class="hot">98.1</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>21</td>
         <td>6月1日-6月5日</td>
+        <td>4067.2</td>
         <td>4107.1</td>
         <td>4015.1</td>
-        <td>92</td>
+        <td>4027.7</td>
+        <td class="">-40.8</td>
+        <td>-1%</td>
+        <td class="hot">92</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>22</td>
         <td>6月8日-6月12日</td>
+        <td>3938.7</td>
         <td>4060.3</td>
         <td>3927.9</td>
-        <td>132.4</td>
+        <td>4031.5</td>
+        <td class="">3.8</td>
+        <td>0.1%</td>
+        <td class="hot">132.4</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>23</td>
         <td>6月15日-6月18日</td>
+        <td>4053.6</td>
         <td>4117.5</td>
         <td>4051.1</td>
-        <td>66.4</td>
+        <td>4090.5</td>
+        <td class="">59</td>
+        <td>1.5%</td>
+        <td class="hot">66.4</td>
+        <td>上证指数</td>
         <td>4</td>
       </tr><tr>
         <td>24</td>
         <td>6月22日-6月26日</td>
+        <td>4094</td>
         <td>4175.4</td>
         <td>4007.9</td>
-        <td>167.5</td>
+        <td>4027.3</td>
+        <td class="">-63.2</td>
+        <td>-1.5%</td>
+        <td class="hot">167.5</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>25</td>
         <td>6月29日-7月3日</td>
+        <td>4026.7</td>
         <td>4143.3</td>
         <td>3992.6</td>
-        <td>150.8</td>
+        <td>4043.6</td>
+        <td class="">16.4</td>
+        <td>0.4%</td>
+        <td class="hot">150.8</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>26</td>
         <td>7月6日-7月10日</td>
+        <td>4059.2</td>
         <td>4074.8</td>
         <td>3938.9</td>
-        <td>135.9</td>
+        <td>3996.2</td>
+        <td class="">-47.5</td>
+        <td>-1.2%</td>
+        <td class="hot">135.9</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>27</td>
         <td>7月13日-7月17日</td>
+        <td>3966</td>
         <td>3983.1</td>
         <td>3745.2</td>
-        <td>237.9</td>
+        <td>3764.2</td>
+        <td class="move-hot">-232</td>
+        <td>-5.8%</td>
+        <td class="hot">237.9</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>28</td>
         <td>7月20日-7月24日</td>
+        <td>3791.7</td>
         <td>3884.4</td>
         <td>3741.1</td>
-        <td>143.3</td>
+        <td>3814.2</td>
+        <td class="">50</td>
+        <td>1.3%</td>
+        <td class="hot">143.3</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr><tr>
         <td>29</td>
         <td>7月27日-7月31日</td>
+        <td>3808.9</td>
         <td>3858.3</td>
         <td>3767.5</td>
-        <td>90.8</td>
+        <td>3832.3</td>
+        <td class="">18.1</td>
+        <td>0.5%</td>
+        <td class="hot">90.8</td>
+        <td>上证指数</td>
         <td>5</td>
       </tr></tbody>
         <tfoot>
-          <tr><td>合计</td><td>29周</td><td></td><td></td><td>3235.9</td><td></td></tr>
-          <tr><td>均值</td><td></td><td></td><td></td><td class="hot">111.6</td><td></td></tr>
+          <tr><td>合计</td><td>29周</td><td></td><td></td><td></td><td></td><td></td><td></td><td>3235.9</td><td></td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="hot">111.6</td><td></td><td></td></tr>
         </tfoot>
       </table>
     </div>
@@ -7688,214 +8123,359 @@
       <div class="weekly-section">
       <h3>每周振幅统计 - IM主力</h3>
       <table class="weekly-table">
-        <thead><tr><th>序号</th><th>周期</th><th>周最高</th><th>周最低</th><th>周振幅</th><th>交易日</th></tr></thead>
+        <thead><tr><th>序号</th><th>周期</th><th>开盘</th><th>高点</th><th>低点</th><th>收盘</th><th>涨跌点数</th><th>涨幅</th><th>振幅</th><th>标的</th><th>交易日</th></tr></thead>
         <tbody><tr>
         <td>1</td>
         <td>1月5日-1月9日</td>
+        <td>7491.6</td>
         <td>8049.4</td>
         <td>7462.2</td>
-        <td>587.2</td>
+        <td>8048.4</td>
+        <td class=""></td>
+        <td></td>
+        <td class="hot">587.2</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>2</td>
         <td>1月12日-1月16日</td>
+        <td>8131</td>
         <td>8419</td>
         <td>8056.2</td>
-        <td>362.8</td>
+        <td>8179.2</td>
+        <td class="">130.8</td>
+        <td>1.6%</td>
+        <td class="hot">362.8</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>3</td>
         <td>1月19日-1月23日</td>
+        <td>8158</td>
         <td>8518.2</td>
         <td>8016.8</td>
-        <td>501.4</td>
+        <td>8516.6</td>
+        <td class="move-hot">337.4</td>
+        <td>4.1%</td>
+        <td class="hot">501.4</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>4</td>
         <td>1月26日-1月30日</td>
+        <td>8541.8</td>
         <td>8568</td>
         <td>8050</td>
-        <td>518</td>
+        <td>8260.6</td>
+        <td class="move-hot">-256</td>
+        <td>-3%</td>
+        <td class="hot">518</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>5</td>
         <td>2月2日-2月6日</td>
+        <td>8180.2</td>
         <td>8240</td>
         <td>7840</td>
-        <td>400</td>
+        <td>7990.8</td>
+        <td class="move-hot">-269.8</td>
+        <td>-3.3%</td>
+        <td class="hot">400</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>6</td>
         <td>2月9日-2月13日</td>
+        <td>8155</td>
         <td>8351.8</td>
         <td>8120.4</td>
-        <td>231.4</td>
+        <td>8189</td>
+        <td class="move-hot">198.2</td>
+        <td>2.5%</td>
+        <td class="hot">231.4</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>7</td>
         <td>2月24日-2月27日</td>
+        <td>8307.8</td>
         <td>8538.8</td>
         <td>8227.2</td>
-        <td>311.6</td>
+        <td>8531.4</td>
+        <td class="move-hot">342.4</td>
+        <td>4.2%</td>
+        <td class="hot">311.6</td>
+        <td>IM2603</td>
         <td>4</td>
       </tr><tr>
         <td>8</td>
         <td>3月2日-3月6日</td>
+        <td>8480</td>
         <td>8514.6</td>
         <td>8037.2</td>
-        <td>477.4</td>
+        <td>8211.8</td>
+        <td class="move-hot">-319.6</td>
+        <td>-3.7%</td>
+        <td class="hot">477.4</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>9</td>
         <td>3月9日-3月13日</td>
+        <td>8064</td>
         <td>8368</td>
         <td>7850</td>
-        <td>518</td>
+        <td>8187</td>
+        <td class="">-24.8</td>
+        <td>-0.3%</td>
+        <td class="hot">518</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>10</td>
         <td>3月16日-3月20日</td>
+        <td>8202.4</td>
         <td>8220</td>
         <td>7866</td>
-        <td>354</td>
+        <td>7876.2</td>
+        <td class="move-hot">-310.8</td>
+        <td>-3.8%</td>
+        <td class="hot">354</td>
+        <td>IM2603</td>
         <td>5</td>
       </tr><tr>
         <td>11</td>
         <td>3月23日-3月27日</td>
+        <td>7459.8</td>
         <td>7589</td>
         <td>7120.2</td>
-        <td>468.8</td>
+        <td>7523.8</td>
+        <td class="move-hot">-352.4</td>
+        <td>-4.5%</td>
+        <td class="hot">468.8</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>12</td>
         <td>3月30日-4月3日</td>
+        <td>7445</td>
         <td>7567.6</td>
         <td>7280.2</td>
-        <td>287.4</td>
+        <td>7309.4</td>
+        <td class="move-hot">-214.4</td>
+        <td>-2.8%</td>
+        <td class="hot">287.4</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>13</td>
         <td>4月7日-4月10日</td>
+        <td>7344.2</td>
         <td>7869.6</td>
         <td>7332.8</td>
-        <td>536.8</td>
+        <td>7785.8</td>
+        <td class="move-hot">476.4</td>
+        <td>6.5%</td>
+        <td class="hot">536.8</td>
+        <td>IM2606</td>
         <td>4</td>
       </tr><tr>
         <td>14</td>
         <td>4月13日-4月17日</td>
+        <td>7758</td>
         <td>8165.8</td>
         <td>7751</td>
-        <td>414.8</td>
+        <td>8132</td>
+        <td class="move-hot">346.2</td>
+        <td>4.4%</td>
+        <td class="hot">414.8</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>15</td>
         <td>4月20日-4月24日</td>
+        <td>8130</td>
         <td>8337</td>
         <td>8092</td>
-        <td>245</td>
+        <td>8163</td>
+        <td class="">31</td>
+        <td>0.4%</td>
+        <td class="hot">245</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>16</td>
         <td>4月27日-4月30日</td>
+        <td>8181.4</td>
         <td>8292</td>
         <td>8056</td>
-        <td>236</td>
+        <td>8279.2</td>
+        <td class="">116.2</td>
+        <td>1.4%</td>
+        <td class="hot">236</td>
+        <td>IM2606</td>
         <td>4</td>
       </tr><tr>
         <td>17</td>
         <td>5月6日-5月8日</td>
+        <td>8398</td>
         <td>8670</td>
         <td>8381</td>
-        <td>289</td>
+        <td>8642.2</td>
+        <td class="move-hot">363</td>
+        <td>4.4%</td>
+        <td class="hot">289</td>
+        <td>IM2606</td>
         <td>3</td>
       </tr><tr>
         <td>18</td>
         <td>5月11日-5月15日</td>
+        <td>8720</td>
         <td>8908.8</td>
         <td>8505.6</td>
-        <td>403.2</td>
+        <td>8582.6</td>
+        <td class="">-59.6</td>
+        <td>-0.7%</td>
+        <td class="hot">403.2</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>19</td>
         <td>5月18日-5月22日</td>
+        <td>8563</td>
         <td>8814.2</td>
         <td>8426.2</td>
-        <td>388</td>
+        <td>8589.8</td>
+        <td class="">7.2</td>
+        <td>0.1%</td>
+        <td class="hot">388</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>20</td>
         <td>5月25日-5月29日</td>
+        <td>8670</td>
         <td>8691.4</td>
         <td>8291.6</td>
-        <td>399.8</td>
+        <td>8344.8</td>
+        <td class="move-hot">-245</td>
+        <td>-2.9%</td>
+        <td class="hot">399.8</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>21</td>
         <td>6月1日-6月5日</td>
+        <td>8355</td>
         <td>8493.4</td>
         <td>8190</td>
-        <td>303.4</td>
+        <td>8291.8</td>
+        <td class="">-53</td>
+        <td>-0.6%</td>
+        <td class="hot">303.4</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>22</td>
         <td>6月8日-6月12日</td>
+        <td>8117.8</td>
         <td>8323.8</td>
         <td>7962</td>
-        <td>361.8</td>
+        <td>8196.8</td>
+        <td class="">-95</td>
+        <td>-1.1%</td>
+        <td class="hot">361.8</td>
+        <td>IM2606</td>
         <td>5</td>
       </tr><tr>
         <td>23</td>
         <td>6月15日-6月18日</td>
+        <td>8292</td>
         <td>8788</td>
         <td>8285</td>
-        <td>503</td>
+        <td>8766</td>
+        <td class="move-hot">569.2</td>
+        <td>6.9%</td>
+        <td class="hot">503</td>
+        <td>IM2606</td>
         <td>4</td>
       </tr><tr>
         <td>24</td>
         <td>6月22日-6月26日</td>
+        <td>8790</td>
         <td>8802.4</td>
         <td>8260.2</td>
-        <td>542.2</td>
+        <td>8319.2</td>
+        <td class="move-hot">-446.8</td>
+        <td>-5.1%</td>
+        <td class="hot">542.2</td>
+        <td>IM2606/IM2609</td>
         <td>5</td>
       </tr><tr>
         <td>25</td>
         <td>6月29日-7月3日</td>
+        <td>8335</td>
         <td>8629</td>
         <td>8145.2</td>
-        <td>483.8</td>
+        <td>8373</td>
+        <td class="">53.8</td>
+        <td>0.6%</td>
+        <td class="hot">483.8</td>
+        <td>IM2609</td>
         <td>5</td>
       </tr><tr>
         <td>26</td>
         <td>7月6日-7月10日</td>
+        <td>8403</td>
         <td>8419.8</td>
         <td>7868.2</td>
-        <td>551.6</td>
+        <td>8019.4</td>
+        <td class="move-hot">-353.6</td>
+        <td>-4.2%</td>
+        <td class="hot">551.6</td>
+        <td>IM2609</td>
         <td>5</td>
       </tr><tr>
         <td>27</td>
         <td>7月13日-7月17日</td>
+        <td>7995</td>
         <td>8029.8</td>
         <td>7018.8</td>
-        <td>1011</td>
+        <td>7065.2</td>
+        <td class="move-hot">-954.2</td>
+        <td>-11.9%</td>
+        <td class="hot">1011</td>
+        <td>IM2609</td>
         <td>5</td>
       </tr><tr>
         <td>28</td>
         <td>7月20日-7月24日</td>
+        <td>7165.2</td>
         <td>7237</td>
         <td>6641.8</td>
-        <td>595.2</td>
+        <td>6880.2</td>
+        <td class="move-hot">-185</td>
+        <td>-2.6%</td>
+        <td class="hot">595.2</td>
+        <td>IM2609</td>
         <td>5</td>
       </tr><tr>
         <td>29</td>
         <td>7月27日-7月31日</td>
+        <td>6880.4</td>
         <td>7205</td>
         <td>6757.6</td>
-        <td>447.4</td>
+        <td>6987.8</td>
+        <td class="">107.6</td>
+        <td>1.6%</td>
+        <td class="hot">447.4</td>
+        <td>IM2609</td>
         <td>5</td>
       </tr></tbody>
         <tfoot>
-          <tr><td>合计</td><td>29周</td><td></td><td></td><td>12730</td><td></td></tr>
-          <tr><td>均值</td><td></td><td></td><td></td><td class="hot">439</td><td></td></tr>
+          <tr><td>合计</td><td>29周</td><td></td><td></td><td></td><td></td><td></td><td></td><td>12730</td><td></td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="hot">439</td><td></td><td></td></tr>
         </tfoot>
       </table>
     </div>
@@ -9643,214 +10223,359 @@
       <div class="weekly-section">
       <h3>每周振幅统计 - IC主力</h3>
       <table class="weekly-table">
-        <thead><tr><th>序号</th><th>周期</th><th>周最高</th><th>周最低</th><th>周振幅</th><th>交易日</th></tr></thead>
+        <thead><tr><th>序号</th><th>周期</th><th>开盘</th><th>高点</th><th>低点</th><th>收盘</th><th>涨跌点数</th><th>涨幅</th><th>振幅</th><th>标的</th><th>交易日</th></tr></thead>
         <tbody><tr>
         <td>1</td>
         <td>1月5日-1月9日</td>
+        <td>7424.4</td>
         <td>8037.8</td>
         <td>7422</td>
-        <td>615.8</td>
+        <td>8037.8</td>
+        <td class=""></td>
+        <td></td>
+        <td class="hot">615.8</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>2</td>
         <td>1月12日-1月16日</td>
+        <td>8099</td>
         <td>8388.6</td>
         <td>8044</td>
-        <td>344.6</td>
+        <td>8210.4</td>
+        <td class="move-hot">172.6</td>
+        <td>2.1%</td>
+        <td class="hot">344.6</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>3</td>
         <td>1月19日-1月23日</td>
+        <td>8182.6</td>
         <td>8660</td>
         <td>8112</td>
-        <td>548</td>
+        <td>8658.2</td>
+        <td class="move-hot">447.8</td>
+        <td>5.5%</td>
+        <td class="hot">548</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>4</td>
         <td>1月26日-1月30日</td>
+        <td>8695</td>
         <td>8728.2</td>
         <td>8135</td>
-        <td>593.2</td>
+        <td>8362.4</td>
+        <td class="move-hot">-295.8</td>
+        <td>-3.4%</td>
+        <td class="hot">593.2</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>5</td>
         <td>2月2日-2月6日</td>
+        <td>8262.2</td>
         <td>8334.4</td>
         <td>7832</td>
-        <td>502.4</td>
+        <td>8117.4</td>
+        <td class="move-hot">-245</td>
+        <td>-2.9%</td>
+        <td class="hot">502.4</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>6</td>
         <td>2月9日-2月13日</td>
+        <td>8260</td>
         <td>8458.8</td>
         <td>8220</td>
-        <td>238.8</td>
+        <td>8274.8</td>
+        <td class="move-hot">157.4</td>
+        <td>1.9%</td>
+        <td class="hot">238.8</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>7</td>
         <td>2月24日-2月27日</td>
+        <td>8360</td>
         <td>8650</td>
         <td>8314</td>
-        <td>336</td>
+        <td>8645.4</td>
+        <td class="move-hot">370.6</td>
+        <td>4.5%</td>
+        <td class="hot">336</td>
+        <td>IC2603</td>
         <td>4</td>
       </tr><tr>
         <td>8</td>
         <td>3月2日-3月6日</td>
+        <td>8600</td>
         <td>8686</td>
         <td>8180.6</td>
-        <td>505.4</td>
+        <td>8322.6</td>
+        <td class="move-hot">-322.8</td>
+        <td>-3.7%</td>
+        <td class="hot">505.4</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>9</td>
         <td>3月9日-3月13日</td>
+        <td>8201.8</td>
         <td>8434.4</td>
         <td>7710</td>
-        <td>724.4</td>
+        <td>8213.8</td>
+        <td class="">-108.8</td>
+        <td>-1.3%</td>
+        <td class="hot">724.4</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>10</td>
         <td>3月16日-3月20日</td>
+        <td>8225.2</td>
         <td>8229.6</td>
         <td>7827.8</td>
-        <td>401.8</td>
+        <td>7844.4</td>
+        <td class="move-hot">-369.4</td>
+        <td>-4.5%</td>
+        <td class="hot">401.8</td>
+        <td>IC2603</td>
         <td>5</td>
       </tr><tr>
         <td>11</td>
         <td>3月23日-3月27日</td>
+        <td>7460</td>
         <td>7652</td>
         <td>7171</td>
-        <td>481</td>
+        <td>7559.2</td>
+        <td class="move-hot">-285.2</td>
+        <td>-3.6%</td>
+        <td class="hot">481</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>12</td>
         <td>3月30日-4月3日</td>
+        <td>7470.8</td>
         <td>7619</td>
         <td>7325.2</td>
-        <td>293.8</td>
+        <td>7352</td>
+        <td class="move-hot">-207.2</td>
+        <td>-2.7%</td>
+        <td class="hot">293.8</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>13</td>
         <td>4月7日-4月10日</td>
+        <td>7380</td>
         <td>7945.4</td>
         <td>7355.6</td>
-        <td>589.8</td>
+        <td>7828.6</td>
+        <td class="move-hot">476.6</td>
+        <td>6.5%</td>
+        <td class="hot">589.8</td>
+        <td>IC2606</td>
         <td>4</td>
       </tr><tr>
         <td>14</td>
         <td>4月13日-4月17日</td>
+        <td>7792</td>
         <td>8119.6</td>
         <td>7792</td>
-        <td>327.6</td>
+        <td>8098.8</td>
+        <td class="move-hot">270.2</td>
+        <td>3.5%</td>
+        <td class="hot">327.6</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>15</td>
         <td>4月20日-4月24日</td>
+        <td>8076.4</td>
         <td>8288.2</td>
         <td>8042</td>
-        <td>246.2</td>
+        <td>8132.8</td>
+        <td class="">34</td>
+        <td>0.4%</td>
+        <td class="hot">246.2</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>16</td>
         <td>4月27日-4月30日</td>
+        <td>8145.2</td>
         <td>8287.8</td>
         <td>8056.2</td>
-        <td>231.6</td>
+        <td>8270</td>
+        <td class="">137.2</td>
+        <td>1.7%</td>
+        <td class="hot">231.6</td>
+        <td>IC2606</td>
         <td>4</td>
       </tr><tr>
         <td>17</td>
         <td>5月6日-5月8日</td>
+        <td>8377.6</td>
         <td>8648</td>
         <td>8375.4</td>
-        <td>272.6</td>
+        <td>8620.8</td>
+        <td class="move-hot">350.8</td>
+        <td>4.2%</td>
+        <td class="hot">272.6</td>
+        <td>IC2606</td>
         <td>3</td>
       </tr><tr>
         <td>18</td>
         <td>5月11日-5月15日</td>
+        <td>8691</td>
         <td>8886.8</td>
         <td>8378.2</td>
-        <td>508.6</td>
+        <td>8448.8</td>
+        <td class="move-hot">-172</td>
+        <td>-2%</td>
+        <td class="hot">508.6</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>19</td>
         <td>5月18日-5月22日</td>
+        <td>8418.4</td>
         <td>8728</td>
         <td>8310</td>
-        <td>418</td>
+        <td>8469.2</td>
+        <td class="">20.4</td>
+        <td>0.2%</td>
+        <td class="hot">418</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>20</td>
         <td>5月25日-5月29日</td>
+        <td>8543</td>
         <td>8658.2</td>
         <td>8218.2</td>
-        <td>440</td>
+        <td>8274.6</td>
+        <td class="move-hot">-194.6</td>
+        <td>-2.3%</td>
+        <td class="hot">440</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>21</td>
         <td>6月1日-6月5日</td>
+        <td>8298</td>
         <td>8425</td>
         <td>8101.6</td>
-        <td>323.4</td>
+        <td>8190.6</td>
+        <td class="">-84</td>
+        <td>-1%</td>
+        <td class="hot">323.4</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>22</td>
         <td>6月8日-6月12日</td>
+        <td>8050</td>
         <td>8237.6</td>
         <td>7838</td>
-        <td>399.6</td>
+        <td>8117.2</td>
+        <td class="">-73.4</td>
+        <td>-0.9%</td>
+        <td class="hot">399.6</td>
+        <td>IC2606</td>
         <td>5</td>
       </tr><tr>
         <td>23</td>
         <td>6月15日-6月18日</td>
+        <td>8181.2</td>
         <td>8718</td>
         <td>8181.2</td>
-        <td>536.8</td>
+        <td>8682.8</td>
+        <td class="move-hot">565.6</td>
+        <td>7%</td>
+        <td class="hot">536.8</td>
+        <td>IC2606</td>
         <td>4</td>
       </tr><tr>
         <td>24</td>
         <td>6月22日-6月26日</td>
+        <td>8692.8</td>
         <td>8778.8</td>
         <td>8377</td>
-        <td>401.8</td>
+        <td>8447</td>
+        <td class="move-hot">-235.8</td>
+        <td>-2.7%</td>
+        <td class="hot">401.8</td>
+        <td>IC2606/IC2609</td>
         <td>5</td>
       </tr><tr>
         <td>25</td>
         <td>6月29日-7月3日</td>
+        <td>8463.8</td>
         <td>8873.8</td>
         <td>8350.4</td>
-        <td>523.4</td>
+        <td>8538</td>
+        <td class="">91</td>
+        <td>1.1%</td>
+        <td class="hot">523.4</td>
+        <td>IC2609</td>
         <td>5</td>
       </tr><tr>
         <td>26</td>
         <td>7月6日-7月10日</td>
+        <td>8574.4</td>
         <td>8618</td>
         <td>8173</td>
-        <td>445</td>
+        <td>8333</td>
+        <td class="move-hot">-205</td>
+        <td>-2.4%</td>
+        <td class="hot">445</td>
+        <td>IC2609</td>
         <td>5</td>
       </tr><tr>
         <td>27</td>
         <td>7月13日-7月17日</td>
+        <td>8303</td>
         <td>8328</td>
         <td>7362.8</td>
-        <td>965.2</td>
+        <td>7389</td>
+        <td class="move-hot">-944</td>
+        <td>-11.3%</td>
+        <td class="hot">965.2</td>
+        <td>IC2609</td>
         <td>5</td>
       </tr><tr>
         <td>28</td>
         <td>7月20日-7月24日</td>
+        <td>7490</td>
         <td>7765.6</td>
         <td>7092</td>
-        <td>673.6</td>
+        <td>7416</td>
+        <td class="">27</td>
+        <td>0.4%</td>
+        <td class="hot">673.6</td>
+        <td>IC2609</td>
         <td>5</td>
       </tr><tr>
         <td>29</td>
         <td>7月27日-7月31日</td>
+        <td>7447</td>
         <td>7666.6</td>
         <td>7106</td>
-        <td>560.6</td>
+        <td>7395</td>
+        <td class="">-21</td>
+        <td>-0.3%</td>
+        <td class="hot">560.6</td>
+        <td>IC2609</td>
         <td>5</td>
       </tr></tbody>
         <tfoot>
-          <tr><td>合计</td><td>29周</td><td></td><td></td><td>13449</td><td></td></tr>
-          <tr><td>均值</td><td></td><td></td><td></td><td class="hot">463.8</td><td></td></tr>
+          <tr><td>合计</td><td>29周</td><td></td><td></td><td></td><td></td><td></td><td></td><td>13449</td><td></td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="hot">463.8</td><td></td><td></td></tr>
         </tfoot>
       </table>
     </div>
@@ -11598,214 +12323,359 @@
       <div class="weekly-section">
       <h3>每周振幅统计 - IF主力</h3>
       <table class="weekly-table">
-        <thead><tr><th>序号</th><th>周期</th><th>周最高</th><th>周最低</th><th>周振幅</th><th>交易日</th></tr></thead>
+        <thead><tr><th>序号</th><th>周期</th><th>开盘</th><th>高点</th><th>低点</th><th>收盘</th><th>涨跌点数</th><th>涨幅</th><th>振幅</th><th>标的</th><th>交易日</th></tr></thead>
         <tbody><tr>
         <td>1</td>
         <td>1月5日-1月9日</td>
+        <td>4627</td>
         <td>4785.8</td>
         <td>4627</td>
-        <td>158.8</td>
+        <td>4743.8</td>
+        <td class=""></td>
+        <td></td>
+        <td class="hot">158.8</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>2</td>
         <td>1月12日-1月16日</td>
+        <td>4762</td>
         <td>4833.2</td>
         <td>4707</td>
-        <td>126.2</td>
+        <td>4723.2</td>
+        <td class="">-20.6</td>
+        <td>-0.4%</td>
+        <td class="hot">126.2</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>3</td>
         <td>1月19日-1月23日</td>
+        <td>4711.8</td>
         <td>4763</td>
         <td>4672.8</td>
-        <td>90.2</td>
+        <td>4709.2</td>
+        <td class="">-14</td>
+        <td>-0.3%</td>
+        <td class="hot">90.2</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>4</td>
         <td>1月26日-1月30日</td>
+        <td>4726.8</td>
         <td>4793</td>
         <td>4640</td>
-        <td>153</td>
+        <td>4711</td>
+        <td class="">1.8</td>
+        <td>0%</td>
+        <td class="hot">153</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>5</td>
         <td>2月2日-2月6日</td>
+        <td>4680.6</td>
         <td>4724</td>
         <td>4555.6</td>
-        <td>168.4</td>
+        <td>4637.6</td>
+        <td class="">-73.4</td>
+        <td>-1.6%</td>
+        <td class="hot">168.4</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>6</td>
         <td>2月9日-2月13日</td>
+        <td>4688.8</td>
         <td>4733.8</td>
         <td>4624</td>
-        <td>109.8</td>
+        <td>4627</td>
+        <td class="">-10.6</td>
+        <td>-0.2%</td>
+        <td class="hot">109.8</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>7</td>
         <td>2月24日-2月27日</td>
+        <td>4680.2</td>
         <td>4768</td>
         <td>4671.2</td>
-        <td>96.8</td>
+        <td>4713.8</td>
+        <td class="">86.8</td>
+        <td>1.9%</td>
+        <td class="hot">96.8</td>
+        <td>IF2603</td>
         <td>4</td>
       </tr><tr>
         <td>8</td>
         <td>3月2日-3月6日</td>
+        <td>4681.2</td>
         <td>4725</td>
         <td>4560.2</td>
-        <td>164.8</td>
+        <td>4646</td>
+        <td class="">-67.8</td>
+        <td>-1.4%</td>
+        <td class="hot">164.8</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>9</td>
         <td>3月9日-3月13日</td>
+        <td>4600</td>
         <td>4699</td>
         <td>4500</td>
-        <td>199</td>
+        <td>4658</td>
+        <td class="">12</td>
+        <td>0.3%</td>
+        <td class="hot">199</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>10</td>
         <td>3月16日-3月20日</td>
+        <td>4665</td>
         <td>4718.4</td>
         <td>4570</td>
-        <td>148.4</td>
+        <td>4596.8</td>
+        <td class="">-61.2</td>
+        <td>-1.3%</td>
+        <td class="hot">148.4</td>
+        <td>IF2603</td>
         <td>5</td>
       </tr><tr>
         <td>11</td>
         <td>3月23日-3月27日</td>
+        <td>4434.4</td>
         <td>4466.2</td>
         <td>4307.2</td>
-        <td>159</td>
+        <td>4427.4</td>
+        <td class="move-hot">-169.4</td>
+        <td>-3.7%</td>
+        <td class="hot">159</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>12</td>
         <td>3月30日-4月3日</td>
+        <td>4387.2</td>
         <td>4459.8</td>
         <td>4346</td>
-        <td>113.8</td>
+        <td>4362.2</td>
+        <td class="">-65.2</td>
+        <td>-1.5%</td>
+        <td class="hot">113.8</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>13</td>
         <td>4月7日-4月10日</td>
+        <td>4369.8</td>
         <td>4591.8</td>
         <td>4347</td>
-        <td>244.8</td>
+        <td>4562</td>
+        <td class="move-hot">199.8</td>
+        <td>4.6%</td>
+        <td class="hot">244.8</td>
+        <td>IF2606</td>
         <td>4</td>
       </tr><tr>
         <td>14</td>
         <td>4月13日-4月17日</td>
+        <td>4542</td>
         <td>4685</td>
         <td>4541.6</td>
-        <td>143.4</td>
+        <td>4667</td>
+        <td class="">105</td>
+        <td>2.3%</td>
+        <td class="hot">143.4</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>15</td>
         <td>4月20日-4月24日</td>
+        <td>4665</td>
         <td>4763</td>
         <td>4656.8</td>
-        <td>106.2</td>
+        <td>4713.6</td>
+        <td class="">46.6</td>
+        <td>1%</td>
+        <td class="hot">106.2</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>16</td>
         <td>4月27日-4月30日</td>
+        <td>4720</td>
         <td>4776.6</td>
         <td>4687.2</td>
-        <td>89.4</td>
+        <td>4763.4</td>
+        <td class="">49.8</td>
+        <td>1.1%</td>
+        <td class="">89.4</td>
+        <td>IF2606</td>
         <td>4</td>
       </tr><tr>
         <td>17</td>
         <td>5月6日-5月8日</td>
+        <td>4808.2</td>
         <td>4869</td>
         <td>4797</td>
-        <td>72</td>
+        <td>4836.8</td>
+        <td class="">73.4</td>
+        <td>1.5%</td>
+        <td class="">72</td>
+        <td>IF2606</td>
         <td>3</td>
       </tr><tr>
         <td>18</td>
         <td>5月11日-5月15日</td>
+        <td>4860</td>
         <td>4995</td>
         <td>4794</td>
-        <td>201</td>
+        <td>4824</td>
+        <td class="">-12.8</td>
+        <td>-0.3%</td>
+        <td class="hot">201</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>19</td>
         <td>5月18日-5月22日</td>
+        <td>4810</td>
         <td>4900.8</td>
         <td>4735</td>
-        <td>165.8</td>
+        <td>4788.2</td>
+        <td class="">-35.8</td>
+        <td>-0.7%</td>
+        <td class="hot">165.8</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>20</td>
         <td>5月25日-5月29日</td>
+        <td>4817.8</td>
         <td>4928.4</td>
         <td>4793.2</td>
-        <td>135.2</td>
+        <td>4847.8</td>
+        <td class="">59.6</td>
+        <td>1.2%</td>
+        <td class="hot">135.2</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>21</td>
         <td>6月1日-6月5日</td>
+        <td>4860</td>
         <td>4964.6</td>
         <td>4762.2</td>
-        <td>202.4</td>
+        <td>4776.8</td>
+        <td class="">-71</td>
+        <td>-1.5%</td>
+        <td class="hot">202.4</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>22</td>
         <td>6月8日-6月12日</td>
+        <td>4700</td>
         <td>4793</td>
         <td>4640.2</td>
-        <td>152.8</td>
+        <td>4769.8</td>
+        <td class="">-7</td>
+        <td>-0.1%</td>
+        <td class="hot">152.8</td>
+        <td>IF2606</td>
         <td>5</td>
       </tr><tr>
         <td>23</td>
         <td>6月15日-6月18日</td>
+        <td>4819</td>
         <td>4971</td>
         <td>4804.8</td>
-        <td>166.2</td>
+        <td>4960.6</td>
+        <td class="move-hot">190.8</td>
+        <td>4%</td>
+        <td class="hot">166.2</td>
+        <td>IF2606</td>
         <td>4</td>
       </tr><tr>
         <td>24</td>
         <td>6月22日-6月26日</td>
+        <td>4956</td>
         <td>5030.2</td>
         <td>4717</td>
-        <td>313.2</td>
+        <td>4748.2</td>
+        <td class="move-hot">-212.4</td>
+        <td>-4.3%</td>
+        <td class="hot">313.2</td>
+        <td>IF2606/IF2609</td>
         <td>5</td>
       </tr><tr>
         <td>25</td>
         <td>6月29日-7月3日</td>
+        <td>4759.4</td>
         <td>4899.6</td>
         <td>4705</td>
-        <td>194.6</td>
+        <td>4752.2</td>
+        <td class="">4</td>
+        <td>0.1%</td>
+        <td class="hot">194.6</td>
+        <td>IF2609</td>
         <td>5</td>
       </tr><tr>
         <td>26</td>
         <td>7月6日-7月10日</td>
+        <td>4781</td>
         <td>4822.2</td>
         <td>4665.2</td>
-        <td>157</td>
+        <td>4704.6</td>
+        <td class="">-47.6</td>
+        <td>-1%</td>
+        <td class="hot">157</td>
+        <td>IF2609</td>
         <td>5</td>
       </tr><tr>
         <td>27</td>
         <td>7月13日-7月17日</td>
+        <td>4691</td>
         <td>4739.4</td>
         <td>4441.4</td>
-        <td>298</td>
+        <td>4473.8</td>
+        <td class="move-hot">-230.8</td>
+        <td>-4.9%</td>
+        <td class="hot">298</td>
+        <td>IF2609</td>
         <td>5</td>
       </tr><tr>
         <td>28</td>
         <td>7月20日-7月24日</td>
+        <td>4530</td>
         <td>4707.8</td>
         <td>4465</td>
-        <td>242.8</td>
+        <td>4578.2</td>
+        <td class="">104.4</td>
+        <td>2.3%</td>
+        <td class="hot">242.8</td>
+        <td>IF2609</td>
         <td>5</td>
       </tr><tr>
         <td>29</td>
         <td>7月27日-7月31日</td>
+        <td>4589.4</td>
         <td>4652.2</td>
         <td>4420</td>
-        <td>232.2</td>
+        <td>4538</td>
+        <td class="">-40.2</td>
+        <td>-0.9%</td>
+        <td class="hot">232.2</td>
+        <td>IF2609</td>
         <td>5</td>
       </tr></tbody>
         <tfoot>
-          <tr><td>合计</td><td>29周</td><td></td><td></td><td>4805.2</td><td></td></tr>
-          <tr><td>均值</td><td></td><td></td><td></td><td class="hot">165.7</td><td></td></tr>
+          <tr><td>合计</td><td>29周</td><td></td><td></td><td></td><td></td><td></td><td></td><td>4805.2</td><td></td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="hot">165.7</td><td></td><td></td></tr>
         </tfoot>
       </table>
     </div>
@@ -13553,214 +14423,359 @@
       <div class="weekly-section">
       <h3>每周振幅统计 - IH主力</h3>
       <table class="weekly-table">
-        <thead><tr><th>序号</th><th>周期</th><th>周最高</th><th>周最低</th><th>周振幅</th><th>交易日</th></tr></thead>
+        <thead><tr><th>序号</th><th>周期</th><th>开盘</th><th>高点</th><th>低点</th><th>收盘</th><th>涨跌点数</th><th>涨幅</th><th>振幅</th><th>标的</th><th>交易日</th></tr></thead>
         <tbody><tr>
         <td>1</td>
         <td>1月5日-1月9日</td>
+        <td>3040.8</td>
         <td>3165.6</td>
         <td>3040.8</td>
-        <td>124.8</td>
+        <td>3134.8</td>
+        <td class=""></td>
+        <td></td>
+        <td class="hot">124.8</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>2</td>
         <td>1月12日-1月16日</td>
+        <td>3148.4</td>
         <td>3181.2</td>
         <td>3074.4</td>
-        <td>106.8</td>
+        <td>3084.4</td>
+        <td class="">-50.4</td>
+        <td>-1.6%</td>
+        <td class="hot">106.8</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>3</td>
         <td>1月19日-1月23日</td>
+        <td>3081.2</td>
         <td>3102.6</td>
         <td>3036.2</td>
-        <td>66.4</td>
+        <td>3037.8</td>
+        <td class="">-46.6</td>
+        <td>-1.5%</td>
+        <td class="hot">66.4</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>4</td>
         <td>1月26日-1月30日</td>
+        <td>3049.8</td>
         <td>3136.6</td>
         <td>3044</td>
-        <td>92.6</td>
+        <td>3074</td>
+        <td class="">36.2</td>
+        <td>1.2%</td>
+        <td class="hot">92.6</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>5</td>
         <td>2月2日-2月6日</td>
+        <td>3039.4</td>
         <td>3081</td>
         <td>2984</td>
-        <td>97</td>
+        <td>3036.2</td>
+        <td class="">-37.8</td>
+        <td>-1.2%</td>
+        <td class="hot">97</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>6</td>
         <td>2月9日-2月13日</td>
+        <td>3060.6</td>
         <td>3098</td>
         <td>3020</td>
-        <td>78</td>
+        <td>3020</td>
+        <td class="">-16.2</td>
+        <td>-0.5%</td>
+        <td class="hot">78</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>7</td>
         <td>2月24日-2月27日</td>
+        <td>3049.2</td>
         <td>3086.4</td>
         <td>3022</td>
-        <td>64.4</td>
+        <td>3045.4</td>
+        <td class="">25.4</td>
+        <td>0.8%</td>
+        <td class="hot">64.4</td>
+        <td>IH2603</td>
         <td>4</td>
       </tr><tr>
         <td>8</td>
         <td>3月2日-3月6日</td>
+        <td>3038</td>
         <td>3056</td>
         <td>2950</td>
-        <td>106</td>
+        <td>2990</td>
+        <td class="">-55.4</td>
+        <td>-1.8%</td>
+        <td class="hot">106</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>9</td>
         <td>3月9日-3月13日</td>
+        <td>2965.4</td>
         <td>2989</td>
         <td>2912.6</td>
-        <td>76.4</td>
+        <td>2957</td>
+        <td class="">-33</td>
+        <td>-1.1%</td>
+        <td class="hot">76.4</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>10</td>
         <td>3月16日-3月20日</td>
+        <td>2953</td>
         <td>2996.6</td>
         <td>2896</td>
-        <td>100.6</td>
+        <td>2898.4</td>
+        <td class="">-58.6</td>
+        <td>-2%</td>
+        <td class="hot">100.6</td>
+        <td>IH2603</td>
         <td>5</td>
       </tr><tr>
         <td>11</td>
         <td>3月23日-3月27日</td>
+        <td>2830</td>
         <td>2847.6</td>
         <td>2750.8</td>
-        <td>96.8</td>
+        <td>2814.4</td>
+        <td class="">-84</td>
+        <td>-2.9%</td>
+        <td class="hot">96.8</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>12</td>
         <td>3月30日-4月3日</td>
+        <td>2794.8</td>
         <td>2865.4</td>
         <td>2780.4</td>
-        <td>85</td>
+        <td>2804.4</td>
+        <td class="">-10</td>
+        <td>-0.4%</td>
+        <td class="hot">85</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>13</td>
         <td>4月7日-4月10日</td>
+        <td>2810.4</td>
         <td>2896</td>
         <td>2797.2</td>
-        <td>98.8</td>
+        <td>2873.2</td>
+        <td class="">68.8</td>
+        <td>2.5%</td>
+        <td class="hot">98.8</td>
+        <td>IH2606</td>
         <td>4</td>
       </tr><tr>
         <td>14</td>
         <td>4月13日-4月17日</td>
+        <td>2864.6</td>
         <td>2930.8</td>
         <td>2860</td>
-        <td>70.8</td>
+        <td>2888</td>
+        <td class="">14.8</td>
+        <td>0.5%</td>
+        <td class="hot">70.8</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>15</td>
         <td>4月20日-4月24日</td>
+        <td>2900.8</td>
         <td>2934.2</td>
         <td>2891</td>
-        <td>43.2</td>
+        <td>2929</td>
+        <td class="">41</td>
+        <td>1.4%</td>
+        <td class="">43.2</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>16</td>
         <td>4月27日-4月30日</td>
+        <td>2929.2</td>
         <td>2970</td>
         <td>2917</td>
-        <td>53</td>
+        <td>2968.8</td>
+        <td class="">39.8</td>
+        <td>1.4%</td>
+        <td class="">53</td>
+        <td>IH2606</td>
         <td>4</td>
       </tr><tr>
         <td>17</td>
         <td>5月6日-5月8日</td>
+        <td>2995.2</td>
         <td>3024.8</td>
         <td>2969.2</td>
-        <td>55.6</td>
+        <td>2981.6</td>
+        <td class="">12.8</td>
+        <td>0.4%</td>
+        <td class="">55.6</td>
+        <td>IH2606</td>
         <td>3</td>
       </tr><tr>
         <td>18</td>
         <td>5月11日-5月15日</td>
+        <td>2997.6</td>
         <td>3041.8</td>
         <td>2927</td>
-        <td>114.8</td>
+        <td>2945</td>
+        <td class="">-36.6</td>
+        <td>-1.2%</td>
+        <td class="hot">114.8</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>19</td>
         <td>5月18日-5月22日</td>
+        <td>2936</td>
         <td>2981.8</td>
         <td>2893.2</td>
-        <td>88.6</td>
+        <td>2899.2</td>
+        <td class="">-45.8</td>
+        <td>-1.6%</td>
+        <td class="hot">88.6</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>20</td>
         <td>5月25日-5月29日</td>
+        <td>2910.8</td>
         <td>2960</td>
         <td>2871</td>
-        <td>89</td>
+        <td>2900.6</td>
+        <td class="">1.4</td>
+        <td>0%</td>
+        <td class="hot">89</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>21</td>
         <td>6月1日-6月5日</td>
+        <td>2901</td>
         <td>2924.2</td>
         <td>2841.6</td>
-        <td>82.6</td>
+        <td>2844</td>
+        <td class="">-56.6</td>
+        <td>-2%</td>
+        <td class="hot">82.6</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>22</td>
         <td>6月8日-6月12日</td>
+        <td>2808.4</td>
         <td>2902.6</td>
         <td>2791.2</td>
-        <td>111.4</td>
+        <td>2897.2</td>
+        <td class="">53.2</td>
+        <td>1.9%</td>
+        <td class="hot">111.4</td>
+        <td>IH2606</td>
         <td>5</td>
       </tr><tr>
         <td>23</td>
         <td>6月15日-6月18日</td>
+        <td>2926.2</td>
         <td>2954.6</td>
         <td>2903.4</td>
-        <td>51.2</td>
+        <td>2941</td>
+        <td class="">43.8</td>
+        <td>1.5%</td>
+        <td class="">51.2</td>
+        <td>IH2606</td>
         <td>4</td>
       </tr><tr>
         <td>24</td>
         <td>6月22日-6月26日</td>
+        <td>2936</td>
         <td>2996</td>
         <td>2834.8</td>
-        <td>161.2</td>
+        <td>2859</td>
+        <td class="">-82</td>
+        <td>-2.8%</td>
+        <td class="hot">161.2</td>
+        <td>IH2606/IH2609</td>
         <td>5</td>
       </tr><tr>
         <td>25</td>
         <td>6月29日-7月3日</td>
+        <td>2870</td>
         <td>2976</td>
         <td>2861.8</td>
-        <td>114.2</td>
+        <td>2886.6</td>
+        <td class="">27.6</td>
+        <td>1%</td>
+        <td class="hot">114.2</td>
+        <td>IH2609</td>
         <td>5</td>
       </tr><tr>
         <td>26</td>
         <td>7月6日-7月10日</td>
+        <td>2899</td>
         <td>2983.8</td>
         <td>2862.4</td>
-        <td>121.4</td>
+        <td>2910.2</td>
+        <td class="">23.6</td>
+        <td>0.8%</td>
+        <td class="hot">121.4</td>
+        <td>IH2609</td>
         <td>5</td>
       </tr><tr>
         <td>27</td>
         <td>7月13日-7月17日</td>
+        <td>2895.8</td>
         <td>2924</td>
         <td>2782.6</td>
-        <td>141.4</td>
+        <td>2796.4</td>
+        <td class="">-113.8</td>
+        <td>-3.9%</td>
+        <td class="hot">141.4</td>
+        <td>IH2609</td>
         <td>5</td>
       </tr><tr>
         <td>28</td>
         <td>7月20日-7月24日</td>
+        <td>2820</td>
         <td>2978</td>
         <td>2820</td>
-        <td>158</td>
+        <td>2910</td>
+        <td class="">113.6</td>
+        <td>4.1%</td>
+        <td class="hot">158</td>
+        <td>IH2609</td>
         <td>5</td>
       </tr><tr>
         <td>29</td>
         <td>7月27日-7月31日</td>
+        <td>2929.6</td>
         <td>2930</td>
         <td>2847.2</td>
-        <td>82.8</td>
+        <td>2891.8</td>
+        <td class="">-18.2</td>
+        <td>-0.6%</td>
+        <td class="hot">82.8</td>
+        <td>IH2609</td>
         <td>5</td>
       </tr></tbody>
         <tfoot>
-          <tr><td>合计</td><td>29周</td><td></td><td></td><td>2732.8</td><td></td></tr>
-          <tr><td>均值</td><td></td><td></td><td></td><td class="hot">94.2</td><td></td></tr>
+          <tr><td>合计</td><td>29周</td><td></td><td></td><td></td><td></td><td></td><td></td><td>2732.8</td><td></td><td></td></tr>
+          <tr><td>均值</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="hot">94.2</td><td></td><td></td></tr>
         </tfoot>
       </table>
     </div>
