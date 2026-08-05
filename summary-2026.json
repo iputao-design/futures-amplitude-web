@@ -4,9 +4,9 @@
   "title": "2026年统计",
   "reportDate": "2026-08-05",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/08/06 01:29",
+  "updatedAt": "2026/08/06 01:33",
   "tradingDays": 142,
-  "overallAverage": 132.4,
+  "overallAverage": 1230.8,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -77,6 +77,16 @@
       "total": 6000,
       "average": 42.3,
       "hotDays": 19
+    },
+    {
+      "code": "LC2609",
+      "name": "碳酸锂2609",
+      "latestDate": "2026-08-05",
+      "latestAmplitude": 5980,
+      "days": 142,
+      "total": 1266600,
+      "average": 8919.7,
+      "hotDays": 107
     }
   ]
 }
