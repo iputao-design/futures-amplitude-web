@@ -2,51 +2,51 @@
   "pageName": "2026.html",
   "excelFileName": "每日振幅统计_2026.xlsx",
   "title": "2026年统计",
-  "reportDate": "2026-08-06",
+  "reportDate": "2026-08-07",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/08/06 20:30",
-  "tradingDays": 143,
-  "overallAverage": 1226.8,
+  "updatedAt": "2026/08/07 16:30",
+  "tradingDays": 144,
+  "overallAverage": 1223.7,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-08-06",
-      "latestAmplitude": 130.2,
-      "days": 143,
-      "total": 25796.3,
-      "average": 180.4,
-      "hotDays": 66
+      "latestDate": "2026-08-07",
+      "latestAmplitude": 237.1,
+      "days": 144,
+      "total": 26033.4,
+      "average": 180.8,
+      "hotDays": 67
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-08-06",
-      "latestAmplitude": 146.3,
-      "days": 143,
-      "total": 26016.5,
-      "average": 181.9,
-      "hotDays": 74
+      "latestDate": "2026-08-07",
+      "latestAmplitude": 219.6,
+      "days": 144,
+      "total": 26236.1,
+      "average": 182.2,
+      "hotDays": 75
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-08-06",
-      "latestAmplitude": 37.8,
-      "days": 143,
-      "total": 7144.8,
+      "latestDate": "2026-08-07",
+      "latestAmplitude": 55.3,
+      "days": 144,
+      "total": 7200.1,
       "average": 50,
-      "hotDays": 59
+      "hotDays": 60
     },
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-06",
-      "latestAmplitude": 125,
-      "days": 143,
-      "total": 27517.4,
-      "average": 192.4,
-      "hotDays": 62
+      "latestDate": "2026-08-07",
+      "latestAmplitude": 225.2,
+      "days": 144,
+      "total": 27742.6,
+      "average": 192.7,
+      "hotDays": 63
     },
     {
       "code": "IC",
@@ -71,21 +71,21 @@
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-08-06",
-      "latestAmplitude": 18,
-      "days": 143,
-      "total": 6018,
+      "latestDate": "2026-08-07",
+      "latestAmplitude": 46.6,
+      "days": 144,
+      "total": 6064.6,
       "average": 42.1,
       "hotDays": 19
     },
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-06",
-      "latestAmplitude": 4620,
-      "days": 143,
-      "total": 1271220,
-      "average": 8889.7,
+      "latestDate": "2026-08-07",
+      "latestAmplitude": 5200,
+      "days": 144,
+      "total": 1276420,
+      "average": 8864,
       "hotDays": 107
     }
   ]
