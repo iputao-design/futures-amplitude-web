@@ -4,9 +4,9 @@
   "title": "2026年统计",
   "reportDate": "2026-08-12",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/08/12 16:30",
+  "updatedAt": "2026/08/12 20:30",
   "tradingDays": 147,
-  "overallAverage": 1216.6,
+  "overallAverage": 1213.1,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -51,41 +51,41 @@
     {
       "code": "IC",
       "name": "IC主力",
-      "latestDate": "2026-08-11",
-      "latestAmplitude": 133.8,
-      "days": 146,
-      "total": 29357.6,
-      "average": 201.1,
+      "latestDate": "2026-08-12",
+      "latestAmplitude": 112.8,
+      "days": 147,
+      "total": 29470.4,
+      "average": 200.5,
       "hotDays": 103
     },
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-08-11",
-      "latestAmplitude": 47.8,
-      "days": 146,
-      "total": 10987.8,
-      "average": 75.3,
+      "latestDate": "2026-08-12",
+      "latestAmplitude": 40.4,
+      "days": 147,
+      "total": 11028.2,
+      "average": 75,
       "hotDays": 35
     },
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-08-11",
-      "latestAmplitude": 38.2,
-      "days": 146,
-      "total": 6124.6,
-      "average": 41.9,
+      "latestDate": "2026-08-12",
+      "latestAmplitude": 15.8,
+      "days": 147,
+      "total": 6140.4,
+      "average": 41.8,
       "hotDays": 19
     },
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-11",
-      "latestAmplitude": 3180,
-      "days": 146,
-      "total": 1286700,
-      "average": 8813,
+      "latestDate": "2026-08-12",
+      "latestAmplitude": 4820,
+      "days": 147,
+      "total": 1291520,
+      "average": 8785.9,
       "hotDays": 108
     }
   ]
