@@ -2,40 +2,40 @@
   "pageName": "current.html",
   "excelFileName": "每日振幅统计.xlsx",
   "title": "2026年8月统计",
-  "reportDate": "2026-08-12",
+  "reportDate": "2026-08-13",
   "startDate": "2026-08-01",
-  "updatedAt": "2026/08/12 20:30",
-  "tradingDays": 8,
-  "overallAverage": 725.1,
+  "updatedAt": "2026/08/13 16:30",
+  "tradingDays": 9,
+  "overallAverage": 729.8,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-08-12",
-      "latestAmplitude": 112.8,
-      "days": 8,
-      "total": 1291.6,
-      "average": 161.5,
+      "latestDate": "2026-08-13",
+      "latestAmplitude": 165.9,
+      "days": 9,
+      "total": 1457.5,
+      "average": 161.9,
       "hotDays": 3
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-08-12",
-      "latestAmplitude": 105.7,
-      "days": 8,
-      "total": 1296.8,
-      "average": 162.1,
-      "hotDays": 3
+      "latestDate": "2026-08-13",
+      "latestAmplitude": 175.5,
+      "days": 9,
+      "total": 1472.3,
+      "average": 163.6,
+      "hotDays": 4
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-08-12",
-      "latestAmplitude": 23.1,
-      "days": 8,
-      "total": 312.7,
-      "average": 39.1,
+      "latestDate": "2026-08-13",
+      "latestAmplitude": 43.8,
+      "days": 9,
+      "total": 356.5,
+      "average": 39.6,
       "hotDays": 2
     },
     {
@@ -81,11 +81,11 @@
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-12",
-      "latestAmplitude": 4820,
-      "days": 8,
-      "total": 40200,
-      "average": 5025,
+      "latestDate": "2026-08-13",
+      "latestAmplitude": 5340,
+      "days": 9,
+      "total": 45540,
+      "average": 5060,
       "hotDays": 1
     }
   ]
