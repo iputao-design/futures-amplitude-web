@@ -4,9 +4,9 @@
   "title": "2026年8月统计",
   "reportDate": "2026-08-14",
   "startDate": "2026-08-01",
-  "updatedAt": "2026/08/14 16:30",
+  "updatedAt": "2026/08/14 20:30",
   "tradingDays": 10,
-  "overallAverage": 726.8,
+  "overallAverage": 723.4,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -61,11 +61,11 @@
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-08-13",
-      "latestAmplitude": 59.6,
-      "days": 9,
-      "total": 528.2,
-      "average": 58.7,
+      "latestDate": "2026-08-14",
+      "latestAmplitude": 41.6,
+      "days": 10,
+      "total": 569.8,
+      "average": 57,
       "hotDays": 1
     },
     {
@@ -81,11 +81,11 @@
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-13",
-      "latestAmplitude": 5340,
-      "days": 9,
-      "total": 45540,
-      "average": 5060,
+      "latestDate": "2026-08-14",
+      "latestAmplitude": 4800,
+      "days": 10,
+      "total": 50340,
+      "average": 5034,
       "hotDays": 1
     }
   ]
