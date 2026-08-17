@@ -4,9 +4,9 @@
   "title": "2026年8月统计",
   "reportDate": "2026-08-17",
   "startDate": "2026-08-01",
-  "updatedAt": "2026/08/17 16:30",
+  "updatedAt": "2026/08/17 20:30",
   "tradingDays": 11,
-  "overallAverage": 724.7,
+  "overallAverage": 722.9,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -41,51 +41,51 @@
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-14",
-      "latestAmplitude": 97.4,
-      "days": 10,
-      "total": 1525,
-      "average": 152.5,
-      "hotDays": 3
+      "latestDate": "2026-08-17",
+      "latestAmplitude": 243.6,
+      "days": 11,
+      "total": 1768.6,
+      "average": 160.8,
+      "hotDays": 4
     },
     {
       "code": "IC",
       "name": "IC主力",
-      "latestDate": "2026-08-14",
-      "latestAmplitude": 112,
-      "days": 10,
-      "total": 1573,
-      "average": 157.3,
-      "hotDays": 4
+      "latestDate": "2026-08-17",
+      "latestAmplitude": 217,
+      "days": 11,
+      "total": 1790,
+      "average": 162.7,
+      "hotDays": 5
     },
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-08-14",
-      "latestAmplitude": 41.6,
-      "days": 10,
-      "total": 569.8,
-      "average": 57,
+      "latestDate": "2026-08-17",
+      "latestAmplitude": 80.8,
+      "days": 11,
+      "total": 650.6,
+      "average": 59.1,
       "hotDays": 1
     },
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-08-14",
-      "latestAmplitude": 33.2,
-      "days": 10,
-      "total": 328.8,
-      "average": 32.9,
+      "latestDate": "2026-08-17",
+      "latestAmplitude": 37.8,
+      "days": 11,
+      "total": 366.6,
+      "average": 33.3,
       "hotDays": 0
     },
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-14",
-      "latestAmplitude": 4800,
-      "days": 10,
-      "total": 50340,
-      "average": 5034,
+      "latestDate": "2026-08-17",
+      "latestAmplitude": 4700,
+      "days": 11,
+      "total": 55040,
+      "average": 5003.6,
       "hotDays": 1
     }
   ]

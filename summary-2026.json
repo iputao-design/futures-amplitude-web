@@ -4,9 +4,9 @@
   "title": "2026年统计",
   "reportDate": "2026-08-17",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/08/17 16:30",
+  "updatedAt": "2026/08/17 20:30",
   "tradingDays": 150,
-  "overallAverage": 1206.5,
+  "overallAverage": 1203.1,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -41,12 +41,12 @@
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-14",
-      "latestAmplitude": 97.4,
-      "days": 149,
-      "total": 28352.8,
-      "average": 190.3,
-      "hotDays": 63
+      "latestDate": "2026-08-17",
+      "latestAmplitude": 243.6,
+      "days": 150,
+      "total": 28596.4,
+      "average": 190.6,
+      "hotDays": 64
     },
     {
       "code": "IC",
@@ -81,11 +81,11 @@
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-14",
-      "latestAmplitude": 4800,
-      "days": 149,
-      "total": 1301660,
-      "average": 8736,
+      "latestDate": "2026-08-17",
+      "latestAmplitude": 4700,
+      "days": 150,
+      "total": 1306360,
+      "average": 8709.1,
       "hotDays": 108
     }
   ]
