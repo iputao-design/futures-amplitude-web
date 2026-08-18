@@ -4,7 +4,7 @@
   "title": "2026年统计",
   "reportDate": "2026-08-18",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/08/18 16:30",
+  "updatedAt": "2026/08/18 20:30",
   "tradingDays": 151,
   "overallAverage": 1199.5,
   "targetSummaries": [
@@ -41,11 +41,11 @@
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-17",
-      "latestAmplitude": 243.6,
-      "days": 150,
-      "total": 28596.4,
-      "average": 190.6,
+      "latestDate": "2026-08-18",
+      "latestAmplitude": 157.8,
+      "days": 151,
+      "total": 28754.2,
+      "average": 190.4,
       "hotDays": 64
     },
     {
@@ -61,20 +61,20 @@
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-08-17",
-      "latestAmplitude": 80.8,
-      "days": 150,
-      "total": 11210.2,
+      "latestDate": "2026-08-18",
+      "latestAmplitude": 65,
+      "days": 151,
+      "total": 11275.2,
       "average": 74.7,
       "hotDays": 35
     },
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-08-17",
-      "latestAmplitude": 37.8,
-      "days": 150,
-      "total": 6244.4,
+      "latestDate": "2026-08-18",
+      "latestAmplitude": 33.6,
+      "days": 151,
+      "total": 6278,
       "average": 41.6,
       "hotDays": 19
     },
