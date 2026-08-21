@@ -2,50 +2,50 @@
   "pageName": "current.html",
   "excelFileName": "每日振幅统计.xlsx",
   "title": "2026年8月统计",
-  "reportDate": "2026-08-20",
+  "reportDate": "2026-08-21",
   "startDate": "2026-08-01",
-  "updatedAt": "2026/08/20 20:30",
-  "tradingDays": 14,
-  "overallAverage": 700.2,
+  "updatedAt": "2026/08/21 16:30",
+  "tradingDays": 15,
+  "overallAverage": 717.8,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-08-20",
-      "latestAmplitude": 115.1,
-      "days": 14,
-      "total": 2385.7,
-      "average": 170.4,
+      "latestDate": "2026-08-21",
+      "latestAmplitude": 161.6,
+      "days": 15,
+      "total": 2547.3,
+      "average": 169.8,
       "hotDays": 5
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-08-20",
-      "latestAmplitude": 127.6,
-      "days": 14,
-      "total": 2329.4,
-      "average": 166.4,
+      "latestDate": "2026-08-21",
+      "latestAmplitude": 121.1,
+      "days": 15,
+      "total": 2450.5,
+      "average": 163.4,
       "hotDays": 6
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-08-20",
-      "latestAmplitude": 37,
-      "days": 14,
-      "total": 601.6,
-      "average": 43,
+      "latestDate": "2026-08-21",
+      "latestAmplitude": 28.3,
+      "days": 15,
+      "total": 629.9,
+      "average": 42,
       "hotDays": 4
     },
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-20",
-      "latestAmplitude": 99.4,
-      "days": 14,
-      "total": 2330.4,
-      "average": 166.5,
+      "latestDate": "2026-08-21",
+      "latestAmplitude": 165,
+      "days": 15,
+      "total": 2495.4,
+      "average": 166.4,
       "hotDays": 5
     },
     {
@@ -81,12 +81,12 @@
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-20",
-      "latestAmplitude": 2800,
-      "days": 14,
-      "total": 67120,
-      "average": 4794.3,
-      "hotDays": 1
+      "latestDate": "2026-08-21",
+      "latestAmplitude": 6980,
+      "days": 15,
+      "total": 74100,
+      "average": 4940,
+      "hotDays": 2
     }
   ]
 }
