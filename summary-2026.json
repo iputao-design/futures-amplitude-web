@@ -4,7 +4,7 @@
   "title": "2026年统计",
   "reportDate": "2026-08-24",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/08/24 16:30",
+  "updatedAt": "2026/08/24 20:30",
   "tradingDays": 155,
   "overallAverage": 1188,
   "targetSummaries": [
@@ -41,12 +41,12 @@
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-21",
-      "latestAmplitude": 165,
-      "days": 154,
-      "total": 29323.2,
-      "average": 190.4,
-      "hotDays": 65
+      "latestDate": "2026-08-24",
+      "latestAmplitude": 240.2,
+      "days": 155,
+      "total": 29563.4,
+      "average": 190.7,
+      "hotDays": 66
     },
     {
       "code": "IC",

@@ -4,9 +4,9 @@
   "title": "2026年8月统计",
   "reportDate": "2026-08-24",
   "startDate": "2026-08-01",
-  "updatedAt": "2026/08/24 16:30",
+  "updatedAt": "2026/08/24 20:30",
   "tradingDays": 16,
-  "overallAverage": 726,
+  "overallAverage": 726.6,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -41,12 +41,12 @@
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-21",
-      "latestAmplitude": 165,
-      "days": 15,
-      "total": 2495.4,
-      "average": 166.4,
-      "hotDays": 5
+      "latestDate": "2026-08-24",
+      "latestAmplitude": 240.2,
+      "days": 16,
+      "total": 2735.6,
+      "average": 171,
+      "hotDays": 6
     },
     {
       "code": "IC",
