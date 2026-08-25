@@ -4,9 +4,9 @@
   "title": "2026年统计",
   "reportDate": "2026-08-25",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/08/25 16:30",
+  "updatedAt": "2026/08/25 20:30",
   "tradingDays": 156,
-  "overallAverage": 1188,
+  "overallAverage": 1188.1,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -41,52 +41,52 @@
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-24",
-      "latestAmplitude": 240.2,
-      "days": 155,
-      "total": 29563.4,
-      "average": 190.7,
-      "hotDays": 66
+      "latestDate": "2026-08-25",
+      "latestAmplitude": 209.4,
+      "days": 156,
+      "total": 29772.8,
+      "average": 190.9,
+      "hotDays": 67
     },
     {
       "code": "IC",
       "name": "IC主力",
-      "latestDate": "2026-08-24",
-      "latestAmplitude": 250,
-      "days": 155,
-      "total": 30857.2,
-      "average": 199.1,
-      "hotDays": 108
+      "latestDate": "2026-08-25",
+      "latestAmplitude": 191.8,
+      "days": 156,
+      "total": 31049,
+      "average": 199,
+      "hotDays": 109
     },
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-08-24",
-      "latestAmplitude": 121,
-      "days": 155,
-      "total": 11594.6,
-      "average": 74.8,
+      "latestDate": "2026-08-25",
+      "latestAmplitude": 56.2,
+      "days": 156,
+      "total": 11650.8,
+      "average": 74.7,
       "hotDays": 37
     },
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-08-24",
-      "latestAmplitude": 29.4,
-      "days": 155,
-      "total": 6415.8,
-      "average": 41.4,
+      "latestDate": "2026-08-25",
+      "latestAmplitude": 24.4,
+      "days": 156,
+      "total": 6440.2,
+      "average": 41.3,
       "hotDays": 19
     },
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-24",
-      "latestAmplitude": 5720,
-      "days": 155,
-      "total": 1331140,
-      "average": 8588,
-      "hotDays": 109
+      "latestDate": "2026-08-25",
+      "latestAmplitude": 8680,
+      "days": 156,
+      "total": 1339820,
+      "average": 8588.6,
+      "hotDays": 110
     }
   ]
 }
