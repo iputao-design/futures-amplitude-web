@@ -1,92 +1,92 @@
 {
   "pageName": "current.html",
   "excelFileName": "每日振幅统计.xlsx",
-  "title": "2026年8月统计",
-  "reportDate": "2026-08-31",
-  "startDate": "2026-08-01",
-  "updatedAt": "2026/08/31 20:30",
-  "tradingDays": 21,
-  "overallAverage": 759.9,
+  "title": "2026年9月统计",
+  "reportDate": "2026-09-01",
+  "startDate": "2026-09-01",
+  "updatedAt": "2026/09/01 16:30",
+  "tradingDays": 1,
+  "overallAverage": 46.6,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-08-31",
-      "latestAmplitude": 166.6,
-      "days": 21,
-      "total": 3614.9,
-      "average": 172.1,
-      "hotDays": 8
+      "latestDate": "2026-09-01",
+      "latestAmplitude": 105.7,
+      "days": 1,
+      "total": 105.7,
+      "average": 105.7,
+      "hotDays": 0
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-08-31",
-      "latestAmplitude": 189,
-      "days": 21,
-      "total": 3487.7,
-      "average": 166.1,
-      "hotDays": 10
+      "latestDate": "2026-09-01",
+      "latestAmplitude": 102.7,
+      "days": 1,
+      "total": 102.7,
+      "average": 102.7,
+      "hotDays": 0
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-08-31",
-      "latestAmplitude": 59.8,
-      "days": 21,
-      "total": 905.8,
-      "average": 43.1,
-      "hotDays": 6
+      "latestDate": "2026-09-01",
+      "latestAmplitude": 18.7,
+      "days": 1,
+      "total": 18.7,
+      "average": 18.7,
+      "hotDays": 0
     },
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-08-31",
-      "latestAmplitude": 182.2,
-      "days": 21,
-      "total": 3616,
-      "average": 172.2,
-      "hotDays": 8
+      "latestDate": "2026-09-01",
+      "latestAmplitude": 122.6,
+      "days": 1,
+      "total": 122.6,
+      "average": 122.6,
+      "hotDays": 0
     },
     {
       "code": "IC",
       "name": "IC主力",
-      "latestDate": "2026-08-31",
-      "latestAmplitude": 219,
-      "days": 21,
-      "total": 3571.6,
-      "average": 170.1,
-      "hotDays": 12
+      "latestDate": "",
+      "latestAmplitude": "",
+      "days": 0,
+      "total": 0,
+      "average": 0,
+      "hotDays": 0
     },
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-08-31",
-      "latestAmplitude": 78.6,
-      "days": 21,
-      "total": 1327,
-      "average": 63.2,
-      "hotDays": 3
+      "latestDate": "",
+      "latestAmplitude": "",
+      "days": 0,
+      "total": 0,
+      "average": 0,
+      "hotDays": 0
     },
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-08-31",
-      "latestAmplitude": 43.8,
-      "days": 21,
-      "total": 698.8,
-      "average": 33.3,
+      "latestDate": "2026-09-01",
+      "latestAmplitude": 22.8,
+      "days": 1,
+      "total": 22.8,
+      "average": 22.8,
       "hotDays": 0
     },
     {
       "code": "LC2609",
       "name": "碳酸锂2609",
-      "latestDate": "2026-08-31",
-      "latestAmplitude": 3720,
-      "days": 21,
-      "total": 110440,
-      "average": 5259,
-      "hotDays": 5
+      "latestDate": "",
+      "latestAmplitude": "",
+      "days": 0,
+      "total": 0,
+      "average": 0,
+      "hotDays": 0
     }
   ]
 }
