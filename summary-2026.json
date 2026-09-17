@@ -4,9 +4,9 @@
   "title": "2026年统计",
   "reportDate": "2026-09-16",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/09/16 20:30",
+  "updatedAt": "2026/09/17 09:11",
   "tradingDays": 172,
-  "overallAverage": 1143.8,
+  "overallAverage": 1119.3,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -79,14 +79,14 @@
       "hotDays": 19
     },
     {
-      "code": "LC2609",
-      "name": "碳酸锂2609",
-      "latestDate": "2026-09-14",
-      "latestAmplitude": 0,
-      "days": 170,
-      "total": 1402960,
-      "average": 8252.7,
-      "hotDays": 114
+      "code": "LC2610",
+      "name": "碳酸锂2610",
+      "latestDate": "2026-09-16",
+      "latestAmplitude": 4460,
+      "days": 172,
+      "total": 1385840,
+      "average": 8057.2,
+      "hotDays": 108
     }
   ]
 }
