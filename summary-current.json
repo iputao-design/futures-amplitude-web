@@ -2,50 +2,50 @@
   "pageName": "current.html",
   "excelFileName": "每日振幅统计.xlsx",
   "title": "2026年9月统计",
-  "reportDate": "2026-09-22",
+  "reportDate": "2026-09-23",
   "startDate": "2026-09-01",
-  "updatedAt": "2026/09/22 20:30",
-  "tradingDays": 16,
-  "overallAverage": 823.6,
+  "updatedAt": "2026/09/23 16:30",
+  "tradingDays": 17,
+  "overallAverage": 826.6,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-09-22",
-      "latestAmplitude": 117.9,
-      "days": 16,
-      "total": 2072.7,
-      "average": 129.5,
+      "latestDate": "2026-09-23",
+      "latestAmplitude": 39.6,
+      "days": 17,
+      "total": 2112.3,
+      "average": 124.3,
       "hotDays": 3
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-09-22",
-      "latestAmplitude": 113.6,
-      "days": 16,
-      "total": 1900.7,
-      "average": 118.8,
+      "latestDate": "2026-09-23",
+      "latestAmplitude": 58.6,
+      "days": 17,
+      "total": 1959.3,
+      "average": 115.3,
       "hotDays": 3
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-09-22",
-      "latestAmplitude": 22.3,
-      "days": 16,
-      "total": 551.6,
-      "average": 34.5,
+      "latestDate": "2026-09-23",
+      "latestAmplitude": 17.1,
+      "days": 17,
+      "total": 568.7,
+      "average": 33.5,
       "hotDays": 3
     },
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-09-22",
-      "latestAmplitude": 124,
-      "days": 16,
-      "total": 2316.2,
-      "average": 144.8,
+      "latestDate": "2026-09-23",
+      "latestAmplitude": 42.2,
+      "days": 17,
+      "total": 2358.4,
+      "average": 138.7,
       "hotDays": 4
     },
     {
@@ -61,11 +61,11 @@
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-09-22",
-      "latestAmplitude": 42.4,
-      "days": 16,
-      "total": 819.2,
-      "average": 51.2,
+      "latestDate": "2026-09-23",
+      "latestAmplitude": 33.2,
+      "days": 17,
+      "total": 852.4,
+      "average": 50.1,
       "hotDays": 0
     },
     {
@@ -81,12 +81,12 @@
     {
       "code": "LC2610",
       "name": "碳酸锂2610",
-      "latestDate": "2026-09-22",
-      "latestAmplitude": 5160,
-      "days": 16,
-      "total": 95040,
-      "average": 5940,
-      "hotDays": 5
+      "latestDate": "2026-09-23",
+      "latestAmplitude": 6640,
+      "days": 17,
+      "total": 101680,
+      "average": 5981.2,
+      "hotDays": 6
     }
   ]
 }
