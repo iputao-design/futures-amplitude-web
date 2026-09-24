@@ -2,40 +2,40 @@
   "pageName": "current.html",
   "excelFileName": "每日振幅统计.xlsx",
   "title": "2026年9月统计",
-  "reportDate": "2026-09-23",
+  "reportDate": "2026-09-24",
   "startDate": "2026-09-01",
-  "updatedAt": "2026/09/23 20:30",
-  "tradingDays": 17,
-  "overallAverage": 826,
+  "updatedAt": "2026/09/24 16:30",
+  "tradingDays": 18,
+  "overallAverage": 831.2,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-09-23",
-      "latestAmplitude": 39.6,
-      "days": 17,
-      "total": 2112.3,
-      "average": 124.3,
+      "latestDate": "2026-09-24",
+      "latestAmplitude": 156,
+      "days": 18,
+      "total": 2268.3,
+      "average": 126,
       "hotDays": 3
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-09-23",
-      "latestAmplitude": 58.6,
-      "days": 17,
-      "total": 1959.3,
-      "average": 115.3,
+      "latestDate": "2026-09-24",
+      "latestAmplitude": 150.2,
+      "days": 18,
+      "total": 2109.5,
+      "average": 117.2,
       "hotDays": 3
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-09-23",
-      "latestAmplitude": 17.1,
-      "days": 17,
-      "total": 568.7,
-      "average": 33.5,
+      "latestDate": "2026-09-24",
+      "latestAmplitude": 42.1,
+      "days": 18,
+      "total": 610.8,
+      "average": 33.9,
       "hotDays": 3
     },
     {
@@ -71,22 +71,22 @@
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-09-23",
-      "latestAmplitude": 20.4,
-      "days": 17,
-      "total": 502,
-      "average": 29.5,
+      "latestDate": "2026-09-24",
+      "latestAmplitude": 52,
+      "days": 18,
+      "total": 554,
+      "average": 30.8,
       "hotDays": 0
     },
     {
       "code": "LC2610",
       "name": "碳酸锂2610",
-      "latestDate": "2026-09-23",
+      "latestDate": "2026-09-24",
       "latestAmplitude": 6640,
-      "days": 17,
-      "total": 101680,
-      "average": 5981.2,
-      "hotDays": 6
+      "days": 18,
+      "total": 108320,
+      "average": 6017.8,
+      "hotDays": 7
     }
   ]
 }
