@@ -2,51 +2,51 @@
   "pageName": "2026.html",
   "excelFileName": "每日振幅统计_2026.xlsx",
   "title": "2026年统计",
-  "reportDate": "2026-10-08",
+  "reportDate": "2026-10-09",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/10/08 20:30",
-  "tradingDays": 182,
-  "overallAverage": 1103.3,
+  "updatedAt": "2026/10/09 16:30",
+  "tradingDays": 183,
+  "overallAverage": 1100.9,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-10-08",
-      "latestAmplitude": 279.1,
-      "days": 182,
-      "total": 31770.1,
-      "average": 174.6,
-      "hotDays": 77
+      "latestDate": "2026-10-09",
+      "latestAmplitude": 249.9,
+      "days": 183,
+      "total": 32020,
+      "average": 175,
+      "hotDays": 78
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-10-08",
-      "latestAmplitude": 255.2,
-      "days": 182,
-      "total": 31540.3,
-      "average": 173.3,
-      "hotDays": 87
+      "latestDate": "2026-10-09",
+      "latestAmplitude": 228.7,
+      "days": 183,
+      "total": 31769,
+      "average": 173.6,
+      "hotDays": 88
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-10-08",
-      "latestAmplitude": 68.8,
-      "days": 182,
-      "total": 8683.5,
-      "average": 47.7,
-      "hotDays": 69
+      "latestDate": "2026-10-09",
+      "latestAmplitude": 70.6,
+      "days": 183,
+      "total": 8754.1,
+      "average": 47.8,
+      "hotDays": 70
     },
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-10-08",
-      "latestAmplitude": 303.6,
-      "days": 182,
-      "total": 33797,
-      "average": 185.7,
-      "hotDays": 75
+      "latestDate": "2026-10-09",
+      "latestAmplitude": 229.8,
+      "days": 183,
+      "total": 34026.8,
+      "average": 185.9,
+      "hotDays": 76
     },
     {
       "code": "IC",
@@ -81,11 +81,11 @@
     {
       "code": "LC2610",
       "name": "碳酸锂2610",
-      "latestDate": "2026-10-08",
-      "latestAmplitude": 6800,
-      "days": 182,
-      "total": 1445240,
-      "average": 7940.9,
+      "latestDate": "2026-10-09",
+      "latestAmplitude": 4200,
+      "days": 183,
+      "total": 1449440,
+      "average": 7920.4,
       "hotDays": 113
     }
   ]
