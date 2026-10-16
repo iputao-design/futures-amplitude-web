@@ -2,51 +2,51 @@
   "pageName": "2026.html",
   "excelFileName": "每日振幅统计_2026.xlsx",
   "title": "2026年统计",
-  "reportDate": "2026-10-15",
+  "reportDate": "2026-10-16",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/10/15 20:30",
-  "tradingDays": 187,
+  "updatedAt": "2026/10/16 16:30",
+  "tradingDays": 188,
   "overallAverage": 1103.9,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-10-15",
-      "latestAmplitude": 152.6,
-      "days": 187,
-      "total": 32738.2,
-      "average": 175.1,
-      "hotDays": 79
+      "latestDate": "2026-10-16",
+      "latestAmplitude": 207.9,
+      "days": 188,
+      "total": 32946.1,
+      "average": 175.2,
+      "hotDays": 80
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-10-15",
-      "latestAmplitude": 145.4,
-      "days": 187,
-      "total": 32464.2,
-      "average": 173.6,
-      "hotDays": 89
+      "latestDate": "2026-10-16",
+      "latestAmplitude": 188.1,
+      "days": 188,
+      "total": 32652.3,
+      "average": 173.7,
+      "hotDays": 90
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-10-15",
-      "latestAmplitude": 49.7,
-      "days": 187,
-      "total": 8971.4,
-      "average": 48,
-      "hotDays": 71
+      "latestDate": "2026-10-16",
+      "latestAmplitude": 69.5,
+      "days": 188,
+      "total": 9040.9,
+      "average": 48.1,
+      "hotDays": 72
     },
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-10-15",
-      "latestAmplitude": 174.2,
-      "days": 187,
-      "total": 34801.4,
-      "average": 186.1,
-      "hotDays": 77
+      "latestDate": "2026-10-16",
+      "latestAmplitude": 228.4,
+      "days": 188,
+      "total": 35029.8,
+      "average": 186.3,
+      "hotDays": 78
     },
     {
       "code": "IC",
