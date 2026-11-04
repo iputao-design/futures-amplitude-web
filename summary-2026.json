@@ -4,7 +4,7 @@
   "title": "2026年统计",
   "reportDate": "2026-11-04",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/11/04 16:30",
+  "updatedAt": "2026/11/04 20:30",
   "tradingDays": 201,
   "overallAverage": 1092.6,
   "targetSummaries": [
@@ -71,12 +71,12 @@
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-11-03",
-      "latestAmplitude": 55.2,
-      "days": 200,
-      "total": 8075.8,
-      "average": 40.4,
-      "hotDays": 21
+      "latestDate": "2026-11-04",
+      "latestAmplitude": 68.4,
+      "days": 201,
+      "total": 8144.2,
+      "average": 40.5,
+      "hotDays": 22
     },
     {
       "code": "LC2610",
