@@ -4,9 +4,9 @@
   "title": "2026年11月统计",
   "reportDate": "2026-11-20",
   "startDate": "2026-11-01",
-  "updatedAt": "2026/11/20 16:30",
+  "updatedAt": "2026/11/20 20:30",
   "tradingDays": 15,
-  "overallAverage": 108.5,
+  "overallAverage": 109,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -41,22 +41,22 @@
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-11-19",
-      "latestAmplitude": 125.8,
-      "days": 14,
-      "total": 2707.4,
-      "average": 193.4,
-      "hotDays": 6
+      "latestDate": "2026-11-20",
+      "latestAmplitude": 234.6,
+      "days": 15,
+      "total": 2942,
+      "average": 196.1,
+      "hotDays": 7
     },
     {
       "code": "IC",
       "name": "IC主力",
-      "latestDate": "2026-11-19",
-      "latestAmplitude": 130,
-      "days": 14,
-      "total": 2578.6,
-      "average": 184.2,
-      "hotDays": 9
+      "latestDate": "2026-11-20",
+      "latestAmplitude": 202.2,
+      "days": 15,
+      "total": 2780.8,
+      "average": 185.4,
+      "hotDays": 10
     },
     {
       "code": "IF",
