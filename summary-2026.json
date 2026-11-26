@@ -2,51 +2,51 @@
   "pageName": "2026.html",
   "excelFileName": "每日振幅统计_2026.xlsx",
   "title": "2026年统计",
-  "reportDate": "2026-11-25",
+  "reportDate": "2026-11-26",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/11/25 20:30",
-  "tradingDays": 216,
+  "updatedAt": "2026/11/26 16:30",
+  "tradingDays": 217,
   "overallAverage": 1092.4,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-11-25",
-      "latestAmplitude": 276.3,
-      "days": 216,
-      "total": 38614.3,
+      "latestDate": "2026-11-26",
+      "latestAmplitude": 183.9,
+      "days": 217,
+      "total": 38798.2,
       "average": 178.8,
-      "hotDays": 96
+      "hotDays": 97
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-11-25",
-      "latestAmplitude": 208.9,
-      "days": 216,
-      "total": 37773.9,
+      "latestDate": "2026-11-26",
+      "latestAmplitude": 179.6,
+      "days": 217,
+      "total": 37953.5,
       "average": 174.9,
-      "hotDays": 105
+      "hotDays": 106
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-11-25",
-      "latestAmplitude": 57.7,
-      "days": 216,
-      "total": 10417.8,
+      "latestDate": "2026-11-26",
+      "latestAmplitude": 42.8,
+      "days": 217,
+      "total": 10460.6,
       "average": 48.2,
       "hotDays": 84
     },
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-11-25",
-      "latestAmplitude": 355,
-      "days": 216,
-      "total": 41270.2,
-      "average": 191.1,
-      "hotDays": 94
+      "latestDate": "2026-11-26",
+      "latestAmplitude": 241.8,
+      "days": 217,
+      "total": 41512,
+      "average": 191.3,
+      "hotDays": 95
     },
     {
       "code": "IC",
@@ -61,11 +61,11 @@
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-11-25",
-      "latestAmplitude": 88.4,
-      "days": 216,
-      "total": 15554.2,
-      "average": 72,
+      "latestDate": "2026-11-26",
+      "latestAmplitude": 58.4,
+      "days": 217,
+      "total": 15612.6,
+      "average": 71.9,
       "hotDays": 45
     },
     {
