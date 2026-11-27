@@ -4,9 +4,9 @@
   "title": "2026年统计",
   "reportDate": "2026-11-27",
   "startDate": "2026-01-01",
-  "updatedAt": "2026/11/27 16:30",
+  "updatedAt": "2026/11/27 20:30",
   "tradingDays": 218,
-  "overallAverage": 1093.1,
+  "overallAverage": 1093.3,
   "targetSummaries": [
     {
       "code": "CSI1000",
@@ -41,12 +41,12 @@
     {
       "code": "IM",
       "name": "IM主力",
-      "latestDate": "2026-11-26",
-      "latestAmplitude": 241.8,
-      "days": 217,
-      "total": 41512,
-      "average": 191.3,
-      "hotDays": 95
+      "latestDate": "2026-11-27",
+      "latestAmplitude": 477,
+      "days": 218,
+      "total": 41989,
+      "average": 192.6,
+      "hotDays": 96
     },
     {
       "code": "IC",
