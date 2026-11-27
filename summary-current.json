@@ -2,41 +2,41 @@
   "pageName": "current.html",
   "excelFileName": "每日振幅统计.xlsx",
   "title": "2026年11月统计",
-  "reportDate": "2026-11-26",
+  "reportDate": "2026-11-27",
   "startDate": "2026-11-01",
-  "updatedAt": "2026/11/26 20:30",
-  "tradingDays": 19,
-  "overallAverage": 117.3,
+  "updatedAt": "2026/11/27 16:30",
+  "tradingDays": 20,
+  "overallAverage": 124.6,
   "targetSummaries": [
     {
       "code": "CSI1000",
       "name": "中证1000",
-      "latestDate": "2026-11-26",
-      "latestAmplitude": 183.9,
-      "days": 19,
-      "total": 3712,
-      "average": 195.4,
-      "hotDays": 12
+      "latestDate": "2026-11-27",
+      "latestAmplitude": 438.2,
+      "days": 20,
+      "total": 4150.2,
+      "average": 207.5,
+      "hotDays": 13
     },
     {
       "code": "CSI500",
       "name": "中证500",
-      "latestDate": "2026-11-26",
-      "latestAmplitude": 179.6,
-      "days": 19,
-      "total": 3367.1,
-      "average": 177.2,
-      "hotDays": 11
+      "latestDate": "2026-11-27",
+      "latestAmplitude": 438.6,
+      "days": 20,
+      "total": 3805.7,
+      "average": 190.3,
+      "hotDays": 12
     },
     {
       "code": "SSE",
       "name": "上证指数",
-      "latestDate": "2026-11-26",
-      "latestAmplitude": 42.8,
-      "days": 19,
-      "total": 884.6,
-      "average": 46.6,
-      "hotDays": 7
+      "latestDate": "2026-11-27",
+      "latestAmplitude": 143.3,
+      "days": 20,
+      "total": 1027.9,
+      "average": 51.4,
+      "hotDays": 8
     },
     {
       "code": "IM",
@@ -51,32 +51,32 @@
     {
       "code": "IC",
       "name": "IC主力",
-      "latestDate": "2026-11-26",
-      "latestAmplitude": 228,
-      "days": 19,
-      "total": 3847,
-      "average": 202.5,
-      "hotDays": 14
+      "latestDate": "2026-11-27",
+      "latestAmplitude": 517.8,
+      "days": 20,
+      "total": 4364.8,
+      "average": 218.2,
+      "hotDays": 15
     },
     {
       "code": "IF",
       "name": "IF主力",
-      "latestDate": "2026-11-26",
-      "latestAmplitude": 58.4,
-      "days": 19,
-      "total": 1224.6,
-      "average": 64.5,
-      "hotDays": 2
+      "latestDate": "2026-11-27",
+      "latestAmplitude": 236.2,
+      "days": 20,
+      "total": 1460.8,
+      "average": 73,
+      "hotDays": 3
     },
     {
       "code": "IH",
       "name": "IH主力",
-      "latestDate": "2026-11-26",
-      "latestAmplitude": 23.8,
-      "days": 19,
-      "total": 637.8,
-      "average": 33.6,
-      "hotDays": 1
+      "latestDate": "2026-11-27",
+      "latestAmplitude": 128.2,
+      "days": 20,
+      "total": 766,
+      "average": 38.3,
+      "hotDays": 2
     },
     {
       "code": "LC2610",
